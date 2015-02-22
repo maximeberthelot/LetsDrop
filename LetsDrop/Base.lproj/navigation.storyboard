@@ -159,7 +159,7 @@
         <!--ACTIVITY-->
         <scene sceneID="o3a-0X-Tge">
             <objects>
-                <viewController id="B8s-sH-AnL" sceneMemberID="viewController">
+                <viewController id="B8s-sH-AnL" customClass="ActivityViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qdO-91-ov7"/>
                         <viewControllerLayoutGuide type="bottom" id="yNl-u4-yHe"/>
@@ -182,6 +182,24 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-OX-gQP">
                                 <rect key="frame" x="0.0" y="89" width="320" height="430"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMh-cb-4uS">
+                                <rect key="frame" x="77" y="51" width="74" height="30"/>
+                                <state key="normal" title="RECEIVED">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recBtn:" destination="B8s-sH-AnL" eventType="touchUpInside" id="Ajl-Sd-sTj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uE-Oc-7R8">
+                                <rect key="frame" x="182" y="51" width="73" height="30"/>
+                                <state key="normal" title="DROPPED">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dropBtn:" destination="B8s-sH-AnL" eventType="touchUpInside" id="7Bh-GX-tMB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -204,6 +222,11 @@
                             <outlet property="animation" destination="g9z-4v-1ep" id="Cav-x2-r7h"/>
                         </connections>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="dropBtn" destination="7uE-Oc-7R8" id="Bcm-RI-dxS"/>
+                        <outlet property="recBtn" destination="OMh-cb-4uS" id="0ba-eH-c66"/>
+                        <outlet property="scrollView" destination="4fa-OX-gQP" id="U3f-51-0fN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wd7-yg-qpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="g9z-4v-1ep" customClass="RAMBounceAnimation" customModule="LetsDrop" customModuleProvider="target">

@@ -18,7 +18,6 @@
 		F94BF8521A9A424700E33852 /* ReceivedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F94BF8511A9A424700E33852 /* ReceivedViewController.xib */; };
 		F94BF8541A9A426B00E33852 /* DroppedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F94BF8531A9A426B00E33852 /* DroppedViewController.xib */; };
 		F94BF8561A9A427600E33852 /* DroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BF8551A9A427600E33852 /* DroppedViewController.swift */; };
-		F94BF8581A9A689A00E33852 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94BF8571A9A689A00E33852 /* main.storyboard */; };
 		F94BF85A1A9A6B4D00E33852 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BF8591A9A6B4D00E33852 /* ActivityViewController.swift */; };
 		F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C11A9A267D00707417 /* AppDelegate.swift */; };
 		F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */; };
@@ -51,7 +50,6 @@
 		F94BF8511A9A424700E33852 /* ReceivedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedViewController.xib; sourceTree = "<group>"; };
 		F94BF8531A9A426B00E33852 /* DroppedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DroppedViewController.xib; sourceTree = "<group>"; };
 		F94BF8551A9A427600E33852 /* DroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroppedViewController.swift; sourceTree = "<group>"; };
-		F94BF8571A9A689A00E33852 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		F94BF8591A9A6B4D00E33852 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		F9F6E3BC1A9A267D00707417 /* LetsDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6E3C01A9A267D00707417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 				F94BF82F1A9A2F2100E33852 /* assets */,
 				F9F6E3C11A9A267D00707417 /* AppDelegate.swift */,
 				F9F6E3C61A9A267D00707417 /* ViewController.swift */,
-				F94BF8571A9A689A00E33852 /* main.storyboard */,
 				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
 				F94BF8471A9A3E6B00E33852 /* Views */,
 				F9F6E3CB1A9A267D00707417 /* Images.xcassets */,
@@ -330,7 +327,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F94BF8581A9A689A00E33852 /* main.storyboard in Resources */,
 				F9F6E3CA1A9A267D00707417 /* navigation.storyboard in Resources */,
 				F94BF8541A9A426B00E33852 /* DroppedViewController.xib in Resources */,
 				F94BF8521A9A424700E33852 /* ReceivedViewController.xib in Resources */,
