@@ -14,10 +14,16 @@
 		F94BF8421A9A2F3F00E33852 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BF83B1A9A2F3F00E33852 /* RAMTransitionItemAnimation.swift */; };
 		F94BF8431A9A2F3F00E33852 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BF83C1A9A2F3F00E33852 /* RAMAnimatedTabBarController.swift */; };
 		F94BF8441A9A2F3F00E33852 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BF83D1A9A2F3F00E33852 /* RAMItemAnimationProtocol.swift */; };
+		F94BF8501A9A422F00E33852 /* ReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BF84F1A9A422F00E33852 /* ReceivedViewController.swift */; };
+		F94BF8521A9A424700E33852 /* ReceivedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F94BF8511A9A424700E33852 /* ReceivedViewController.xib */; };
+		F94BF8541A9A426B00E33852 /* DroppedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F94BF8531A9A426B00E33852 /* DroppedViewController.xib */; };
+		F94BF8561A9A427600E33852 /* DroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BF8551A9A427600E33852 /* DroppedViewController.swift */; };
+		F94BF8581A9A689A00E33852 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94BF8571A9A689A00E33852 /* main.storyboard */; };
+		F94BF85A1A9A6B4D00E33852 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BF8591A9A6B4D00E33852 /* ActivityViewController.swift */; };
 		F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C11A9A267D00707417 /* AppDelegate.swift */; };
 		F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */; };
 		F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C61A9A267D00707417 /* ViewController.swift */; };
-		F9F6E3CA1A9A267D00707417 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F6E3C81A9A267D00707417 /* Main.storyboard */; };
+		F9F6E3CA1A9A267D00707417 /* navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F6E3C81A9A267D00707417 /* navigation.storyboard */; };
 		F9F6E3CC1A9A267D00707417 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9F6E3CB1A9A267D00707417 /* Images.xcassets */; };
 		F9F6E3CF1A9A267D00707417 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9F6E3CD1A9A267D00707417 /* LaunchScreen.xib */; };
 		F9F6E3DB1A9A267D00707417 /* LetsDropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3DA1A9A267D00707417 /* LetsDropTests.swift */; };
@@ -41,12 +47,18 @@
 		F94BF83B1A9A2F3F00E33852 /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
 		F94BF83C1A9A2F3F00E33852 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
 		F94BF83D1A9A2F3F00E33852 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		F94BF84F1A9A422F00E33852 /* ReceivedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedViewController.swift; sourceTree = "<group>"; };
+		F94BF8511A9A424700E33852 /* ReceivedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedViewController.xib; sourceTree = "<group>"; };
+		F94BF8531A9A426B00E33852 /* DroppedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DroppedViewController.xib; sourceTree = "<group>"; };
+		F94BF8551A9A427600E33852 /* DroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroppedViewController.swift; sourceTree = "<group>"; };
+		F94BF8571A9A689A00E33852 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		F94BF8591A9A6B4D00E33852 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		F9F6E3BC1A9A267D00707417 /* LetsDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6E3C01A9A267D00707417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6E3C11A9A267D00707417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9F6E3C41A9A267D00707417 /* LetsDrop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LetsDrop.xcdatamodel; sourceTree = "<group>"; };
 		F9F6E3C61A9A267D00707417 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F9F6E3C91A9A267D00707417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9F6E3C91A9A267D00707417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/navigation.storyboard; sourceTree = "<group>"; };
 		F9F6E3CB1A9A267D00707417 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F9F6E3CE1A9A267D00707417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F9F6E3D41A9A267D00707417 /* LetsDropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetsDropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +154,42 @@
 			path = TransitionAniamtions;
 			sourceTree = "<group>";
 		};
+		F94BF8471A9A3E6B00E33852 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F94BF84C1A9A41FD00E33852 /* ActivityView */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F94BF84C1A9A41FD00E33852 /* ActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				F94BF8591A9A6B4D00E33852 /* ActivityViewController.swift */,
+				F94BF84E1A9A421300E33852 /* Received */,
+				F94BF84D1A9A420800E33852 /* Dropped */,
+			);
+			name = ActivityView;
+			sourceTree = "<group>";
+		};
+		F94BF84D1A9A420800E33852 /* Dropped */ = {
+			isa = PBXGroup;
+			children = (
+				F94BF8531A9A426B00E33852 /* DroppedViewController.xib */,
+				F94BF8551A9A427600E33852 /* DroppedViewController.swift */,
+			);
+			name = Dropped;
+			sourceTree = "<group>";
+		};
+		F94BF84E1A9A421300E33852 /* Received */ = {
+			isa = PBXGroup;
+			children = (
+				F94BF84F1A9A422F00E33852 /* ReceivedViewController.swift */,
+				F94BF8511A9A424700E33852 /* ReceivedViewController.xib */,
+			);
+			name = Received;
+			sourceTree = "<group>";
+		};
 		F9F6E3B31A9A267D00707417 = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +214,9 @@
 				F94BF82F1A9A2F2100E33852 /* assets */,
 				F9F6E3C11A9A267D00707417 /* AppDelegate.swift */,
 				F9F6E3C61A9A267D00707417 /* ViewController.swift */,
-				F9F6E3C81A9A267D00707417 /* Main.storyboard */,
+				F94BF8571A9A689A00E33852 /* main.storyboard */,
+				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
+				F94BF8471A9A3E6B00E33852 /* Views */,
 				F9F6E3CB1A9A267D00707417 /* Images.xcassets */,
 				F9F6E3CD1A9A267D00707417 /* LaunchScreen.xib */,
 				F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */,
@@ -280,7 +330,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9F6E3CA1A9A267D00707417 /* Main.storyboard in Resources */,
+				F94BF8581A9A689A00E33852 /* main.storyboard in Resources */,
+				F9F6E3CA1A9A267D00707417 /* navigation.storyboard in Resources */,
+				F94BF8541A9A426B00E33852 /* DroppedViewController.xib in Resources */,
+				F94BF8521A9A424700E33852 /* ReceivedViewController.xib in Resources */,
 				F9F6E3CF1A9A267D00707417 /* LaunchScreen.xib in Resources */,
 				F9F6E3CC1A9A267D00707417 /* Images.xcassets in Resources */,
 			);
@@ -302,9 +355,12 @@
 			files = (
 				F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */,
 				F94BF8431A9A2F3F00E33852 /* RAMAnimatedTabBarController.swift in Sources */,
+				F94BF8501A9A422F00E33852 /* ReceivedViewController.swift in Sources */,
+				F94BF8561A9A427600E33852 /* DroppedViewController.swift in Sources */,
 				F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */,
 				F94BF8421A9A2F3F00E33852 /* RAMTransitionItemAnimation.swift in Sources */,
 				F94BF8441A9A2F3F00E33852 /* RAMItemAnimationProtocol.swift in Sources */,
+				F94BF85A1A9A6B4D00E33852 /* ActivityViewController.swift in Sources */,
 				F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */,
 				F94BF8411A9A2F3F00E33852 /* RAMRotationAnimation.swift in Sources */,
 				F94BF83F1A9A2F3F00E33852 /* RAMFrameItemAnimation.swift in Sources */,
@@ -332,12 +388,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F9F6E3C81A9A267D00707417 /* Main.storyboard */ = {
+		F9F6E3C81A9A267D00707417 /* navigation.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F9F6E3C91A9A267D00707417 /* Base */,
 			);
-			name = Main.storyboard;
+			name = navigation.storyboard;
 			sourceTree = "<group>";
 		};
 		F9F6E3CD1A9A267D00707417 /* LaunchScreen.xib */ = {
@@ -433,6 +489,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LetsDrop",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LetsDrop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,6 +505,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LetsDrop",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LetsDrop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

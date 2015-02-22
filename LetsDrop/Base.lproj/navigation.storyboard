@@ -41,7 +41,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="694" y="1880"/>
+            <point key="canvasLocation" x="298" y="1880"/>
         </scene>
         <!--CONTACTS-->
         <scene sceneID="4DT-fS-lad">
@@ -54,7 +54,26 @@
                     <view key="view" contentMode="scaleToFill" id="xOW-J7-ftY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ez-Pb-W49">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="21S-kC-MHM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="QdB-Wp-LA8"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="90" id="stC-HH-Eik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2ez-Pb-W49" firstAttribute="top" secondItem="xOW-J7-ftY" secondAttribute="top" id="6ut-MU-RGb"/>
+                            <constraint firstAttribute="trailing" secondItem="2ez-Pb-W49" secondAttribute="trailing" id="J4A-Jd-78v"/>
+                            <constraint firstItem="2ez-Pb-W49" firstAttribute="leading" secondItem="xOW-J7-ftY" secondAttribute="leading" id="TeJ-l5-77H"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="CONTACTS" image="icon-contacts" id="Hnz-hA-xBi" customClass="RAMAnimatedTabBarItem" customModule="LetsDrop" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
@@ -93,7 +112,24 @@
                     <view key="view" contentMode="scaleToFill" id="MVc-RQ-SaM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdI-0p-BYN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="6ji-Bh-9xj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pdI-0p-BYN" secondAttribute="trailing" id="W16-OF-OPk"/>
+                            <constraint firstItem="pdI-0p-BYN" firstAttribute="leading" secondItem="MVc-RQ-SaM" secondAttribute="leading" id="bvh-mS-Vx8"/>
+                            <constraint firstItem="pdI-0p-BYN" firstAttribute="top" secondItem="MVc-RQ-SaM" secondAttribute="top" id="dEJ-4T-0sE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="SETTINGS" image="icon-settings" id="tEG-Mi-k0l" customClass="RAMAnimatedTabBarItem" customModule="LetsDrop" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
@@ -131,7 +167,32 @@
                     <view key="view" contentMode="scaleToFill" id="1nR-8g-RPG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pob-qB-RQF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="BrG-uu-CfP"/>
+                                    <constraint firstAttribute="height" constant="90" id="aYj-h7-uv8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-OX-gQP">
+                                <rect key="frame" x="0.0" y="89" width="320" height="430"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4fa-OX-gQP" secondAttribute="trailing" id="2bz-zh-Djh"/>
+                            <constraint firstItem="pob-qB-RQF" firstAttribute="top" secondItem="1nR-8g-RPG" secondAttribute="top" id="3Zp-a6-L2w"/>
+                            <constraint firstAttribute="trailing" secondItem="pob-qB-RQF" secondAttribute="trailing" id="FFy-Wf-HFt"/>
+                            <constraint firstItem="4fa-OX-gQP" firstAttribute="top" secondItem="qdO-91-ov7" secondAttribute="bottom" constant="70" id="Kid-ZJ-i4J"/>
+                            <constraint firstItem="yNl-u4-yHe" firstAttribute="top" secondItem="4fa-OX-gQP" secondAttribute="bottom" id="VNd-PR-iVb"/>
+                            <constraint firstItem="pob-qB-RQF" firstAttribute="leading" secondItem="1nR-8g-RPG" secondAttribute="leading" id="dAO-9j-UPU"/>
+                            <constraint firstItem="4fa-OX-gQP" firstAttribute="leading" secondItem="1nR-8g-RPG" secondAttribute="leading" id="xq7-Re-vh5"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ACTIVITY" image="icon-drops" id="8qq-Jp-xHc" customClass="RAMAnimatedTabBarItem" customModule="LetsDrop" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
@@ -156,7 +217,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="328" y="1880"/>
+            <point key="canvasLocation" x="699" y="1880"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="lJG-QT-bnw">
@@ -172,8 +233,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="iV1-TC-aY6" kind="relationship" relationship="viewControllers" id="8BB-Dk-Xg7"/>
-                        <segue destination="B8s-sH-AnL" kind="relationship" relationship="viewControllers" id="weC-LC-rq9"/>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="H27-Pf-2ad"/>
+                        <segue destination="B8s-sH-AnL" kind="relationship" relationship="viewControllers" id="weC-LC-rq9"/>
                         <segue destination="ax6-3e-MfZ" kind="relationship" relationship="viewControllers" id="6Gi-Oc-e6W"/>
                     </connections>
                 </tabBarController>
