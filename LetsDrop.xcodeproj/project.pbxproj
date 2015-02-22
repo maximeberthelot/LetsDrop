@@ -46,6 +46,7 @@
 		C15A46551A9A40760012CE29 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463B1A9A40760012CE29 /* TransitionManager.swift */; };
 		C15A46561A9A40760012CE29 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463C1A9A40760012CE29 /* TransitionZoom.swift */; };
 		C15A46571A9A40760012CE29 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463D1A9A40760012CE29 /* UnwindSegue.swift */; };
+		C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */; };
 		F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C11A9A267D00707417 /* AppDelegate.swift */; };
 		F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */; };
 		F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C61A9A267D00707417 /* ViewController.swift */; };
@@ -155,6 +156,8 @@
 		C15A463B1A9A40760012CE29 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		C15A463C1A9A40760012CE29 /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		C15A463D1A9A40760012CE29 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
+		C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
+		C15A465B1A9A4FA70012CE29 /* LetsDrop-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LetsDrop-Bridging-Header.h"; path = "LetsDrop/LetsDrop-Bridging-Header.h"; sourceTree = "<group>"; };
 		F9F6E3BC1A9A267D00707417 /* LetsDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6E3C01A9A267D00707417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6E3C11A9A267D00707417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -266,9 +269,18 @@
 			path = Spring;
 			sourceTree = "<group>";
 		};
+		C15A465A1A9A4F880012CE29 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		F9F6E3B31A9A267D00707417 = {
 			isa = PBXGroup;
 			children = (
+				C15A465B1A9A4FA70012CE29 /* LetsDrop-Bridging-Header.h */,
 				C15A45F41A9A37700012CE29 /* Alamofire.xcodeproj */,
 				F9F6E3BE1A9A267D00707417 /* LetsDrop */,
 				F9F6E3D71A9A267D00707417 /* LetsDropTests */,
@@ -292,6 +304,7 @@
 				F9F6E3C11A9A267D00707417 /* AppDelegate.swift */,
 				F9F6E3C61A9A267D00707417 /* ViewController.swift */,
 				F9F6E3C81A9A267D00707417 /* Main.storyboard */,
+				C15A465A1A9A4F880012CE29 /* Helpers */,
 				C15A45F01A9A334B0012CE29 /* Login */,
 				F9F6E3CB1A9A267D00707417 /* Images.xcassets */,
 				F9F6E3CD1A9A267D00707417 /* LaunchScreen.xib */,
@@ -487,6 +500,7 @@
 				C15A46411A9A40760012CE29 /* DesignableImageView.swift in Sources */,
 				C15A45F31A9A33AC0012CE29 /* LoginViewController.swift in Sources */,
 				C15A46511A9A40760012CE29 /* SpringLabel.swift in Sources */,
+				C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */,
 				C15A463F1A9A40760012CE29 /* Data.swift in Sources */,
 				C15A46461A9A40760012CE29 /* DesignableView.swift in Sources */,
 				C15A464A1A9A40760012CE29 /* LoadingView.swift in Sources */,
@@ -636,6 +650,7 @@
 				INFOPLIST_FILE = LetsDrop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LetsDrop/LetsDrop-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -646,6 +661,7 @@
 				INFOPLIST_FILE = LetsDrop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LetsDrop/LetsDrop-Bridging-Header.h";
 			};
 			name = Release;
 		};
