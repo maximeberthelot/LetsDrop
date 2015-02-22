@@ -24,7 +24,6 @@
 		F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C61A9A267D00707417 /* ViewController.swift */; };
 		F9F6E3CA1A9A267D00707417 /* navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F6E3C81A9A267D00707417 /* navigation.storyboard */; };
 		F9F6E3CC1A9A267D00707417 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9F6E3CB1A9A267D00707417 /* Images.xcassets */; };
-		F9F6E3CF1A9A267D00707417 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9F6E3CD1A9A267D00707417 /* LaunchScreen.xib */; };
 		F9F6E3DB1A9A267D00707417 /* LetsDropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3DA1A9A267D00707417 /* LetsDropTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +57,6 @@
 		F9F6E3C61A9A267D00707417 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F9F6E3C91A9A267D00707417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/navigation.storyboard; sourceTree = "<group>"; };
 		F9F6E3CB1A9A267D00707417 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F9F6E3CE1A9A267D00707417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F9F6E3D41A9A267D00707417 /* LetsDropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetsDropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6E3D91A9A267D00707417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6E3DA1A9A267D00707417 /* LetsDropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsDropTests.swift; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
 				F94BF8471A9A3E6B00E33852 /* Views */,
 				F9F6E3CB1A9A267D00707417 /* Images.xcassets */,
-				F9F6E3CD1A9A267D00707417 /* LaunchScreen.xib */,
 				F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */,
 				F9F6E3BF1A9A267D00707417 /* Supporting Files */,
 			);
@@ -330,7 +327,6 @@
 				F9F6E3CA1A9A267D00707417 /* navigation.storyboard in Resources */,
 				F94BF8541A9A426B00E33852 /* DroppedViewController.xib in Resources */,
 				F94BF8521A9A424700E33852 /* ReceivedViewController.xib in Resources */,
-				F9F6E3CF1A9A267D00707417 /* LaunchScreen.xib in Resources */,
 				F9F6E3CC1A9A267D00707417 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,14 +386,6 @@
 				F9F6E3C91A9A267D00707417 /* Base */,
 			);
 			name = navigation.storyboard;
-			sourceTree = "<group>";
-		};
-		F9F6E3CD1A9A267D00707417 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9F6E3CE1A9A267D00707417 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
