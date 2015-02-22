@@ -10,6 +10,16 @@
 		C15A45EF1A9A33460012CE29 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15A45EE1A9A33460012CE29 /* login.storyboard */; };
 		C15A45F31A9A33AC0012CE29 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45F21A9A33AC0012CE29 /* LoginViewController.swift */; };
 		C15A46061A9A38650012CE29 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C15A45FC1A9A37700012CE29 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C15A46151A9A400A0012CE29 /* Lolita ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A460B1A9A400A0012CE29 /* Lolita ExtraLight.otf */; };
+		C15A46161A9A400A0012CE29 /* Lolita SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A460C1A9A400A0012CE29 /* Lolita SemiBold.otf */; };
+		C15A46171A9A400A0012CE29 /* LolitaBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A460D1A9A400A0012CE29 /* LolitaBlack.otf */; };
+		C15A46181A9A400A0012CE29 /* LolitaBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A460E1A9A400A0012CE29 /* LolitaBold.otf */; };
+		C15A46191A9A400A0012CE29 /* LolitaBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A460F1A9A400A0012CE29 /* LolitaBook.otf */; };
+		C15A461A1A9A400A0012CE29 /* LolitaHeavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A46101A9A400A0012CE29 /* LolitaHeavy.otf */; };
+		C15A461B1A9A400A0012CE29 /* LolitaLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A46111A9A400A0012CE29 /* LolitaLight.otf */; };
+		C15A461C1A9A400A0012CE29 /* LolitaMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A46121A9A400A0012CE29 /* LolitaMedium.otf */; };
+		C15A461D1A9A400A0012CE29 /* LolitaThin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A46131A9A400A0012CE29 /* LolitaThin.otf */; };
+		C15A461E1A9A400A0012CE29 /* LolitaUltra.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A46141A9A400A0012CE29 /* LolitaUltra.otf */; };
 		F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C11A9A267D00707417 /* AppDelegate.swift */; };
 		F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */; };
 		F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C61A9A267D00707417 /* ViewController.swift */; };
@@ -82,6 +92,16 @@
 		C15A45EE1A9A33460012CE29 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		C15A45F21A9A33AC0012CE29 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C15A45F41A9A37700012CE29 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Libs/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		C15A460B1A9A400A0012CE29 /* Lolita ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lolita ExtraLight.otf"; sourceTree = "<group>"; };
+		C15A460C1A9A400A0012CE29 /* Lolita SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lolita SemiBold.otf"; sourceTree = "<group>"; };
+		C15A460D1A9A400A0012CE29 /* LolitaBlack.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LolitaBlack.otf; sourceTree = "<group>"; };
+		C15A460E1A9A400A0012CE29 /* LolitaBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LolitaBold.otf; sourceTree = "<group>"; };
+		C15A460F1A9A400A0012CE29 /* LolitaBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LolitaBook.otf; sourceTree = "<group>"; };
+		C15A46101A9A400A0012CE29 /* LolitaHeavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LolitaHeavy.otf; sourceTree = "<group>"; };
+		C15A46111A9A400A0012CE29 /* LolitaLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LolitaLight.otf; sourceTree = "<group>"; };
+		C15A46121A9A400A0012CE29 /* LolitaMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LolitaMedium.otf; sourceTree = "<group>"; };
+		C15A46131A9A400A0012CE29 /* LolitaThin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LolitaThin.otf; sourceTree = "<group>"; };
+		C15A46141A9A400A0012CE29 /* LolitaUltra.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LolitaUltra.otf; sourceTree = "<group>"; };
 		F9F6E3BC1A9A267D00707417 /* LetsDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6E3C01A9A267D00707417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6E3C11A9A267D00707417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +153,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C15A46091A9A400A0012CE29 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				C15A460A1A9A400A0012CE29 /* Fonts */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		C15A460A1A9A400A0012CE29 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C15A460B1A9A400A0012CE29 /* Lolita ExtraLight.otf */,
+				C15A460C1A9A400A0012CE29 /* Lolita SemiBold.otf */,
+				C15A460D1A9A400A0012CE29 /* LolitaBlack.otf */,
+				C15A460E1A9A400A0012CE29 /* LolitaBold.otf */,
+				C15A460F1A9A400A0012CE29 /* LolitaBook.otf */,
+				C15A46101A9A400A0012CE29 /* LolitaHeavy.otf */,
+				C15A46111A9A400A0012CE29 /* LolitaLight.otf */,
+				C15A46121A9A400A0012CE29 /* LolitaMedium.otf */,
+				C15A46131A9A400A0012CE29 /* LolitaThin.otf */,
+				C15A46141A9A400A0012CE29 /* LolitaUltra.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		F9F6E3B31A9A267D00707417 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +200,7 @@
 		F9F6E3BE1A9A267D00707417 /* LetsDrop */ = {
 			isa = PBXGroup;
 			children = (
+				C15A46091A9A400A0012CE29 /* Ressources */,
 				F9F6E3C11A9A267D00707417 /* AppDelegate.swift */,
 				F9F6E3C61A9A267D00707417 /* ViewController.swift */,
 				F9F6E3C81A9A267D00707417 /* Main.storyboard */,
@@ -311,10 +357,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C15A46151A9A400A0012CE29 /* Lolita ExtraLight.otf in Resources */,
+				C15A461E1A9A400A0012CE29 /* LolitaUltra.otf in Resources */,
 				C15A45EF1A9A33460012CE29 /* login.storyboard in Resources */,
+				C15A46191A9A400A0012CE29 /* LolitaBook.otf in Resources */,
 				F9F6E3CA1A9A267D00707417 /* Main.storyboard in Resources */,
+				C15A461A1A9A400A0012CE29 /* LolitaHeavy.otf in Resources */,
+				C15A461D1A9A400A0012CE29 /* LolitaThin.otf in Resources */,
+				C15A461C1A9A400A0012CE29 /* LolitaMedium.otf in Resources */,
+				C15A461B1A9A400A0012CE29 /* LolitaLight.otf in Resources */,
+				C15A46181A9A400A0012CE29 /* LolitaBold.otf in Resources */,
 				F9F6E3CF1A9A267D00707417 /* LaunchScreen.xib in Resources */,
+				C15A46161A9A400A0012CE29 /* Lolita SemiBold.otf in Resources */,
 				F9F6E3CC1A9A267D00707417 /* Images.xcassets in Resources */,
+				C15A46171A9A400A0012CE29 /* LolitaBlack.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
