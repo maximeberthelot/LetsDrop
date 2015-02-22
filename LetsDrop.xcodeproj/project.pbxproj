@@ -301,10 +301,10 @@
 			isa = PBXGroup;
 			children = (
 				C15A46091A9A400A0012CE29 /* Ressources */,
+				C15A465A1A9A4F880012CE29 /* Helpers */,
 				F9F6E3C11A9A267D00707417 /* AppDelegate.swift */,
 				F9F6E3C61A9A267D00707417 /* ViewController.swift */,
 				F9F6E3C81A9A267D00707417 /* Main.storyboard */,
-				C15A465A1A9A4F880012CE29 /* Helpers */,
 				C15A45F01A9A334B0012CE29 /* Login */,
 				F9F6E3CB1A9A267D00707417 /* Images.xcassets */,
 				F9F6E3CD1A9A267D00707417 /* LaunchScreen.xib */,
