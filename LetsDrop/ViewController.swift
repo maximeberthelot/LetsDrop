@@ -16,21 +16,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let (dic, error) = Locksmith.loadDataForUserAccount(userAccount)
-        if error == nil {
-            if dic!["id"] != nil {
-                // user is already logged ins
-                println("already logged : \(dic)")
-                
-            }
-        } else {
-            println("not logged")
-        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        // Checking if userdata is already stored in Keychain
+        let (dic, error) = Locksmith.loadDataForUserAccount(userAccount)
+        
+        if error == nil {
+            
+            if dic!["id"] != nil {
+                
+                // user is already logged in
+                // Loading app
+                var loginStoryboard = UIStoryboard(name: "navigation", bundle: nil)
+                var controller = loginStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
+                controller.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+                self.presentViewController(controller, animated: true, completion: nil)
+                
+            }
+        } else {
+            
+            println("not logged")
+            
+        }
+
     }
     
     
