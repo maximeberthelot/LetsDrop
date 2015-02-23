@@ -12,10 +12,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        println("hello")
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,9 +20,8 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func signUpButton(sender: AnyObject) {
+    @IBAction func signInButton(sender: AnyObject) {
         
-        println("lolol")
         // Load loginStoryboard and present it
         var loginStoryboard = UIStoryboard(name: "login", bundle: nil)
         var controller = loginStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
@@ -34,6 +29,15 @@ class ViewController: UIViewController {
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
+    @IBAction func signUpButton(sender: AnyObject) {
+        // Load loginStoryboard and present it
+        var signUpStoryboard = UIStoryboard(name: "signUp", bundle: nil)
+        var controller = signUpStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
+        controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+        
+    }
     
 }
 
