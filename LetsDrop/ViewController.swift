@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewViewController: UIViewController {
+class ViewController: UIViewController {
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        println("hello")
         
     }
 
@@ -24,20 +24,16 @@ class ViewViewController: UIViewController {
     }
     
     
-    @IBAction func signInButton(sender: AnyObject) {
+    @IBAction func signUpButton(sender: AnyObject) {
         
+        println("lolol")
         // Load loginStoryboard and present it
         var loginStoryboard = UIStoryboard(name: "login", bundle: nil)
         var controller = loginStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
         controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(controller, animated: true, completion: nil)
-        
     }
-    @IBAction func SignUpButton(sender: AnyObject) {
-        
-        
-    }
-
-
+    
+    
 }
 

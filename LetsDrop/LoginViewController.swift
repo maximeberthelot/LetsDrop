@@ -16,20 +16,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passView: DesignableView!
     @IBOutlet weak var usernameTextField: DesignableTextField!
     @IBOutlet weak var passwordTextField: DesignableTextField!
-    
     @IBOutlet weak var errorLabel: DesignableLabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
         // Set animation for the input field
         logView.animation = "zoomIn"
         logView.delay = 1
-        
         
         // Set animation for the transition to password input
         passView.animation = "zoomIn"

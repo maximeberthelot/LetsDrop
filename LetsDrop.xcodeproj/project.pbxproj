@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C12D27781A9AAA730086CE66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12D27761A9AAA730086CE66 /* Main.storyboard */; };
+		C12D277B1A9AAA830086CE66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C12D27791A9AAA830086CE66 /* LaunchScreen.xib */; };
+		C1493B6F1A9AA8DE0013A7AD /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1493B641A9AA8DE0013A7AD /* RAMBounceAnimation.swift */; };
+		C1493B701A9AA8DE0013A7AD /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1493B661A9AA8DE0013A7AD /* RAMFrameItemAnimation.swift */; };
+		C1493B711A9AA8DE0013A7AD /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1493B681A9AA8DE0013A7AD /* RAMFumeAnimation.swift */; };
+		C1493B721A9AA8DE0013A7AD /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1493B6A1A9AA8DE0013A7AD /* RAMRotationAnimation.swift */; };
+		C1493B731A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1493B6C1A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift */; };
+		C1493B741A9AA8DE0013A7AD /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1493B6D1A9AA8DE0013A7AD /* RAMAnimatedTabBarController.swift */; };
+		C1493B751A9AA8DE0013A7AD /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1493B6E1A9AA8DE0013A7AD /* RAMItemAnimationProtocol.swift */; };
 		C15A45EF1A9A33460012CE29 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15A45EE1A9A33460012CE29 /* login.storyboard */; };
 		C15A45F31A9A33AC0012CE29 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45F21A9A33AC0012CE29 /* LoginViewController.swift */; };
-		C15A46061A9A38650012CE29 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C15A45FC1A9A37700012CE29 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C15A46151A9A400A0012CE29 /* Lolita ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A460B1A9A400A0012CE29 /* Lolita ExtraLight.otf */; };
 		C15A46161A9A400A0012CE29 /* Lolita SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A460C1A9A400A0012CE29 /* Lolita SemiBold.otf */; };
 		C15A46171A9A400A0012CE29 /* LolitaBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A460D1A9A400A0012CE29 /* LolitaBlack.otf */; };
@@ -47,13 +55,6 @@
 		C15A46561A9A40760012CE29 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463C1A9A40760012CE29 /* TransitionZoom.swift */; };
 		C15A46571A9A40760012CE29 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463D1A9A40760012CE29 /* UnwindSegue.swift */; };
 		C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */; };
-		C1DE2EAD1A9AA336007025CB /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DE2EA21A9AA336007025CB /* RAMBounceAnimation.swift */; };
-		C1DE2EAE1A9AA336007025CB /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DE2EA41A9AA336007025CB /* RAMFrameItemAnimation.swift */; };
-		C1DE2EAF1A9AA336007025CB /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DE2EA61A9AA336007025CB /* RAMFumeAnimation.swift */; };
-		C1DE2EB01A9AA336007025CB /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DE2EA81A9AA336007025CB /* RAMRotationAnimation.swift */; };
-		C1DE2EB11A9AA336007025CB /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DE2EAA1A9AA336007025CB /* RAMTransitionItemAnimation.swift */; };
-		C1DE2EB21A9AA336007025CB /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DE2EAB1A9AA336007025CB /* RAMAnimatedTabBarController.swift */; };
-		C1DE2EB31A9AA336007025CB /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DE2EAC1A9AA336007025CB /* RAMItemAnimationProtocol.swift */; };
 		F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C11A9A267D00707417 /* AppDelegate.swift */; };
 		F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */; };
 		F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C61A9A267D00707417 /* ViewController.swift */; };
@@ -63,41 +64,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C15A45FB1A9A37700012CE29 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C15A45F41A9A37700012CE29 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		C15A45FD1A9A37700012CE29 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C15A45F41A9A37700012CE29 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire OSX";
-		};
-		C15A45FF1A9A37700012CE29 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C15A45F41A9A37700012CE29 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		C15A46011A9A37700012CE29 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C15A45F41A9A37700012CE29 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire OSX Tests";
-		};
-		C15A46031A9A37D10012CE29 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C15A45F41A9A37700012CE29 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
 		F9F6E3D51A9A267D00707417 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9F6E3B41A9A267D00707417 /* Project object */;
@@ -107,24 +73,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		C15A46051A9A383F0012CE29 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C15A46061A9A38650012CE29 /* Alamofire.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		C12D27771A9AAA730086CE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C12D277A1A9AAA830086CE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C1493B641A9AA8DE0013A7AD /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		C1493B661A9AA8DE0013A7AD /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		C1493B681A9AA8DE0013A7AD /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		C1493B6A1A9AA8DE0013A7AD /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		C1493B6C1A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
+		C1493B6D1A9AA8DE0013A7AD /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		C1493B6E1A9AA8DE0013A7AD /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
 		C15A45EE1A9A33460012CE29 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		C15A45F21A9A33AC0012CE29 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C15A45F41A9A37700012CE29 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Libs/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C15A460B1A9A400A0012CE29 /* Lolita ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lolita ExtraLight.otf"; sourceTree = "<group>"; };
 		C15A460C1A9A400A0012CE29 /* Lolita SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lolita SemiBold.otf"; sourceTree = "<group>"; };
 		C15A460D1A9A400A0012CE29 /* LolitaBlack.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LolitaBlack.otf; sourceTree = "<group>"; };
@@ -164,13 +124,6 @@
 		C15A463D1A9A40760012CE29 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 		C15A465B1A9A4FA70012CE29 /* LetsDrop-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LetsDrop-Bridging-Header.h"; path = "LetsDrop/LetsDrop-Bridging-Header.h"; sourceTree = "<group>"; };
-		C1DE2EA21A9AA336007025CB /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
-		C1DE2EA41A9AA336007025CB /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
-		C1DE2EA61A9AA336007025CB /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
-		C1DE2EA81A9AA336007025CB /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
-		C1DE2EAA1A9AA336007025CB /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
-		C1DE2EAB1A9AA336007025CB /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
-		C1DE2EAC1A9AA336007025CB /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
 		F9F6E3BC1A9A267D00707417 /* LetsDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6E3C01A9A267D00707417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6E3C11A9A267D00707417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +154,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1493B611A9AA8DE0013A7AD /* RAMAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				C1493B621A9AA8DE0013A7AD /* Animations */,
+				C1493B6D1A9AA8DE0013A7AD /* RAMAnimatedTabBarController.swift */,
+				C1493B6E1A9AA8DE0013A7AD /* RAMItemAnimationProtocol.swift */,
+			);
+			path = RAMAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+		C1493B621A9AA8DE0013A7AD /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C1493B631A9AA8DE0013A7AD /* BounceAnimation */,
+				C1493B651A9AA8DE0013A7AD /* FrameAnimation */,
+				C1493B671A9AA8DE0013A7AD /* FumeAnimation */,
+				C1493B691A9AA8DE0013A7AD /* RotationAnimation */,
+				C1493B6B1A9AA8DE0013A7AD /* TransitionAniamtions */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		C1493B631A9AA8DE0013A7AD /* BounceAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C1493B641A9AA8DE0013A7AD /* RAMBounceAnimation.swift */,
+			);
+			path = BounceAnimation;
+			sourceTree = "<group>";
+		};
+		C1493B651A9AA8DE0013A7AD /* FrameAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C1493B661A9AA8DE0013A7AD /* RAMFrameItemAnimation.swift */,
+			);
+			path = FrameAnimation;
+			sourceTree = "<group>";
+		};
+		C1493B671A9AA8DE0013A7AD /* FumeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C1493B681A9AA8DE0013A7AD /* RAMFumeAnimation.swift */,
+			);
+			path = FumeAnimation;
+			sourceTree = "<group>";
+		};
+		C1493B691A9AA8DE0013A7AD /* RotationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C1493B6A1A9AA8DE0013A7AD /* RAMRotationAnimation.swift */,
+			);
+			path = RotationAnimation;
+			sourceTree = "<group>";
+		};
+		C1493B6B1A9AA8DE0013A7AD /* TransitionAniamtions */ = {
+			isa = PBXGroup;
+			children = (
+				C1493B6C1A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift */,
+			);
+			path = TransitionAniamtions;
+			sourceTree = "<group>";
+		};
 		C15A45F01A9A334B0012CE29 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,20 +225,10 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
-		C15A45F51A9A37700012CE29 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C15A45FC1A9A37700012CE29 /* Alamofire.framework */,
-				C15A45FE1A9A37700012CE29 /* Alamofire.framework */,
-				C15A46001A9A37700012CE29 /* Alamofire iOS Tests.xctest */,
-				C15A46021A9A37700012CE29 /* Alamofire OSX Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C15A46091A9A400A0012CE29 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				C1493B611A9AA8DE0013A7AD /* RAMAnimatedTabBarController */,
 				C15A46221A9A40760012CE29 /* Spring */,
 				C15A460A1A9A400A0012CE29 /* Fonts */,
 			);
@@ -289,73 +294,10 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		C1DE2E9F1A9AA336007025CB /* RAMAnimatedTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				C1DE2EA01A9AA336007025CB /* Animations */,
-				C1DE2EAB1A9AA336007025CB /* RAMAnimatedTabBarController.swift */,
-				C1DE2EAC1A9AA336007025CB /* RAMItemAnimationProtocol.swift */,
-			);
-			path = RAMAnimatedTabBarController;
-			sourceTree = "<group>";
-		};
-		C1DE2EA01A9AA336007025CB /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				C1DE2EA11A9AA336007025CB /* BounceAnimation */,
-				C1DE2EA31A9AA336007025CB /* FrameAnimation */,
-				C1DE2EA51A9AA336007025CB /* FumeAnimation */,
-				C1DE2EA71A9AA336007025CB /* RotationAnimation */,
-				C1DE2EA91A9AA336007025CB /* TransitionAniamtions */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		C1DE2EA11A9AA336007025CB /* BounceAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				C1DE2EA21A9AA336007025CB /* RAMBounceAnimation.swift */,
-			);
-			path = BounceAnimation;
-			sourceTree = "<group>";
-		};
-		C1DE2EA31A9AA336007025CB /* FrameAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				C1DE2EA41A9AA336007025CB /* RAMFrameItemAnimation.swift */,
-			);
-			path = FrameAnimation;
-			sourceTree = "<group>";
-		};
-		C1DE2EA51A9AA336007025CB /* FumeAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				C1DE2EA61A9AA336007025CB /* RAMFumeAnimation.swift */,
-			);
-			path = FumeAnimation;
-			sourceTree = "<group>";
-		};
-		C1DE2EA71A9AA336007025CB /* RotationAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				C1DE2EA81A9AA336007025CB /* RAMRotationAnimation.swift */,
-			);
-			path = RotationAnimation;
-			sourceTree = "<group>";
-		};
-		C1DE2EA91A9AA336007025CB /* TransitionAniamtions */ = {
-			isa = PBXGroup;
-			children = (
-				C1DE2EAA1A9AA336007025CB /* RAMTransitionItemAnimation.swift */,
-			);
-			path = TransitionAniamtions;
-			sourceTree = "<group>";
-		};
 		F9F6E3B31A9A267D00707417 = {
 			isa = PBXGroup;
 			children = (
 				C15A465B1A9A4FA70012CE29 /* LetsDrop-Bridging-Header.h */,
-				C15A45F41A9A37700012CE29 /* Alamofire.xcodeproj */,
 				F9F6E3BE1A9A267D00707417 /* LetsDrop */,
 				F9F6E3D71A9A267D00707417 /* LetsDropTests */,
 				F9F6E3BD1A9A267D00707417 /* Products */,
@@ -374,12 +316,13 @@
 		F9F6E3BE1A9A267D00707417 /* LetsDrop */ = {
 			isa = PBXGroup;
 			children = (
-				C1DE2E9F1A9AA336007025CB /* RAMAnimatedTabBarController */,
 				C15A46091A9A400A0012CE29 /* Ressources */,
 				C15A465A1A9A4F880012CE29 /* Helpers */,
 				F9F6E3C11A9A267D00707417 /* AppDelegate.swift */,
 				F9F6E3C61A9A267D00707417 /* ViewController.swift */,
 				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
+				C12D27761A9AAA730086CE66 /* Main.storyboard */,
+				C12D27791A9AAA830086CE66 /* LaunchScreen.xib */,
 				C15A45F01A9A334B0012CE29 /* Login */,
 				F9F6E3CB1A9A267D00707417 /* Images.xcassets */,
 				F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */,
@@ -423,12 +366,10 @@
 				F9F6E3B81A9A267D00707417 /* Sources */,
 				F9F6E3B91A9A267D00707417 /* Frameworks */,
 				F9F6E3BA1A9A267D00707417 /* Resources */,
-				C15A46051A9A383F0012CE29 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C15A46041A9A37D10012CE29 /* PBXTargetDependency */,
 			);
 			name = LetsDrop;
 			productName = LetsDrop;
@@ -482,12 +423,6 @@
 			mainGroup = F9F6E3B31A9A267D00707417;
 			productRefGroup = F9F6E3BD1A9A267D00707417 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C15A45F51A9A37700012CE29 /* Products */;
-					ProjectRef = C15A45F41A9A37700012CE29 /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				F9F6E3BB1A9A267D00707417 /* LetsDrop */,
@@ -495,37 +430,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C15A45FC1A9A37700012CE29 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = C15A45FB1A9A37700012CE29 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C15A45FE1A9A37700012CE29 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = C15A45FD1A9A37700012CE29 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C15A46001A9A37700012CE29 /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = C15A45FF1A9A37700012CE29 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C15A46021A9A37700012CE29 /* Alamofire OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire OSX Tests.xctest";
-			remoteRef = C15A46011A9A37700012CE29 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F9F6E3BA1A9A267D00707417 /* Resources */ = {
@@ -535,6 +439,7 @@
 				C15A46151A9A400A0012CE29 /* Lolita ExtraLight.otf in Resources */,
 				C15A461E1A9A400A0012CE29 /* LolitaUltra.otf in Resources */,
 				C15A45EF1A9A33460012CE29 /* login.storyboard in Resources */,
+				C12D277B1A9AAA830086CE66 /* LaunchScreen.xib in Resources */,
 				C15A46191A9A400A0012CE29 /* LolitaBook.otf in Resources */,
 				F9F6E3CA1A9A267D00707417 /* navigation.storyboard in Resources */,
 				C15A461A1A9A400A0012CE29 /* LolitaHeavy.otf in Resources */,
@@ -543,6 +448,7 @@
 				C15A46481A9A40760012CE29 /* Info.plist in Resources */,
 				C15A464B1A9A40760012CE29 /* LoadingView.xib in Resources */,
 				C15A461B1A9A400A0012CE29 /* LolitaLight.otf in Resources */,
+				C12D27781A9AAA730086CE66 /* Main.storyboard in Resources */,
 				C15A46181A9A400A0012CE29 /* LolitaBold.otf in Resources */,
 				C15A46161A9A400A0012CE29 /* Lolita SemiBold.otf in Resources */,
 				F9F6E3CC1A9A267D00707417 /* Images.xcassets in Resources */,
@@ -566,7 +472,7 @@
 			files = (
 				C15A46561A9A40760012CE29 /* TransitionZoom.swift in Sources */,
 				C15A46541A9A40760012CE29 /* SpringView.swift in Sources */,
-				C1DE2EB31A9AA336007025CB /* RAMItemAnimationProtocol.swift in Sources */,
+				C1493B751A9AA8DE0013A7AD /* RAMItemAnimationProtocol.swift in Sources */,
 				C15A46471A9A40760012CE29 /* ImageLoader.swift in Sources */,
 				C15A464C1A9A40760012CE29 /* Misc.swift in Sources */,
 				C15A46501A9A40760012CE29 /* SpringImageView.swift in Sources */,
@@ -579,26 +485,26 @@
 				C15A46461A9A40760012CE29 /* DesignableView.swift in Sources */,
 				C15A464A1A9A40760012CE29 /* LoadingView.swift in Sources */,
 				C15A46401A9A40760012CE29 /* DesignableButton.swift in Sources */,
-				C1DE2EB01A9AA336007025CB /* RAMRotationAnimation.swift in Sources */,
+				C1493B721A9AA8DE0013A7AD /* RAMRotationAnimation.swift in Sources */,
 				C15A464F1A9A40760012CE29 /* SpringButton.swift in Sources */,
 				C15A464D1A9A40760012CE29 /* Spring.swift in Sources */,
 				C15A46441A9A40760012CE29 /* DesignableTextField.swift in Sources */,
 				F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */,
 				C15A46551A9A40760012CE29 /* TransitionManager.swift in Sources */,
 				C15A463E1A9A40760012CE29 /* BlurView.swift in Sources */,
-				C1DE2EAE1A9AA336007025CB /* RAMFrameItemAnimation.swift in Sources */,
+				C1493B701A9AA8DE0013A7AD /* RAMFrameItemAnimation.swift in Sources */,
 				C15A46431A9A40760012CE29 /* DesignableTabBarController.swift in Sources */,
 				F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */,
 				C15A46531A9A40760012CE29 /* SpringTextView.swift in Sources */,
 				C15A46451A9A40760012CE29 /* DesignableTextView.swift in Sources */,
-				C1DE2EB21A9AA336007025CB /* RAMAnimatedTabBarController.swift in Sources */,
-				C1DE2EB11A9AA336007025CB /* RAMTransitionItemAnimation.swift in Sources */,
+				C1493B741A9AA8DE0013A7AD /* RAMAnimatedTabBarController.swift in Sources */,
+				C1493B731A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift in Sources */,
 				C15A46421A9A40760012CE29 /* DesignableLabel.swift in Sources */,
 				F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */,
 				C15A464E1A9A40760012CE29 /* SpringAnimation.swift in Sources */,
-				C1DE2EAD1A9AA336007025CB /* RAMBounceAnimation.swift in Sources */,
+				C1493B6F1A9AA8DE0013A7AD /* RAMBounceAnimation.swift in Sources */,
 				C15A46571A9A40760012CE29 /* UnwindSegue.swift in Sources */,
-				C1DE2EAF1A9AA336007025CB /* RAMFumeAnimation.swift in Sources */,
+				C1493B711A9AA8DE0013A7AD /* RAMFumeAnimation.swift in Sources */,
 				C15A46491A9A40760012CE29 /* KeyboardAvoidingScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,11 +520,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C15A46041A9A37D10012CE29 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = C15A46031A9A37D10012CE29 /* PBXContainerItemProxy */;
-		};
 		F9F6E3D61A9A267D00707417 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F9F6E3BB1A9A267D00707417 /* LetsDrop */;
@@ -627,6 +528,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C12D27761A9AAA730086CE66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C12D27771A9AAA730086CE66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C12D27791A9AAA830086CE66 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C12D277A1A9AAA830086CE66 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
 		F9F6E3C81A9A267D00707417 /* navigation.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -718,6 +635,8 @@
 		F9F6E3DF1A9A267D00707417 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -725,6 +644,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LetsDrop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LetsDrop/LetsDrop-Bridging-Header.h";
@@ -734,6 +654,8 @@
 		F9F6E3E01A9A267D00707417 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -741,6 +663,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LetsDrop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LetsDrop/LetsDrop-Bridging-Header.h";
