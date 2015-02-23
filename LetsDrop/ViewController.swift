@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         // Checking if userdata is already stored in Keychain
         let (dic, error) = Locksmith.loadDataForUserAccount(userAccount)
         
-        if error == nil {
+        if dic != nil {
             
             if dic!["id"] != nil {
                 

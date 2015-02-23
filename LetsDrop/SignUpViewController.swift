@@ -104,17 +104,18 @@ class SignUpViewController: UIViewController {
                 println(id)
                 
                 let error = Locksmith.saveData(["id": "\(id)", "login": login, "password":password], forUserAccount: self.userAccount, inService: self.service)
-                
                 if error == nil {
-                    // Loading app
-                    var loginStoryboard = UIStoryboard(name: "navigation", bundle: nil)
+                    
+                    // Loading contact invitation manager
+                    var loginStoryboard = UIStoryboard(name: "inviteContacts", bundle: nil)
                     var controller = loginStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
-                    controller.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+                    controller.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
                     self.presentViewController(controller, animated: true, completion: nil)
                 }
             
             } else {
                 println("Fail during process")
+                println(data)
             }
         }
         
