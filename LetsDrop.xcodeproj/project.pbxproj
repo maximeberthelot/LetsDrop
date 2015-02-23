@@ -57,9 +57,12 @@
 		C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */; };
 		C1BF0FFC1A9B6C1400E7AC50 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
 		C1BF0FFD1A9B6C1400E7AC50 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C1BF10021A9B6D1900E7AC50 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10011A9B6D1900E7AC50 /* APIController.swift */; };
 		C1BF10041A9B6D8200E7AC50 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10031A9B6D8200E7AC50 /* SignUpViewController.swift */; };
 		C1BF10071A9B6D9D00E7AC50 /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1BF10061A9B6D9D00E7AC50 /* signUp.storyboard */; };
+		C1BF10091A9B7ACB00E7AC50 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10081A9B7ACB00E7AC50 /* SwiftyJSON.swift */; };
+		C1BF100C1A9B80EA00E7AC50 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100A1A9B80EA00E7AC50 /* Locksmith.swift */; };
+		C1BF100D1A9B80EA00E7AC50 /* LocksmithRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100B1A9B80EA00E7AC50 /* LocksmithRequest.swift */; };
+		C1BF100F1A9B835600E7AC50 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100E1A9B835600E7AC50 /* AuthHelper.swift */; };
 		F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C11A9A267D00707417 /* AppDelegate.swift */; };
 		F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */; };
 		F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C61A9A267D00707417 /* ViewController.swift */; };
@@ -179,9 +182,12 @@
 		C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 		C15A465B1A9A4FA70012CE29 /* LetsDrop-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LetsDrop-Bridging-Header.h"; path = "LetsDrop/LetsDrop-Bridging-Header.h"; sourceTree = "<group>"; };
 		C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		C1BF10011A9B6D1900E7AC50 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIController.swift; path = ../APIController.swift; sourceTree = "<group>"; };
 		C1BF10031A9B6D8200E7AC50 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C1BF10061A9B6D9D00E7AC50 /* signUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = signUp.storyboard; sourceTree = "<group>"; };
+		C1BF10081A9B7ACB00E7AC50 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		C1BF100A1A9B80EA00E7AC50 /* Locksmith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locksmith.swift; sourceTree = "<group>"; };
+		C1BF100B1A9B80EA00E7AC50 /* LocksmithRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithRequest.swift; sourceTree = "<group>"; };
+		C1BF100E1A9B835600E7AC50 /* AuthHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
 		F9F6E3BC1A9A267D00707417 /* LetsDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6E3C01A9A267D00707417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6E3C11A9A267D00707417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -287,6 +293,9 @@
 		C15A46091A9A400A0012CE29 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				C1BF100A1A9B80EA00E7AC50 /* Locksmith.swift */,
+				C1BF100B1A9B80EA00E7AC50 /* LocksmithRequest.swift */,
+				C1BF10081A9B7ACB00E7AC50 /* SwiftyJSON.swift */,
 				C1493B611A9AA8DE0013A7AD /* RAMAnimatedTabBarController */,
 				C15A46221A9A40760012CE29 /* Spring */,
 				C15A460A1A9A400A0012CE29 /* Fonts */,
@@ -349,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */,
+				C1BF100E1A9B835600E7AC50 /* AuthHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -400,7 +410,6 @@
 				C15A465A1A9A4F880012CE29 /* Helpers */,
 				F9F6E3C11A9A267D00707417 /* AppDelegate.swift */,
 				F9F6E3C61A9A267D00707417 /* ViewController.swift */,
-				C1BF10011A9B6D1900E7AC50 /* APIController.swift */,
 				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
 				C12D27761A9AAA730086CE66 /* Main.storyboard */,
 				C12D27791A9AAA830086CE66 /* LaunchScreen.xib */,
@@ -592,13 +601,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1BF100C1A9B80EA00E7AC50 /* Locksmith.swift in Sources */,
 				C15A46561A9A40760012CE29 /* TransitionZoom.swift in Sources */,
 				C15A46541A9A40760012CE29 /* SpringView.swift in Sources */,
 				C1493B751A9AA8DE0013A7AD /* RAMItemAnimationProtocol.swift in Sources */,
 				C15A46471A9A40760012CE29 /* ImageLoader.swift in Sources */,
+				C1BF100F1A9B835600E7AC50 /* AuthHelper.swift in Sources */,
 				C15A464C1A9A40760012CE29 /* Misc.swift in Sources */,
 				C15A46501A9A40760012CE29 /* SpringImageView.swift in Sources */,
 				C15A46521A9A40760012CE29 /* SpringTextField.swift in Sources */,
+				C1BF100D1A9B80EA00E7AC50 /* LocksmithRequest.swift in Sources */,
 				C15A46411A9A40760012CE29 /* DesignableImageView.swift in Sources */,
 				C15A45F31A9A33AC0012CE29 /* LoginViewController.swift in Sources */,
 				C15A46511A9A40760012CE29 /* SpringLabel.swift in Sources */,
@@ -606,7 +618,6 @@
 				C15A463F1A9A40760012CE29 /* Data.swift in Sources */,
 				C15A46461A9A40760012CE29 /* DesignableView.swift in Sources */,
 				C15A464A1A9A40760012CE29 /* LoadingView.swift in Sources */,
-				C1BF10021A9B6D1900E7AC50 /* APIController.swift in Sources */,
 				C15A46401A9A40760012CE29 /* DesignableButton.swift in Sources */,
 				C1493B721A9AA8DE0013A7AD /* RAMRotationAnimation.swift in Sources */,
 				C15A464F1A9A40760012CE29 /* SpringButton.swift in Sources */,
@@ -616,6 +627,7 @@
 				C15A46551A9A40760012CE29 /* TransitionManager.swift in Sources */,
 				C15A463E1A9A40760012CE29 /* BlurView.swift in Sources */,
 				C1493B701A9AA8DE0013A7AD /* RAMFrameItemAnimation.swift in Sources */,
+				C1BF10091A9B7ACB00E7AC50 /* SwiftyJSON.swift in Sources */,
 				C15A46431A9A40760012CE29 /* DesignableTabBarController.swift in Sources */,
 				F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */,
 				C1BF10041A9B6D8200E7AC50 /* SignUpViewController.swift in Sources */,

@@ -10,8 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let service = "appAuth"
+    let userAccount = "user"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let (dic, error) = Locksmith.loadDataForUserAccount(userAccount)
+        if error == nil {
+            if dic!["id"] != nil {
+                // user is already logged ins
+                println("already logged : \(dic)")
+                
+            }
+        } else {
+            println("not logged")
+        }
     }
 
     override func didReceiveMemoryWarning() {

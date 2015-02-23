@@ -12,6 +12,10 @@ import Alamofire
 
 class LoginViewController: UIViewController {
     
+    let service = "appAuth"
+    let userAccount = "user"
+    let key = "id"
+    
     @IBOutlet weak var logView: DesignableView!
     @IBOutlet weak var passView: DesignableView!
     @IBOutlet weak var usernameTextField: DesignableTextField!
@@ -61,42 +65,31 @@ class LoginViewController: UIViewController {
     
     @IBAction func signIn(sender: AnyObject) {
         
-        let salt = "LoZ7ClfCbcUhsna0JjVsA9KZhj4hU9gT6HzGbnTpnZsSzJZxFuiK"
         var login = usernameTextField.text
         var password = passwordTextField.text
         
-        var key = password.sha1()+"\(salt)"
-        key = key.sha1()
-        
         var httpUrl = "POST:login"
         
-        let signature:String = httpUrl.hmac(HMACAlgorithm.SHA1, key:key)
+        var signature = AuthHelper.getSignature(login, password: password, url: httpUrl)
         
-        println("key : \(key)")
-        println("signature : \(signature)")
-        
-        let URL = NSURL(string:"http://localhost/API/PHP06/API/login")!
-        
-        var mutableURLRequest = NSMutableURLRequest(URL: URL)
         let postString = "login=\(login)&password=\(password)"
         
-        mutableURLRequest.setValue("\(login):\(signature)", forHTTPHeaderField: "X-Authorization")
-        mutableURLRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-type")
-        mutableURLRequest.setValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
-        mutableURLRequest.HTTPMethod = "POST"
-        mutableURLRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        
-        
+        var mutableURLRequest = AuthHelper.buildRequest("http://localhost/API/PHP06/API/login", login: login, signature: signature, parameters: postString, verb: "POST", auth: true)
         
         let manager = Alamofire.Manager.sharedInstance
         let request = manager.request(mutableURLRequest)
-        request.responseString { (request, response, string, error) in
-            println(response!.statusCode)
-            println(string)
+        request.responseJSON { (request, response, data, error) in
             
             if response!.statusCode == 200 {
-                println("Logged In !")
+                // Sucessful signup
+                
+                let json = JSON(data!)
+                let id = json["data"]["id"].int!
+                println(json)
+                
+                let error = Locksmith.saveData(["id": "\(id)", "login": login, "password": password], forUserAccount: self.userAccount)
             } else {
+                
                 self.usernameTextField.becomeFirstResponder()
                 
                 self.errorLabel.animation = "fadeIn"
