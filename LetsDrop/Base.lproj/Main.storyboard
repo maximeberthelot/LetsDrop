@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="LolitaBold.otf">
+            <string>LolitaBold</string>
+        </mutableArray>
+        <mutableArray key="LolitaBook.otf">
+            <string>LolitaBook</string>
+            <string>LolitaBook</string>
+        </mutableArray>
+        <mutableArray key="LolitaMedium.otf">
+            <string>LolitaMedium</string>
+            <string>LolitaMedium</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Sign In" translatesAutoresizingMaskIntoConstraints="NO" id="YRy-Wh-6pD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="cLA-M3-GQS">
+                                <rect key="frame" x="133" y="134.5" width="54" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="OP7-mW-v3p"/>
+                                    <constraint firstAttribute="width" constant="54" id="q29-af-yVP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LET'S DROP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDS-ks-kBN">
+                                <rect key="frame" x="90.5" y="228.5" width="139.5" height="31"/>
+                                <fontDescription key="fontDescription" name="LolitaBold" family="Lolita" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="messaging will never be the same" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I55-kX-7Dg">
+                                <rect key="frame" x="87" y="263.5" width="146" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="BqZ-xs-fdK"/>
+                                    <constraint firstAttribute="height" constant="11" id="zg4-aZ-iSd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="surprise people as they wander" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXR-9j-Bu5">
+                                <rect key="frame" x="92" y="278.5" width="136" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="11" id="JTT-3d-vtk"/>
+                                    <constraint firstAttribute="width" constant="136" id="SfN-bD-Rza"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEx-Zn-IeH" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="101" y="311" width="118" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="0Dp-xY-w3l"/>
+                                    <constraint firstAttribute="height" constant="36" id="zdK-ey-lHM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LolitaBook" family="Lolita" pointSize="15"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.054901960784313725" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0vM-iE-x3w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bV7-XM-Nbe" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="101" y="360" width="118" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="ZNQ-qh-EqJ"/>
+                                    <constraint firstAttribute="width" constant="118" id="zCv-C2-gVu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LolitaBook" family="Lolita" pointSize="15"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="SignUpButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kja-5e-ruh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gXR-9j-Bu5" firstAttribute="top" secondItem="I55-kX-7Dg" secondAttribute="bottom" constant="4" id="4ym-v5-xIo"/>
+                            <constraint firstItem="YRy-Wh-6pD" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="CEY-LF-2Xf"/>
+                            <constraint firstItem="YRy-Wh-6pD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="CTK-6d-JV0"/>
+                            <constraint firstItem="I55-kX-7Dg" firstAttribute="top" secondItem="dDS-ks-kBN" secondAttribute="bottom" constant="4" id="Dct-cn-Zlv"/>
+                            <constraint firstItem="dDS-ks-kBN" firstAttribute="top" secondItem="cLA-M3-GQS" secondAttribute="bottom" constant="13" id="Djv-Rb-Iux"/>
+                            <constraint firstAttribute="centerX" secondItem="bV7-XM-Nbe" secondAttribute="centerX" id="LTA-As-2zc"/>
+                            <constraint firstAttribute="centerY" secondItem="gXR-9j-Bu5" secondAttribute="centerY" id="NH6-g5-3gq"/>
+                            <constraint firstAttribute="centerX" secondItem="yEx-Zn-IeH" secondAttribute="centerX" id="RaP-6O-D6M"/>
+                            <constraint firstAttribute="centerX" secondItem="cLA-M3-GQS" secondAttribute="centerX" id="SxQ-qC-xxn"/>
+                            <constraint firstAttribute="centerX" secondItem="dDS-ks-kBN" secondAttribute="centerX" id="VTB-mK-aY4"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="YRy-Wh-6pD" secondAttribute="bottom" id="a2H-cH-Kg9"/>
+                            <constraint firstAttribute="centerX" secondItem="gXR-9j-Bu5" secondAttribute="centerX" id="dGe-CE-eMf"/>
+                            <constraint firstAttribute="centerX" secondItem="I55-kX-7Dg" secondAttribute="centerX" id="f8o-Tf-bIx"/>
+                            <constraint firstAttribute="trailing" secondItem="YRy-Wh-6pD" secondAttribute="trailing" id="gLU-FS-hPE"/>
+                            <constraint firstItem="yEx-Zn-IeH" firstAttribute="top" secondItem="gXR-9j-Bu5" secondAttribute="bottom" constant="21.5" id="oz2-8r-rr6"/>
+                            <constraint firstItem="bV7-XM-Nbe" firstAttribute="top" secondItem="yEx-Zn-IeH" secondAttribute="bottom" constant="13" id="pPQ-rC-mr7"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background Sign In" width="320" height="568"/>
+        <image name="Logo" width="58" height="85"/>
+    </resources>
+</document>
