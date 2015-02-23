@@ -3,6 +3,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="LolitaMedium.otf">
+            <string>LolitaMedium</string>
+            <string>LolitaMedium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--MAP-->
         <scene sceneID="ufC-wZ-h7g">
@@ -134,7 +140,7 @@
                     <tabBarItem key="tabBarItem" title="SETTINGS" image="icon-settings" id="tEG-Mi-k0l" customClass="RAMAnimatedTabBarItem" customModule="LetsDrop" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" red="0.43529411759999997" green="0.81568627449999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.43529411764705883" green="0.81568627450980391" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
@@ -159,7 +165,7 @@
         <!--ACTIVITY-->
         <scene sceneID="o3a-0X-Tge">
             <objects>
-                <viewController id="B8s-sH-AnL" sceneMemberID="viewController">
+                <viewController id="B8s-sH-AnL" customClass="NavActViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qdO-91-ov7"/>
                         <viewControllerLayoutGuide type="bottom" id="yNl-u4-yHe"/>
@@ -182,14 +188,46 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-OX-gQP">
                                 <rect key="frame" x="0.0" y="89" width="320" height="430"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F52-az-H3f">
+                                <rect key="frame" x="0.0" y="51" width="141" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="Q52-Tc-h29"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="15"/>
+                                <state key="normal" title="RECEIVED">
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recBtn:" destination="B8s-sH-AnL" eventType="touchUpInside" id="de3-pQ-5c4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwF-sT-oQR">
+                                <rect key="frame" x="183" y="51" width="137" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Lgb-b2-66N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="15"/>
+                                <state key="normal" title="DROPPED">
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dropBtn:" destination="B8s-sH-AnL" eventType="touchUpInside" id="saE-7m-Qqs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="4fa-OX-gQP" secondAttribute="trailing" id="2bz-zh-Djh"/>
                             <constraint firstItem="pob-qB-RQF" firstAttribute="top" secondItem="1nR-8g-RPG" secondAttribute="top" id="3Zp-a6-L2w"/>
+                            <constraint firstItem="F52-az-H3f" firstAttribute="leading" secondItem="1nR-8g-RPG" secondAttribute="leading" id="3th-dc-MDR"/>
+                            <constraint firstAttribute="trailing" secondItem="EwF-sT-oQR" secondAttribute="trailing" id="9D3-Kc-XeE"/>
+                            <constraint firstItem="EwF-sT-oQR" firstAttribute="top" secondItem="qdO-91-ov7" secondAttribute="bottom" constant="33" id="Ah3-3l-Njj"/>
                             <constraint firstAttribute="trailing" secondItem="pob-qB-RQF" secondAttribute="trailing" id="FFy-Wf-HFt"/>
                             <constraint firstItem="4fa-OX-gQP" firstAttribute="top" secondItem="qdO-91-ov7" secondAttribute="bottom" constant="70" id="Kid-ZJ-i4J"/>
                             <constraint firstItem="yNl-u4-yHe" firstAttribute="top" secondItem="4fa-OX-gQP" secondAttribute="bottom" id="VNd-PR-iVb"/>
+                            <constraint firstItem="F52-az-H3f" firstAttribute="top" secondItem="qdO-91-ov7" secondAttribute="bottom" constant="33" id="Yzs-5M-AbP"/>
                             <constraint firstItem="pob-qB-RQF" firstAttribute="leading" secondItem="1nR-8g-RPG" secondAttribute="leading" id="dAO-9j-UPU"/>
                             <constraint firstItem="4fa-OX-gQP" firstAttribute="leading" secondItem="1nR-8g-RPG" secondAttribute="leading" id="xq7-Re-vh5"/>
                         </constraints>
@@ -204,6 +242,12 @@
                             <outlet property="animation" destination="g9z-4v-1ep" id="Cav-x2-r7h"/>
                         </connections>
                     </tabBarItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="dropBtn" destination="EwF-sT-oQR" id="f3s-Hg-157"/>
+                        <outlet property="recBtn" destination="F52-az-H3f" id="oqR-DU-CUS"/>
+                        <outlet property="scrollView" destination="4fa-OX-gQP" id="2mP-Jg-Eqa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wd7-yg-qpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="g9z-4v-1ep" customClass="RAMBounceAnimation" customModule="LetsDrop" customModuleProvider="target">

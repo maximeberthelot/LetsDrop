@@ -2,7 +2,7 @@
 //  ReceivedViewController.swift
 //  LetsDrop
 //
-//  Created by Maxime Berthelot on 22/02/2015.
+//  Created by Maxime Berthelot on 23/02/2015.
 //  Copyright (c) 2015 Maxime Berthelot. All rights reserved.
 //
 

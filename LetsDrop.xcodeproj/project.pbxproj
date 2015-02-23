@@ -63,6 +63,11 @@
 		C1BF100C1A9B80EA00E7AC50 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100A1A9B80EA00E7AC50 /* Locksmith.swift */; };
 		C1BF100D1A9B80EA00E7AC50 /* LocksmithRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100B1A9B80EA00E7AC50 /* LocksmithRequest.swift */; };
 		C1BF100F1A9B835600E7AC50 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100E1A9B835600E7AC50 /* AuthHelper.swift */; };
+		F9E1E0D21A9BBFE4004CF6F4 /* ReceivedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */; };
+		F9E1E0D61A9BC009004CF6F4 /* ReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */; };
+		F9E1E0D91A9BC026004CF6F4 /* DroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */; };
+		F9E1E0DB1A9BC036004CF6F4 /* DroppedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E0DA1A9BC036004CF6F4 /* DroppedViewController.xib */; };
+		F9E1E0DD1A9BC075004CF6F4 /* NavActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0DC1A9BC075004CF6F4 /* NavActViewController.swift */; };
 		F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C11A9A267D00707417 /* AppDelegate.swift */; };
 		F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */; };
 		F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C61A9A267D00707417 /* ViewController.swift */; };
@@ -188,6 +193,11 @@
 		C1BF100A1A9B80EA00E7AC50 /* Locksmith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locksmith.swift; sourceTree = "<group>"; };
 		C1BF100B1A9B80EA00E7AC50 /* LocksmithRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithRequest.swift; sourceTree = "<group>"; };
 		C1BF100E1A9B835600E7AC50 /* AuthHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
+		F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedViewController.xib; sourceTree = "<group>"; };
+		F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedViewController.swift; sourceTree = "<group>"; };
+		F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroppedViewController.swift; sourceTree = "<group>"; };
+		F9E1E0DA1A9BC036004CF6F4 /* DroppedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DroppedViewController.xib; sourceTree = "<group>"; };
+		F9E1E0DC1A9BC075004CF6F4 /* NavActViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavActViewController.swift; sourceTree = "<group>"; };
 		F9F6E3BC1A9A267D00707417 /* LetsDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6E3C01A9A267D00707417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6E3C11A9A267D00707417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -383,6 +393,34 @@
 			name = SignUp;
 			sourceTree = "<group>";
 		};
+		F9E1E0D31A9BBFEA004CF6F4 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E0D71A9BC00E004CF6F4 /* Dropped */,
+				F9E1E0D41A9BBFF5004CF6F4 /* Received */,
+				F9E1E0DC1A9BC075004CF6F4 /* NavActViewController.swift */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		F9E1E0D41A9BBFF5004CF6F4 /* Received */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */,
+				F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */,
+			);
+			name = Received;
+			sourceTree = "<group>";
+		};
+		F9E1E0D71A9BC00E004CF6F4 /* Dropped */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */,
+				F9E1E0DA1A9BC036004CF6F4 /* DroppedViewController.xib */,
+			);
+			name = Dropped;
+			sourceTree = "<group>";
+		};
 		F9F6E3B31A9A267D00707417 = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +451,7 @@
 				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
 				C12D27761A9AAA730086CE66 /* Main.storyboard */,
 				C12D27791A9AAA830086CE66 /* LaunchScreen.xib */,
+				F9E1E0D31A9BBFEA004CF6F4 /* Activity */,
 				C1BF10051A9B6D8800E7AC50 /* SignUp */,
 				C15A45F01A9A334B0012CE29 /* Login */,
 				F9F6E3CB1A9A267D00707417 /* Images.xcassets */,
@@ -567,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1BF10071A9B6D9D00E7AC50 /* signUp.storyboard in Resources */,
+				F9E1E0D21A9BBFE4004CF6F4 /* ReceivedViewController.xib in Resources */,
 				C15A46151A9A400A0012CE29 /* Lolita ExtraLight.otf in Resources */,
 				C15A461E1A9A400A0012CE29 /* LolitaUltra.otf in Resources */,
 				C15A45EF1A9A33460012CE29 /* login.storyboard in Resources */,
@@ -576,6 +616,7 @@
 				C15A461A1A9A400A0012CE29 /* LolitaHeavy.otf in Resources */,
 				C15A461D1A9A400A0012CE29 /* LolitaThin.otf in Resources */,
 				C15A461C1A9A400A0012CE29 /* LolitaMedium.otf in Resources */,
+				F9E1E0DB1A9BC036004CF6F4 /* DroppedViewController.xib in Resources */,
 				C15A46481A9A40760012CE29 /* Info.plist in Resources */,
 				C15A464B1A9A40760012CE29 /* LoadingView.xib in Resources */,
 				C15A461B1A9A400A0012CE29 /* LolitaLight.otf in Resources */,
@@ -630,6 +671,7 @@
 				C1BF10091A9B7ACB00E7AC50 /* SwiftyJSON.swift in Sources */,
 				C15A46431A9A40760012CE29 /* DesignableTabBarController.swift in Sources */,
 				F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */,
+				F9E1E0DD1A9BC075004CF6F4 /* NavActViewController.swift in Sources */,
 				C1BF10041A9B6D8200E7AC50 /* SignUpViewController.swift in Sources */,
 				C15A46531A9A40760012CE29 /* SpringTextView.swift in Sources */,
 				C15A46451A9A40760012CE29 /* DesignableTextView.swift in Sources */,
@@ -637,7 +679,9 @@
 				C1493B731A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift in Sources */,
 				C15A46421A9A40760012CE29 /* DesignableLabel.swift in Sources */,
 				F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */,
+				F9E1E0D91A9BC026004CF6F4 /* DroppedViewController.swift in Sources */,
 				C15A464E1A9A40760012CE29 /* SpringAnimation.swift in Sources */,
+				F9E1E0D61A9BC009004CF6F4 /* ReceivedViewController.swift in Sources */,
 				C1493B6F1A9AA8DE0013A7AD /* RAMBounceAnimation.swift in Sources */,
 				C15A46571A9A40760012CE29 /* UnwindSegue.swift in Sources */,
 				C1493B711A9AA8DE0013A7AD /* RAMFumeAnimation.swift in Sources */,
