@@ -4,6 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="LolitaBold.otf">
+            <string>LolitaBold</string>
+        </mutableArray>
         <mutableArray key="LolitaMedium.otf">
             <string>LolitaMedium</string>
             <string>LolitaMedium</string>
@@ -22,15 +25,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9YU-U5-EY5">
+                            <mapView multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YU-U5-EY5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                             </mapView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VcT-Ba-4Yn" customClass="DesignableView" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="21" y="35" width="277" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0T-XA-0Xz" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="226" y="12" width="43" height="41"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.74117647058823533" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Z2O-7F-0Qj"/>
+                                            <constraint firstAttribute="height" constant="40" id="qcd-Rw-fW0"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-locate">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="findMyLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y4A-Bc-PJT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdj-Ng-lEL" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="12" width="30" height="41"/>
+                                        <state key="normal" image="icon-search">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PICKUP A SPOT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mg-lF-wW6">
+                                        <rect key="frame" x="53" y="21" width="73" height="13.5"/>
+                                        <fontDescription key="fontDescription" name="LolitaBold" family="Lolita" pointSize="12"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.74117647060000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="0BC-vs-Txl"/>
+                                    <constraint firstItem="Zdj-Ng-lEL" firstAttribute="leading" secondItem="VcT-Ba-4Yn" secondAttribute="leading" constant="15" id="3h4-lE-y8p"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="Bfo-jI-cLb"/>
+                                    <constraint firstAttribute="height" constant="65" id="JDc-oy-cqP"/>
+                                    <constraint firstItem="8Mg-lF-wW6" firstAttribute="leading" secondItem="Zdj-Ng-lEL" secondAttribute="trailing" constant="20" id="cR5-oZ-MiX"/>
+                                    <constraint firstAttribute="centerY" secondItem="Zdj-Ng-lEL" secondAttribute="centerY" id="oMl-mK-OsX"/>
+                                    <constraint firstItem="8Mg-lF-wW6" firstAttribute="top" secondItem="w0T-XA-0Xz" secondAttribute="top" id="sTf-sn-adn"/>
+                                    <constraint firstAttribute="trailing" secondItem="w0T-XA-0Xz" secondAttribute="trailing" constant="15" id="uYI-sz-EZW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="33"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9YU-U5-EY5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="CFD-Vr-2FT"/>
                             <constraint firstAttribute="trailing" secondItem="9YU-U5-EY5" secondAttribute="trailing" id="F2a-H6-vpw"/>
+                            <constraint firstItem="VcT-Ba-4Yn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="Mdb-af-mLE"/>
+                            <constraint firstAttribute="trailing" secondItem="VcT-Ba-4Yn" secondAttribute="trailing" constant="20" id="VKb-hT-BvJ"/>
                             <constraint firstItem="9YU-U5-EY5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lsj-N9-wfN"/>
+                            <constraint firstItem="VcT-Ba-4Yn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="nOJ-1S-vsd"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9YU-U5-EY5" secondAttribute="bottom" id="sTH-qj-JWr"/>
                         </constraints>
                     </view>
@@ -46,7 +119,7 @@
                     </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="mapView" destination="9YU-U5-EY5" id="TTu-UZ-64o"/>
+                        <outlet property="mapView" destination="9YU-U5-EY5" id="dJ0-p7-Fh9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -61,7 +134,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="298" y="1880"/>
+            <point key="canvasLocation" x="297" y="1877"/>
         </scene>
         <!--CONTACTS-->
         <scene sceneID="4DT-fS-lad">
@@ -304,7 +377,9 @@
     <resources>
         <image name="icon-contacts" width="17" height="17"/>
         <image name="icon-drops" width="16" height="14"/>
+        <image name="icon-locate" width="18" height="17"/>
         <image name="icon-map" width="17" height="15"/>
+        <image name="icon-search" width="16" height="18"/>
         <image name="icon-settings" width="16" height="16"/>
     </resources>
 </document>
