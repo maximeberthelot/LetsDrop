@@ -68,6 +68,9 @@
 		F9E1E0D91A9BC026004CF6F4 /* DroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */; };
 		F9E1E0DB1A9BC036004CF6F4 /* DroppedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E0DA1A9BC036004CF6F4 /* DroppedViewController.xib */; };
 		F9E1E0DD1A9BC075004CF6F4 /* NavActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0DC1A9BC075004CF6F4 /* NavActViewController.swift */; };
+		F9E1E0E01A9BCC50004CF6F4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0DF1A9BCC50004CF6F4 /* MapViewController.swift */; };
+		F9E1E0E21A9BCE48004CF6F4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E1E0E11A9BCE48004CF6F4 /* MapKit.framework */; };
+		F9E1E0E41A9BCE54004CF6F4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E1E0E31A9BCE54004CF6F4 /* CoreLocation.framework */; };
 		F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C11A9A267D00707417 /* AppDelegate.swift */; };
 		F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */; };
 		F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C61A9A267D00707417 /* ViewController.swift */; };
@@ -198,6 +201,9 @@
 		F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroppedViewController.swift; sourceTree = "<group>"; };
 		F9E1E0DA1A9BC036004CF6F4 /* DroppedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DroppedViewController.xib; sourceTree = "<group>"; };
 		F9E1E0DC1A9BC075004CF6F4 /* NavActViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavActViewController.swift; sourceTree = "<group>"; };
+		F9E1E0DF1A9BCC50004CF6F4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F9E1E0E11A9BCE48004CF6F4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F9E1E0E31A9BCE54004CF6F4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F9F6E3BC1A9A267D00707417 /* LetsDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6E3C01A9A267D00707417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6E3C11A9A267D00707417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +221,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E1E0E41A9BCE54004CF6F4 /* CoreLocation.framework in Frameworks */,
+				F9E1E0E21A9BCE48004CF6F4 /* MapKit.framework in Frameworks */,
 				C1BF0FFC1A9B6C1400E7AC50 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,9 +429,19 @@
 			name = Dropped;
 			sourceTree = "<group>";
 		};
+		F9E1E0DE1A9BCC35004CF6F4 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E0DF1A9BCC50004CF6F4 /* MapViewController.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		F9F6E3B31A9A267D00707417 = {
 			isa = PBXGroup;
 			children = (
+				F9E1E0E31A9BCE54004CF6F4 /* CoreLocation.framework */,
+				F9E1E0E11A9BCE48004CF6F4 /* MapKit.framework */,
 				C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */,
 				C15A465B1A9A4FA70012CE29 /* LetsDrop-Bridging-Header.h */,
 				F9F6E3BE1A9A267D00707417 /* LetsDrop */,
@@ -451,6 +469,7 @@
 				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
 				C12D27761A9AAA730086CE66 /* Main.storyboard */,
 				C12D27791A9AAA830086CE66 /* LaunchScreen.xib */,
+				F9E1E0DE1A9BCC35004CF6F4 /* Map */,
 				F9E1E0D31A9BBFEA004CF6F4 /* Activity */,
 				C1BF10051A9B6D8800E7AC50 /* SignUp */,
 				C15A45F01A9A334B0012CE29 /* Login */,
@@ -655,6 +674,7 @@
 				C15A46411A9A40760012CE29 /* DesignableImageView.swift in Sources */,
 				C15A45F31A9A33AC0012CE29 /* LoginViewController.swift in Sources */,
 				C15A46511A9A40760012CE29 /* SpringLabel.swift in Sources */,
+				F9E1E0E01A9BCC50004CF6F4 /* MapViewController.swift in Sources */,
 				C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */,
 				C15A463F1A9A40760012CE29 /* Data.swift in Sources */,
 				C15A46461A9A40760012CE29 /* DesignableView.swift in Sources */,

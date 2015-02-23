@@ -13,7 +13,7 @@
         <!--MAP-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MapViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -21,7 +21,18 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9YU-U5-EY5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9YU-U5-EY5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="CFD-Vr-2FT"/>
+                            <constraint firstAttribute="trailing" secondItem="9YU-U5-EY5" secondAttribute="trailing" id="F2a-H6-vpw"/>
+                            <constraint firstItem="9YU-U5-EY5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lsj-N9-wfN"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9YU-U5-EY5" secondAttribute="bottom" id="sTH-qj-JWr"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="MAP" image="icon-map" id="zfu-f0-r4h" customClass="RAMAnimatedTabBarItem" customModule="LetsDrop" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
@@ -34,6 +45,9 @@
                         </connections>
                     </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapView" destination="9YU-U5-EY5" id="TTu-UZ-64o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <customObject id="6P2-Vb-wt0" customClass="RAMBounceAnimation" customModule="LetsDrop" customModuleProvider="target">
