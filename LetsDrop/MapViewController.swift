@@ -17,6 +17,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet var setButton: UIButton!
+    
     let manager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -27,6 +29,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         if CLLocationManager.authorizationStatus() == .NotDetermined {
             manager.requestAlwaysAuthorization()
         }
+        
+        setButton.layer.cornerRadius = 5
+        
+     
+        let pinImage: UIImageView = UIImageView(image: UIImage(named:"pin1"))
+        pinImage.center = (CGPointMake(self.view.center.x, self.view.center.y - pinImage.frame.height))
+        self.mapView.delegate = self
+        self.mapView.addSubview(pinImage)
         
         
         if CLLocationManager.locationServicesEnabled() {
@@ -68,9 +78,23 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
         
-        println("hey@")
+        var currentLocation = mapView.centerCoordinate
+        NSLog("Lon: \(currentLocation.longitude.description) Lat: \(currentLocation.latitude.description)")
+        //Convert lat & long
+        var longitude :CLLocationDegrees = Double(currentLocation.longitude)
+        var latitude :CLLocationDegrees = Double(currentLocation.latitude)
+        // push Lat & lon in var location
+        var location = CLLocation(latitude: latitude, longitude: longitude)
+        println(location)
         
-    }
+        CLGeocoder().reverseGeocodeLocation(location) {
+            (placemarks : [AnyObject]!, error : NSError!) in
+            if placemarks != nil {
+                let p = placemarks[0] as CLPlacemark
+                let s = ABCreateStringWithAddressDictionary(p.addressDictionary, false)
+                println("you are at:\n\(s)") // do something with address
+            }
+        }    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
