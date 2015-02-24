@@ -103,7 +103,7 @@ class SignUpViewController: UIViewController {
                 let id = json["data"]["id"].int!
                 println(id)
                 
-                let error = Locksmith.saveData(["id": "\(id)", "login": login, "password":password], forUserAccount: self.userAccount, inService: self.service)
+                let error = Locksmith.saveData(["id": "\(id)", "login": login, "password":password], forUserAccount: self.userAccount)
                 if error == nil {
                     
                     // Loading contact invitation manager

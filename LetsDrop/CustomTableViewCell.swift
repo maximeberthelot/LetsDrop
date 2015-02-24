@@ -11,6 +11,9 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
+    var idUser = ""
 
     override func awakeFromNib() {
         super.awakeFromNib()

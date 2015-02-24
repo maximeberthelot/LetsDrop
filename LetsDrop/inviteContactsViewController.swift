@@ -20,11 +20,14 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
     var password = ""
     var signature = ""
     var addressBook: ABAddressBookRef?
+    var contactList = Array<Dictionary<String, String>>()
+    var usersList:JSON = ""
+
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 80;
+        tableView.rowHeight = 60;
         self.accessAddressBook()
        
     }
@@ -43,8 +46,29 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         let cellIdentifier = "Cell"
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as CustomTableViewCell
         // Configure the cell...
-        cell.nameLabel.text = names[indexPath.row]
+        var name:String = Array(self.contactList[indexPath.row].keys)[0]
+        var phones:String = self.contactList[indexPath.row]["\(name)"]!
+        cell.nameLabel.text = name
+        cell.phoneLabel.text = phones
+        
+        var isRegistered = self.isRegistered(phones)
+        cell.phoneLabel.text = "\(isRegistered)"
         return cell
+    }
+    
+    func isRegistered(phones:String)->Bool {
+        var res = false
+            for(var i=0; i<self.usersList["data"].count; i++){
+                
+                if self.usersList["data"][i]["phone"].string == phones {
+                    var match = self.usersList["data"][i]
+                    println("match de :\(match)")
+                    res = true
+                }
+                
+            }
+        
+        return res
     }
 
     
@@ -85,16 +109,17 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         addressBook = extractABAddressBookRef(ABAddressBookCreateWithOptions(nil, &errorRef))
         var contactList: NSArray = ABAddressBookCopyArrayOfAllPeople(addressBook).takeRetainedValue()
         println("records in the array \(contactList.count)")
-            
+
+        
+    
         for record:ABRecordRef in contactList {
+            
             var contactPerson: ABRecordRef = record
             var contactName: String = ABRecordCopyCompositeName(contactPerson).takeRetainedValue() as NSString
             println ("contactName \(contactName)")
             self.names.append("\(contactName)")
-            
-            
             var emailArray:ABMultiValueRef = extractABEmailRef(ABRecordCopyValue(contactPerson, kABPersonPhoneProperty))!
-            
+                var phones = ""
             for (var j = 0; j < ABMultiValueGetCount(emailArray); ++j)
             {
                 var emailAdd = ABMultiValueCopyValueAtIndex(emailArray, j)
@@ -103,14 +128,25 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
                 myString = myString!.stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("-", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString(")", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
                 
                 
+                
+                    phones += "\(myString!),"
                 println("email: \(myString)")
-                self.phones += "\(myString!),"
+                self.phones += "\(myString!)%2C"
             }
+            
+            
+            
+            
+            var contactDic = Dictionary<String, String>()
+            contactDic["\(contactName)"] = "\(phones.removeCharsFromEnd(1))"
+            self.contactList.append(contactDic)
+            
         }
         
-        self.phones = dropLast(self.phones)
+        self.phones = self.phones.removeCharsFromEnd(3)
         println(self.phones)
-                
+        println(self.contactList)
+        
         self.getFriends(self.phones)
             
     }
@@ -131,14 +167,15 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
     
     
     
-    func getFriends(phonesList: String) -> String {
+    func getFriends(phonesList: String) -> Void {
         
-        var postString = "login=user&password=user"
-        
-        var httpUrl = "POST:login"
-        
-        let (dic, error) = Locksmith.loadDataForUserAccount(userAccount)
+        var httpUrl = "GET:me/friends/suggest?phones="+self.phones
+        // PAS DE CONTENT TYPE FORM EN REQUETE GET
+        let (dic, error) = Locksmith.loadDataForUserAccount(self.userAccount)
+        println(error)
+        println(user)
         var data = JSON(dic!)
+
         self.login = data["login"].string!
         self.password = data["password"].string!
         self.signature = AuthHelper.getSignature(self.login, password: self.password, url: httpUrl)
@@ -147,32 +184,47 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         println(self.login)
         println("\(self.login) : \(self.password) : \(self.signature)")
         
-        let url = "http://localhost/API/PHP06/API/login"
+        let url = "http://localhost/API/PHP06/API/me/friends/suggest?phones="+self.phones
         
-        println(httpUrl)
-        
-        var mutableURLRequest = AuthHelper.buildRequest(url, login: self.login, signature: self.signature, parameters: postString, verb: "POST", auth:true)
+        var mutableURLRequest = AuthHelper.buildRequest(url, login: self.login, signature: self.signature, parameters: "", verb: "GET", auth:true)
         
         
         let manager = Alamofire.Manager.sharedInstance
         let request = manager.request(mutableURLRequest)
         request.responseJSON { (request, response, data, error) in
-            debugPrintln(request)
+            
             if response!.statusCode == 200 {
             
             // Sucessful signup
             
-            let json = JSON(data!)
-            let id = json["data"]["id"].int!
-            println(id)
+            self.usersList = JSON(data!)
+            println(self.usersList)
+                
+            self.tableView.reloadData()
             
             } else {
                 println("Fail during process")
                 println(data)
             }
         }
-        return "yo"
     }
+    
+}
 
+extension String {
+    
+    func removeCharsFromEnd(count:Int) -> String {
+        let stringLength = countElements(self)
+        
+        let substringIndex = (stringLength < count) ? 0 : stringLength - count
+        
+        return self.substringToIndex(advance(self.startIndex, substringIndex))
+    }
+}
 
+extension String {
+    
+    public func encodeURIComponent() -> String? {
+        return self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+    }
 }

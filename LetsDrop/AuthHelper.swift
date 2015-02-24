@@ -34,18 +34,19 @@ class AuthHelper {
         
         let URL = NSURL(string: url)
         var mutableURLRequest = NSMutableURLRequest(URL: URL!)
-        mutableURLRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-type")
+
         mutableURLRequest.setValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
         if auth == true {
             mutableURLRequest.setValue("\(login):\(signature)", forHTTPHeaderField: "X-Authorization")
         }
-        mutableURLRequest.HTTPBody = parameters.dataUsingEncoding(NSUTF8StringEncoding)
+
         
         switch verb {
         case "POST":
             
             mutableURLRequest.HTTPMethod = "POST"
-            
+            mutableURLRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-type")
+            mutableURLRequest.HTTPBody = parameters.dataUsingEncoding(NSUTF8StringEncoding)
         case "GET":
 
             mutableURLRequest.HTTPMethod = "GET"
