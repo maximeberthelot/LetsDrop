@@ -4,9 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="LolitaBold.otf">
-            <string>LolitaBold</string>
-        </mutableArray>
         <mutableArray key="LolitaMedium.otf">
             <string>LolitaMedium</string>
             <string>LolitaMedium</string>
@@ -29,10 +26,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                             </mapView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VcT-Ba-4Yn" customClass="DesignableView" customModule="LetsDrop" customModuleProvider="target">
-                                <rect key="frame" x="21" y="35" width="277" height="65"/>
+                                <rect key="frame" x="11" y="36" width="301" height="54"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0T-XA-0Xz" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
-                                        <rect key="frame" x="226" y="12" width="43" height="41"/>
+                                        <rect key="frame" x="239" y="5" width="43" height="41"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.74117647058823533" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Z2O-7F-0Qj"/>
@@ -47,32 +44,40 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="findMyLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y4A-Bc-PJT"/>
+                                            <action selector="centerMap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yGj-UL-Gz4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdj-Ng-lEL" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="12" width="30" height="41"/>
-                                        <state key="normal" image="icon-search">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PICKUP A SPOT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mg-lF-wW6">
-                                        <rect key="frame" x="53" y="21" width="73" height="13.5"/>
-                                        <fontDescription key="fontDescription" name="LolitaBold" family="Lolita" pointSize="12"/>
-                                        <color key="textColor" red="0.20000000000000001" green="0.74117647060000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <searchBar contentMode="redraw" misplaced="YES" placeholder="| Drag map or find a place" backgroundImage="bg-searchfield" translatesAutoresizingMaskIntoConstraints="NO" id="eKv-N5-82C">
+                                        <rect key="frame" x="18" y="5" width="221" height="44"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="e31-dM-V1O"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="e31-dM-V1O"/>
+                                            </mask>
+                                        </variation>
+                                    </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="0BC-vs-Txl"/>
-                                    <constraint firstItem="Zdj-Ng-lEL" firstAttribute="leading" secondItem="VcT-Ba-4Yn" secondAttribute="leading" constant="15" id="3h4-lE-y8p"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="6Eq-yd-8q1"/>
                                     <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="Bfo-jI-cLb"/>
-                                    <constraint firstAttribute="height" constant="65" id="JDc-oy-cqP"/>
-                                    <constraint firstItem="8Mg-lF-wW6" firstAttribute="leading" secondItem="Zdj-Ng-lEL" secondAttribute="trailing" constant="20" id="cR5-oZ-MiX"/>
-                                    <constraint firstAttribute="centerY" secondItem="Zdj-Ng-lEL" secondAttribute="centerY" id="oMl-mK-OsX"/>
-                                    <constraint firstItem="8Mg-lF-wW6" firstAttribute="top" secondItem="w0T-XA-0Xz" secondAttribute="top" id="sTf-sn-adn"/>
+                                    <constraint firstAttribute="centerY" secondItem="eKv-N5-82C" secondAttribute="centerY" id="I3x-y8-Net"/>
+                                    <constraint firstAttribute="height" constant="55" id="JDc-oy-cqP"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="U2Q-vg-18j"/>
+                                    <constraint firstItem="eKv-N5-82C" firstAttribute="leading" secondItem="VcT-Ba-4Yn" secondAttribute="leading" constant="20" id="VDt-5h-7ZX"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="b9t-e9-oba"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="grg-vY-34B"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="h12-vt-jK8"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="kay-CC-qrZ"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="tT9-QD-Eag"/>
                                     <constraint firstAttribute="trailing" secondItem="w0T-XA-0Xz" secondAttribute="trailing" constant="15" id="uYI-sz-EZW"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="yKN-fX-KUk"/>
+                                    <constraint firstItem="w0T-XA-0Xz" firstAttribute="leading" secondItem="eKv-N5-82C" secondAttribute="trailing" constant="10" id="zql-ZL-fBl"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -85,7 +90,7 @@
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="33"/>
+                                        <real key="value" value="27"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="4"/>
@@ -94,6 +99,17 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0BC-vs-Txl"/>
+                                        <exclude reference="Bfo-jI-cLb"/>
+                                        <exclude reference="U2Q-vg-18j"/>
+                                        <exclude reference="b9t-e9-oba"/>
+                                        <exclude reference="h12-vt-jK8"/>
+                                        <exclude reference="kay-CC-qrZ"/>
+                                        <exclude reference="tT9-QD-Eag"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -101,9 +117,9 @@
                             <constraint firstItem="9YU-U5-EY5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="CFD-Vr-2FT"/>
                             <constraint firstAttribute="trailing" secondItem="9YU-U5-EY5" secondAttribute="trailing" id="F2a-H6-vpw"/>
                             <constraint firstItem="VcT-Ba-4Yn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="Mdb-af-mLE"/>
-                            <constraint firstAttribute="trailing" secondItem="VcT-Ba-4Yn" secondAttribute="trailing" constant="20" id="VKb-hT-BvJ"/>
+                            <constraint firstAttribute="trailing" secondItem="VcT-Ba-4Yn" secondAttribute="trailing" constant="10" id="VKb-hT-BvJ"/>
                             <constraint firstItem="9YU-U5-EY5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lsj-N9-wfN"/>
-                            <constraint firstItem="VcT-Ba-4Yn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="nOJ-1S-vsd"/>
+                            <constraint firstItem="VcT-Ba-4Yn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="nOJ-1S-vsd"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9YU-U5-EY5" secondAttribute="bottom" id="sTH-qj-JWr"/>
                         </constraints>
                     </view>
@@ -120,6 +136,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="mapView" destination="9YU-U5-EY5" id="dJ0-p7-Fh9"/>
+                        <outlet property="searchBar" destination="eKv-N5-82C" id="y2T-Zv-kgH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -134,7 +151,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="297" y="1877"/>
+            <point key="canvasLocation" x="327" y="1880"/>
         </scene>
         <!--CONTACTS-->
         <scene sceneID="4DT-fS-lad">
@@ -272,9 +289,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-OX-gQP">
-                                <rect key="frame" x="0.0" y="89" width="320" height="430"/>
-                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F52-az-H3f">
                                 <rect key="frame" x="0.0" y="51" width="141" height="30"/>
                                 <constraints>
@@ -303,6 +317,9 @@
                                     <action selector="dropBtn:" destination="B8s-sH-AnL" eventType="touchUpInside" id="saE-7m-Qqs"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-OX-gQP">
+                                <rect key="frame" x="0.0" y="89" width="320" height="430"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -375,11 +392,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg-searchfield" width="233" height="28"/>
         <image name="icon-contacts" width="17" height="17"/>
         <image name="icon-drops" width="16" height="14"/>
         <image name="icon-locate" width="18" height="17"/>
         <image name="icon-map" width="17" height="15"/>
-        <image name="icon-search" width="16" height="18"/>
         <image name="icon-settings" width="16" height="16"/>
     </resources>
 </document>
