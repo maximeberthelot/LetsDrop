@@ -51,24 +51,34 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         cell.nameLabel.text = name
         cell.phoneLabel.text = phones
         
-        var isRegistered = self.isRegistered(phones)
-        cell.phoneLabel.text = "\(isRegistered)"
+        var (matched, id) = self.isRegistered(phones)
+        if(matched){
+            cell.phoneLabel.text = "TRUE"
+            cell.idUser = "\(id)"
+        }
+        
         return cell
     }
     
-    func isRegistered(phones:String)->Bool {
-        var res = false
+    func isRegistered(phones:String)->(Bool,Int) {
+        var matched = false
+        var id = 0
+        var phonesArray = phones.componentsSeparatedByString(",")
+        for phone in phonesArray {
             for(var i=0; i<self.usersList["data"].count; i++){
                 
-                if self.usersList["data"][i]["phone"].string == phones {
+                if self.usersList["data"][i]["phone"].string == phone {
                     var match = self.usersList["data"][i]
                     println("match de :\(match)")
-                    res = true
+                    id = self.usersList["data"][i]["id"].int!
+                    matched = true
                 }
                 
             }
+        }
         
-        return res
+        
+        return (matched, id)
     }
 
     
