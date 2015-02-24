@@ -62,13 +62,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var region = MKCoordinateRegion(center: location, span: span)
         
         mapView.setRegion(region, animated: true)
-        
-        var annotation = MKPointAnnotation()
-        annotation.setCoordinate(location)
-        annotation.title = "Roatan"
-        annotation.subtitle = "Honduras"
-        
-        mapView.addAnnotation(annotation)
+    
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
@@ -87,14 +81,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var location = CLLocation(latitude: latitude, longitude: longitude)
         println(location)
         
+
         CLGeocoder().reverseGeocodeLocation(location) {
             (placemarks : [AnyObject]!, error : NSError!) in
             if placemarks != nil {
                 let p = placemarks[0] as CLPlacemark
                 let s = ABCreateStringWithAddressDictionary(p.addressDictionary, false)
                 println("you are at:\n\(s)") // do something with address
+                self.searchBar.text = String(s);
             }
-        }    }
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -107,8 +104,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         searchBar.resignFirstResponder()
         let s = searchBar.text
         if s == nil || countElements(s) < 5 { return }
-        let geo = CLGeocoder()
-        geo.geocodeAddressString(s) {
+       
+        CLGeocoder().geocodeAddressString(s) {
             (placemarks : [AnyObject]!, error : NSError!) in
             if nil == placemarks {
                 println(error.localizedDescription)
@@ -117,14 +114,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             self.mapView.showsUserLocation = false
             let p = placemarks[0] as CLPlacemark
             let mp = MKPlacemark(placemark:p)
-            self.mapView.removeAnnotations(self.mapView.annotations)
-            self.mapView.addAnnotation(mp)
-            self.mapView.setRegion(
-                MKCoordinateRegionMakeWithDistance(mp.coordinate, 1000, 1000),
-                animated: true)
         }
 
-    
+        
+        
     }
     
     //SetCenterMap
