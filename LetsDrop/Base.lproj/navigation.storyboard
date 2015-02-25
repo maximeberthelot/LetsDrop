@@ -112,8 +112,12 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5n-4s-YUy" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5n-4s-YUy" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
                                 <rect key="frame" x="58" y="247" width="205" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="C4P-HQ-z0V"/>
+                                    <constraint firstAttribute="width" constant="205" id="Srs-o1-GrV"/>
+                                </constraints>
                                 <state key="normal" image="drop-message">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -130,17 +134,20 @@
                             <constraint firstAttribute="centerX" secondItem="n5n-4s-YUy" secondAttribute="centerX" id="AHb-oR-Jqy"/>
                             <constraint firstItem="9YU-U5-EY5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="CFD-Vr-2FT"/>
                             <constraint firstAttribute="trailing" secondItem="9YU-U5-EY5" secondAttribute="trailing" id="F2a-H6-vpw"/>
+                            <constraint firstAttribute="centerY" secondItem="n5n-4s-YUy" secondAttribute="centerY" constant="70" id="JhZ-MD-FUh"/>
                             <constraint firstItem="VcT-Ba-4Yn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="Mdb-af-mLE"/>
                             <constraint firstAttribute="centerY" secondItem="9YU-U5-EY5" secondAttribute="centerY" id="SjF-xY-h5s"/>
                             <constraint firstAttribute="trailing" secondItem="VcT-Ba-4Yn" secondAttribute="trailing" constant="10" id="VKb-hT-BvJ"/>
                             <constraint firstAttribute="centerY" secondItem="n5n-4s-YUy" secondAttribute="centerY" id="XyA-eI-KBs"/>
                             <constraint firstItem="n5n-4s-YUy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="bZk-L3-Cph"/>
                             <constraint firstAttribute="centerX" secondItem="n5n-4s-YUy" secondAttribute="centerX" id="c75-Ck-SRb"/>
+                            <constraint firstItem="n5n-4s-YUy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="cmO-Os-2C9"/>
                             <constraint firstItem="9YU-U5-EY5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lsj-N9-wfN"/>
                             <constraint firstItem="VcT-Ba-4Yn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="nOJ-1S-vsd"/>
                             <constraint firstAttribute="centerX" secondItem="9YU-U5-EY5" secondAttribute="centerX" id="p9F-0K-mVI"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9YU-U5-EY5" secondAttribute="bottom" id="sTH-qj-JWr"/>
                             <constraint firstItem="n5n-4s-YUy" firstAttribute="top" secondItem="VcT-Ba-4Yn" secondAttribute="bottom" constant="148" id="t8Q-Fd-Xpz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n5n-4s-YUy" secondAttribute="trailing" constant="20" id="xEf-M0-LF8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -150,7 +157,9 @@
                                 <exclude reference="XyA-eI-KBs"/>
                                 <exclude reference="bZk-L3-Cph"/>
                                 <exclude reference="c75-Ck-SRb"/>
+                                <exclude reference="cmO-Os-2C9"/>
                                 <exclude reference="t8Q-Fd-Xpz"/>
+                                <exclude reference="xEf-M0-LF8"/>
                                 <exclude reference="sTH-qj-JWr"/>
                             </mask>
                         </variation>

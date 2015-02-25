@@ -24,14 +24,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Set Dropped Btn ********************
-        var bounds: CGRect = UIScreen.mainScreen().bounds,
-        width:CGFloat = bounds.size.width,
-        height:CGFloat = bounds.size.height;
-        
-        println(height)
-          println(width)
-        createMessageBtn.center = (CGPointMake(self.view.center.x, self.view.center.y - createMessageBtn.frame.height+15))
+       
         
         //
         searchBar.showsScopeBar = true
@@ -130,11 +123,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             latitude: userLocate.latitude,
             longitude: userLocate.longitude
         )
-        var bounds: CGRect = UIScreen.mainScreen().bounds,
-        width:CGFloat = bounds.size.width,
-        height:CGFloat = bounds.size.height;
-        
-        createMessageBtn.center = (CGPointMake(self.view.center.x, self.view.center.y - createMessageBtn.frame.height+15))
         var mapCamera = MKMapCamera(lookingAtCenterCoordinate: location, fromEyeCoordinate: location, eyeAltitude: 1000)
         
         mapView.setCamera(mapCamera, animated: true)
