@@ -9,8 +9,11 @@
 import UIKit
 import AddressBook
 import Alamofire
+import MessageUI
 
-class inviteContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class inviteContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MFMessageComposeViewControllerDelegate {
+    
+    // MARK: - Properties
     
     let service = "appAuth"
     let userAccount = "user"
@@ -22,20 +25,44 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
     var addressBook: ABAddressBookRef?
     var contactList = Array<Dictionary<String, String>>()
     var usersList:JSON = ""
-
-    
     @IBOutlet weak var tableView: UITableView!
+
+
+    @IBAction func inviteButton(sender: UIButton) {
+        
+        var button:UIButton = sender as UIButton
+        //use the tag to index the array
+        
+        var cellName:String = Array(self.contactList[button.tag].keys)[0]
+        var phones:String = self.contactList[button.tag]["\(cellName)"]!
+        println(phones)
+        
+        var messageVC = MFMessageComposeViewController()
+        messageVC.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
+        
+        messageVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+        
+        messageVC.body = "You should try Let's Drop app !";
+        messageVC.recipients = ["\(phones)"]
+        messageVC.messageComposeDelegate = self;
+        
+        self.presentViewController(messageVC, animated: true, completion: nil)
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 60;
         self.accessAddressBook()
-       
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Tableview
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
@@ -50,15 +77,28 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         var phones:String = self.contactList[indexPath.row]["\(name)"]!
         cell.nameLabel.text = name
         cell.phoneLabel.text = phones
+        cell.inviteButton.tag = indexPath.row
+        cell.addRemoveButton.tag = indexPath.row
+        cell.addRemoveButton.enabled = false
+        cell.addRemoveButton.hidden = true
+        cell.inviteButton.hidden = false
+        cell.inviteButton.enabled = true
         
         var (matched, id) = self.isRegistered(phones)
         if(matched){
+            cell.inviteButton.hidden = true
+            cell.inviteButton.enabled = false
+            cell.addRemoveButton.hidden = false
+            cell.addRemoveButton.enabled = true
             cell.phoneLabel.text = "TRUE"
             cell.idUser = "\(id)"
         }
         
         return cell
     }
+    
+    
+    // MARK: - Addressbook
     
     func isRegistered(phones:String)->(Bool,Int) {
         var matched = false
@@ -124,21 +164,33 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
     
         for record:ABRecordRef in contactList {
             
+            println("CONTACT")
+            
             var contactPerson: ABRecordRef = record
-            var contactName: String = ABRecordCopyCompositeName(contactPerson).takeRetainedValue() as NSString
+            println("RECORD")
+            var contactName:String = "TEST"
+            if ABRecordCopyCompositeName(contactPerson) != nil {
+                contactName = ABRecordCopyCompositeName(contactPerson).takeRetainedValue() as NSString
+                
+            }
             println ("contactName \(contactName)")
             self.names.append("\(contactName)")
+            
             var emailArray:ABMultiValueRef = extractABEmailRef(ABRecordCopyValue(contactPerson, kABPersonPhoneProperty))!
                 var phones = ""
+            
+            println("CONTACT OK")
+            
             for (var j = 0; j < ABMultiValueGetCount(emailArray); ++j)
             {
+                println("PHONES")
                 var emailAdd = ABMultiValueCopyValueAtIndex(emailArray, j)
                 var myString = extractABEmailAddress(emailAdd)
 
-                myString = myString!.stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("-", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString(")", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                myString = myString!.stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("-", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString(")", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("+33", withString: "0", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("#", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
                 
                 
-                
+                println("PHONES OK")
                     phones += "\(myString!),"
                 println("email: \(myString)")
                 self.phones += "\(myString!)%2C"
@@ -175,16 +227,15 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         return nil
     }
     
-    
+    // MARK: - Request
     
     func getFriends(phonesList: String) -> Void {
         
         var httpUrl = "GET:me/friends/suggest?phones="+self.phones
         // PAS DE CONTENT TYPE FORM EN REQUETE GET
         let (dic, error) = Locksmith.loadDataForUserAccount(self.userAccount)
-        println(error)
-        println(user)
         var data = JSON(dic!)
+        println("data: \(data)")
 
         self.login = data["login"].string!
         self.password = data["password"].string!
@@ -194,18 +245,18 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         println(self.login)
         println("\(self.login) : \(self.password) : \(self.signature)")
         
-        let url = "http://localhost/API/PHP06/API/me/friends/suggest?phones="+self.phones
+        let url = "http://macbook-simon.local/API/PHP06/API/me/friends/suggest?phones="+self.phones
         
+        println(url)
         var mutableURLRequest = AuthHelper.buildRequest(url, login: self.login, signature: self.signature, parameters: "", verb: "GET", auth:true)
         
         
         let manager = Alamofire.Manager.sharedInstance
         let request = manager.request(mutableURLRequest)
         request.responseJSON { (request, response, data, error) in
-            
+            println(data)
+            println(response)
             if response!.statusCode == 200 {
-            
-            // Sucessful signup
             
             self.usersList = JSON(data!)
             println(self.usersList)
@@ -219,7 +270,30 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
     
+    // MARK: - Message functions
+    
+    func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result: MessageComposeResult) {
+        switch (result.value) {
+        case MessageComposeResultCancelled.value:
+            println("Message was cancelled")
+            self.dismissViewControllerAnimated(true, completion: nil)
+        case MessageComposeResultFailed.value:
+            println("Message failed")
+            self.dismissViewControllerAnimated(true, completion: nil)
+        case MessageComposeResultSent.value:
+            println("Message was sent")
+            self.dismissViewControllerAnimated(true, completion: nil)
+        default:
+            break;
+        }
+    }
+    
+    
+    // Class end
 }
+
+
+//MARK:- Extensions
 
 extension String {
     
@@ -238,3 +312,11 @@ extension String {
         return self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
     }
 }
+
+extension String {
+    func condenseWhitespace() -> String {
+        let components = self.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).filter({!Swift.isEmpty($0)})
+        return " ".join(components)
+    }
+}
+

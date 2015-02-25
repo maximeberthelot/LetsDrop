@@ -74,7 +74,7 @@ class LoginViewController: UIViewController {
         
         let postString = "login=\(login)&password=\(password)"
         
-        var mutableURLRequest = AuthHelper.buildRequest("http://localhost/API/PHP06/API/login", login: login, signature: signature, parameters: postString, verb: "POST", auth: true)
+        var mutableURLRequest = AuthHelper.buildRequest("http://macbook-simon.local/API/PHP06/API/login", login: login, signature: signature, parameters: postString, verb: "POST", auth: true)
         
         let manager = Alamofire.Manager.sharedInstance
         let request = manager.request(mutableURLRequest)

@@ -8,13 +8,23 @@
 
 import UIKit
 
+
 class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var inviteButton: UIButton!
+    @IBOutlet weak var addRemoveButton: UIButton!
     
     var idUser = ""
 
+    @IBAction func addRemoveButton(sender: AnyObject) {
+        
+        if idUser != "" {
+            
+        }
+        
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,5 +35,5 @@ class CustomTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

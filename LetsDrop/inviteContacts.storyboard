@@ -56,10 +56,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hie-1C-dpX">
-                                                    <rect key="frame" x="258" y="15" width="30" height="30"/>
-                                                    <state key="normal" title="Add">
+                                                    <rect key="frame" x="254" y="15" width="37" height="30"/>
+                                                    <state key="normal" title="Invite">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="inviteButton:" destination="Vlk-9l-eTl" eventType="touchUpInside" id="O2K-3G-sUF"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ez3-s5-kFM">
                                                     <rect key="frame" x="23" y="38" width="193" height="21"/>
@@ -73,9 +76,21 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xv8-Mv-ZRQ">
+                                                    <rect key="frame" x="254" y="15" width="30" height="30"/>
+                                                    <state key="normal" title="Add">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addRemoveButton:" destination="0fQ-WB-9s2" eventType="touchUpInside" id="LaF-qj-Z33"/>
+                                                        <action selector="addRemoveButton:" destination="Vlk-9l-eTl" eventType="touchUpInside" id="c8B-yk-oUC"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="addRemoveButton" destination="Xv8-Mv-ZRQ" id="X3S-IU-ozX"/>
+                                            <outlet property="inviteButton" destination="Hie-1C-dpX" id="9Sk-0Y-dza"/>
                                             <outlet property="nameLabel" destination="fTj-Ol-hSV" id="KGg-5H-m4x"/>
                                             <outlet property="phoneLabel" destination="Ez3-s5-kFM" id="kUa-VE-j75"/>
                                         </connections>

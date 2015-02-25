@@ -84,7 +84,7 @@ class SignUpViewController: UIViewController {
         
         var httpUrl = "POST:signup"
         
-        let url = "http://localhost/API/PHP06/API/signup"
+        let url = "http://macbook-simon.local/API/PHP06/API/signup"
         
         let postString = "login=\(login)&password=\(password)&phone=\(phone)"
         

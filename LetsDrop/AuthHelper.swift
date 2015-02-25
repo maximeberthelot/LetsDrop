@@ -32,6 +32,7 @@ class AuthHelper {
     
     class func buildRequest(url: String,login: String, signature: String, parameters: String, verb: String, auth: Bool) -> NSMutableURLRequest {
         
+
         let URL = NSURL(string: url)
         var mutableURLRequest = NSMutableURLRequest(URL: URL!)
 
