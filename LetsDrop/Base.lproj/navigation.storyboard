@@ -45,7 +45,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="centerMap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yGj-UL-Gz4"/>
+                                            <action selector="findMyLocate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Lba-lk-Jte"/>
                                         </connections>
                                     </button>
                                     <searchBar contentMode="redraw" misplaced="YES" placeholder="| Drag map or find a place" backgroundImage="bg-searchfield" translatesAutoresizingMaskIntoConstraints="NO" id="eKv-N5-82C">
@@ -112,12 +112,14 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5n-4s-YUy" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5n-4s-YUy" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
                                 <rect key="frame" x="58" y="247" width="205" height="74"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="-100" maxX="6" maxY="0.0"/>
                                 <state key="normal" image="drop-message">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nH5-sI-frQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -142,8 +144,11 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="2Hs-Uq-MLD"/>
                                 <exclude reference="8Gi-8d-reu"/>
+                                <exclude reference="96P-Gl-rCb"/>
                                 <exclude reference="XyA-eI-KBs"/>
+                                <exclude reference="bZk-L3-Cph"/>
                                 <exclude reference="c75-Ck-SRb"/>
                                 <exclude reference="t8Q-Fd-Xpz"/>
                                 <exclude reference="sTH-qj-JWr"/>
@@ -162,9 +167,9 @@
                     </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="createMessageBtn" destination="n5n-4s-YUy" id="fda-NN-pbb"/>
                         <outlet property="mapView" destination="9YU-U5-EY5" id="dJ0-p7-Fh9"/>
                         <outlet property="searchBar" destination="eKv-N5-82C" id="y2T-Zv-kgH"/>
-                        <outlet property="setButton" destination="n5n-4s-YUy" id="wfs-Ng-a2i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

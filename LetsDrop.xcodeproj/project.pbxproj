@@ -63,6 +63,8 @@
 		C1BF100C1A9B80EA00E7AC50 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100A1A9B80EA00E7AC50 /* Locksmith.swift */; };
 		C1BF100D1A9B80EA00E7AC50 /* LocksmithRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100B1A9B80EA00E7AC50 /* LocksmithRequest.swift */; };
 		C1BF100F1A9B835600E7AC50 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100E1A9B835600E7AC50 /* AuthHelper.swift */; };
+		F92A6DCE1A9E5575004EDF86 /* createmessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */; };
+		F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */; };
 		F9E1E0D21A9BBFE4004CF6F4 /* ReceivedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */; };
 		F9E1E0D61A9BC009004CF6F4 /* ReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */; };
 		F9E1E0D91A9BC026004CF6F4 /* DroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */; };
@@ -196,6 +198,8 @@
 		C1BF100A1A9B80EA00E7AC50 /* Locksmith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locksmith.swift; sourceTree = "<group>"; };
 		C1BF100B1A9B80EA00E7AC50 /* LocksmithRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithRequest.swift; sourceTree = "<group>"; };
 		C1BF100E1A9B835600E7AC50 /* AuthHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
+		F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createmessage.storyboard; sourceTree = "<group>"; };
+		F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMessageViewController.swift; sourceTree = "<group>"; };
 		F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedViewController.xib; sourceTree = "<group>"; };
 		F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedViewController.swift; sourceTree = "<group>"; };
 		F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroppedViewController.swift; sourceTree = "<group>"; };
@@ -401,6 +405,15 @@
 			name = SignUp;
 			sourceTree = "<group>";
 		};
+		F92A6DC91A9E5549004EDF86 /* CreateMessage */ = {
+			isa = PBXGroup;
+			children = (
+				F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */,
+				F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */,
+			);
+			name = CreateMessage;
+			sourceTree = "<group>";
+		};
 		F9E1E0D31A9BBFEA004CF6F4 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,8 +481,9 @@
 				F9F6E3C11A9A267D00707417 /* AppDelegate.swift */,
 				F9F6E3C61A9A267D00707417 /* ViewController.swift */,
 				C12D27761A9AAA730086CE66 /* Main.storyboard */,
-				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
 				C12D27791A9AAA830086CE66 /* LaunchScreen.xib */,
+				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
+				F92A6DC91A9E5549004EDF86 /* CreateMessage */,
 				F9E1E0DE1A9BCC35004CF6F4 /* Map */,
 				F9E1E0D31A9BBFEA004CF6F4 /* Activity */,
 				C1BF10051A9B6D8800E7AC50 /* SignUp */,
@@ -626,6 +640,7 @@
 			files = (
 				C1BF10071A9B6D9D00E7AC50 /* signUp.storyboard in Resources */,
 				F9E1E0E61A9BDCDB004CF6F4 /* Images.xcassets in Resources */,
+				F92A6DCE1A9E5575004EDF86 /* createmessage.storyboard in Resources */,
 				F9E1E0D21A9BBFE4004CF6F4 /* ReceivedViewController.xib in Resources */,
 				C15A46151A9A400A0012CE29 /* Lolita ExtraLight.otf in Resources */,
 				C15A461E1A9A400A0012CE29 /* LolitaUltra.otf in Resources */,
@@ -669,6 +684,7 @@
 				C1BF100F1A9B835600E7AC50 /* AuthHelper.swift in Sources */,
 				C15A464C1A9A40760012CE29 /* Misc.swift in Sources */,
 				C15A46501A9A40760012CE29 /* SpringImageView.swift in Sources */,
+				F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */,
 				C15A46521A9A40760012CE29 /* SpringTextField.swift in Sources */,
 				C1BF100D1A9B80EA00E7AC50 /* LocksmithRequest.swift in Sources */,
 				C15A46411A9A40760012CE29 /* DesignableImageView.swift in Sources */,
