@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KQy-Uk-HKY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="LolitaBold.otf">
+            <string>LolitaBold</string>
+        </mutableArray>
+        <mutableArray key="LolitaMedium.otf">
+            <string>LolitaMedium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Create Message View Controller-->
         <scene sceneID="egp-Xc-PoL">
@@ -15,13 +24,175 @@
                     <view key="view" contentMode="scaleToFill" id="Qhc-3k-MTR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5C-Yp-zua">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="487"/>
+                                <color key="backgroundColor" red="0.24705882352941178" green="0.32156862745098042" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6t-w1-tCI" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="32" y="74" width="254" height="365"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="8" height="0.0"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="| Drop a message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLy-r6-XJx" customClass="DesignableTextField" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="32" y="74" width="254" height="365"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.15686274510000001" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sidePadding">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6z-4L-HJM">
+                                <rect key="frame" x="45" y="89" width="63" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSo-h1-zbk" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="125" y="390" width="71" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="SaL-66-o1F"/>
+                                    <constraint firstAttribute="height" constant="70" id="yR8-gT-QIO"/>
+                                </constraints>
+                                <state key="normal" image="icon-picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doPick:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="Rpa-BR-yYW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec7-2c-Se9" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DBl-Lt-FCO"/>
+                                    <constraint firstAttribute="width" constant="30" id="xVw-iu-JPy"/>
+                                </constraints>
+                                <state key="normal" image="btn-cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="tJs-k3-Qhd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3p-zQ-9tk" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="136" y="513" width="47" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2LF-aR-ndf"/>
+                                    <constraint firstAttribute="height" constant="50" id="vIc-Fy-p6f"/>
+                                </constraints>
+                                <state key="normal" image="add-contact">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2LF-aR-ndf"/>
+                                        <exclude reference="vIc-Fy-p6f"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Send to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhY-IA-9Hl">
+                                <rect key="frame" x="16" y="490" width="53" height="21"/>
+                                <fontDescription key="fontDescription" name="LolitaBold" family="Lolita" pointSize="14"/>
+                                <color key="textColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bLy-r6-XJx" firstAttribute="leading" secondItem="Qhc-3k-MTR" secondAttribute="leading" constant="40" id="0CA-9a-7Vu"/>
+                            <constraint firstItem="STf-JN-wtC" firstAttribute="top" secondItem="N3p-zQ-9tk" secondAttribute="bottom" constant="10" id="4QP-J4-D1C"/>
+                            <constraint firstItem="bLy-r6-XJx" firstAttribute="top" secondItem="v6t-w1-tCI" secondAttribute="top" constant="-10" id="77B-7j-wj7"/>
+                            <constraint firstAttribute="centerX" secondItem="bLy-r6-XJx" secondAttribute="centerX" id="APR-wk-wLP"/>
+                            <constraint firstAttribute="centerX" secondItem="mhY-IA-9Hl" secondAttribute="centerX" id="DHc-aG-Mxm"/>
+                            <constraint firstAttribute="trailing" secondItem="f5C-Yp-zua" secondAttribute="trailing" id="Hgu-wT-VNT"/>
+                            <constraint firstItem="STf-JN-wtC" firstAttribute="top" secondItem="f5C-Yp-zua" secondAttribute="bottom" constant="80" id="IM0-Xi-Qzm"/>
+                            <constraint firstAttribute="centerX" secondItem="bLy-r6-XJx" secondAttribute="centerX" id="Mk1-hS-NLu"/>
+                            <constraint firstItem="mhY-IA-9Hl" firstAttribute="bottom" secondItem="f5C-Yp-zua" secondAttribute="bottom" constant="25" id="O9o-Mm-yqf"/>
+                            <constraint firstItem="f5C-Yp-zua" firstAttribute="leading" secondItem="Qhc-3k-MTR" secondAttribute="leading" id="Oup-cv-lsS"/>
+                            <constraint firstItem="MSo-h1-zbk" firstAttribute="bottom" secondItem="bLy-r6-XJx" secondAttribute="bottom" constant="-15" id="PGb-eA-bfw"/>
+                            <constraint firstAttribute="centerX" secondItem="N3p-zQ-9tk" secondAttribute="centerX" id="PLI-FB-C9e"/>
+                            <constraint firstItem="f5C-Yp-zua" firstAttribute="top" secondItem="Qhc-3k-MTR" secondAttribute="top" id="RdN-sE-YKc"/>
+                            <constraint firstItem="bLy-r6-XJx" firstAttribute="leading" secondItem="v6t-w1-tCI" secondAttribute="leading" constant="-10" id="WOQ-xx-iyX"/>
+                            <constraint firstAttribute="centerX" secondItem="v6t-w1-tCI" secondAttribute="centerX" id="Z9F-FG-y3D"/>
+                            <constraint firstItem="bLy-r6-XJx" firstAttribute="leading" secondItem="mhY-IA-9Hl" secondAttribute="leading" id="Zuu-5d-A1Z"/>
+                            <constraint firstItem="MSo-h1-zbk" firstAttribute="bottom" secondItem="f5C-Yp-zua" secondAttribute="bottom" constant="-10" id="abO-gH-Ycc"/>
+                            <constraint firstItem="bLy-r6-XJx" firstAttribute="top" secondItem="ec7-2c-Se9" secondAttribute="bottom" constant="15" id="e6Z-VA-kmC"/>
+                            <constraint firstAttribute="centerX" secondItem="MSo-h1-zbk" secondAttribute="centerX" id="ful-A8-gcl"/>
+                            <constraint firstItem="ec7-2c-Se9" firstAttribute="top" secondItem="7vp-FP-uO5" secondAttribute="bottom" constant="8" id="hja-o4-PRn"/>
+                            <constraint firstItem="bLy-r6-XJx" firstAttribute="bottom" secondItem="f5C-Yp-zua" secondAttribute="bottom" constant="-50" id="iBj-qu-ijl"/>
+                            <constraint firstAttribute="trailing" secondItem="bLy-r6-XJx" secondAttribute="trailing" constant="40" id="nlH-M4-ORV"/>
+                            <constraint firstItem="N3p-zQ-9tk" firstAttribute="top" secondItem="mhY-IA-9Hl" secondAttribute="bottom" constant="2" id="pbp-sg-sRa"/>
+                            <constraint firstItem="bLy-r6-XJx" firstAttribute="trailing" secondItem="v6t-w1-tCI" secondAttribute="trailing" constant="10" id="pzM-Hv-V4l"/>
+                            <constraint firstItem="ec7-2c-Se9" firstAttribute="leading" secondItem="Qhc-3k-MTR" secondAttribute="leadingMargin" id="veT-Ti-eeA"/>
+                            <constraint firstItem="bLy-r6-XJx" firstAttribute="bottom" secondItem="v6t-w1-tCI" secondAttribute="bottom" constant="10" id="xEp-VR-2wg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="abO-gH-Ycc"/>
+                                <exclude reference="DHc-aG-Mxm"/>
+                                <exclude reference="4QP-J4-D1C"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cancelBtn" destination="ec7-2c-Se9" id="r6H-BY-zNo"/>
+                        <outlet property="redView" destination="F6z-4L-HJM" id="1Fd-4b-sj6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rav-Ja-gc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="-13"/>
+            <point key="canvasLocation" x="109" y="57"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add-contact" width="47" height="47"/>
+        <image name="btn-cancel" width="26" height="26"/>
+        <image name="icon-picture" width="37" height="37"/>
+    </resources>
 </document>

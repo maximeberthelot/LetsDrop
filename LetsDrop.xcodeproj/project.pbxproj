@@ -63,6 +63,10 @@
 		C1BF100C1A9B80EA00E7AC50 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100A1A9B80EA00E7AC50 /* Locksmith.swift */; };
 		C1BF100D1A9B80EA00E7AC50 /* LocksmithRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100B1A9B80EA00E7AC50 /* LocksmithRequest.swift */; };
 		C1BF100F1A9B835600E7AC50 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF100E1A9B835600E7AC50 /* AuthHelper.swift */; };
+		F9063C091A9F1A4D000E5996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C081A9F1A4D000E5996 /* Foundation.framework */; };
+		F9063C0E1A9F1A57000E5996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C0D1A9F1A57000E5996 /* UIKit.framework */; };
+		F9063C101A9F1A61000E5996 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C0F1A9F1A61000E5996 /* CoreGraphics.framework */; };
+		F9063C121A9F1C48000E5996 /* MyImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9063C111A9F1C48000E5996 /* MyImagePickerController.swift */; };
 		F92A6DCE1A9E5575004EDF86 /* createmessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */; };
 		F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */; };
 		F9E1E0D21A9BBFE4004CF6F4 /* ReceivedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */; };
@@ -198,6 +202,10 @@
 		C1BF100A1A9B80EA00E7AC50 /* Locksmith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locksmith.swift; sourceTree = "<group>"; };
 		C1BF100B1A9B80EA00E7AC50 /* LocksmithRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithRequest.swift; sourceTree = "<group>"; };
 		C1BF100E1A9B835600E7AC50 /* AuthHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
+		F9063C081A9F1A4D000E5996 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F9063C0D1A9F1A57000E5996 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F9063C0F1A9F1A61000E5996 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F9063C111A9F1C48000E5996 /* MyImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImagePickerController.swift; sourceTree = "<group>"; };
 		F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createmessage.storyboard; sourceTree = "<group>"; };
 		F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMessageViewController.swift; sourceTree = "<group>"; };
 		F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedViewController.xib; sourceTree = "<group>"; };
@@ -225,6 +233,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9063C101A9F1A61000E5996 /* CoreGraphics.framework in Frameworks */,
+				F9063C0E1A9F1A57000E5996 /* UIKit.framework in Frameworks */,
+				F9063C091A9F1A4D000E5996 /* Foundation.framework in Frameworks */,
 				F9E1E0E41A9BCE54004CF6F4 /* CoreLocation.framework in Frameworks */,
 				F9E1E0E21A9BCE48004CF6F4 /* MapKit.framework in Frameworks */,
 				C1BF0FFC1A9B6C1400E7AC50 /* Alamofire.framework in Frameworks */,
@@ -408,6 +419,7 @@
 		F92A6DC91A9E5549004EDF86 /* CreateMessage */ = {
 			isa = PBXGroup;
 			children = (
+				F9063C111A9F1C48000E5996 /* MyImagePickerController.swift */,
 				F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */,
 				F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */,
 			);
@@ -453,6 +465,9 @@
 		F9F6E3B31A9A267D00707417 = {
 			isa = PBXGroup;
 			children = (
+				F9063C0F1A9F1A61000E5996 /* CoreGraphics.framework */,
+				F9063C0D1A9F1A57000E5996 /* UIKit.framework */,
+				F9063C081A9F1A4D000E5996 /* Foundation.framework */,
 				F9E1E0E31A9BCE54004CF6F4 /* CoreLocation.framework */,
 				F9E1E0E11A9BCE48004CF6F4 /* MapKit.framework */,
 				C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */,
@@ -707,6 +722,7 @@
 				C1BF10091A9B7ACB00E7AC50 /* SwiftyJSON.swift in Sources */,
 				C15A46431A9A40760012CE29 /* DesignableTabBarController.swift in Sources */,
 				F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */,
+				F9063C121A9F1C48000E5996 /* MyImagePickerController.swift in Sources */,
 				F9E1E0DD1A9BC075004CF6F4 /* NavActViewController.swift in Sources */,
 				C1BF10041A9B6D8200E7AC50 /* SignUpViewController.swift in Sources */,
 				C15A46531A9A40760012CE29 /* SpringTextView.swift in Sources */,

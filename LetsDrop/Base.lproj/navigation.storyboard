@@ -14,7 +14,7 @@
         <!--MAP-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="MapViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialMapViewController" id="vXZ-lx-hvc" customClass="MapViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -412,7 +412,7 @@
         <!--Animated Tab Bar Controller-->
         <scene sceneID="lJG-QT-bnw">
             <objects>
-                <tabBarController storyboardIdentifier="InitialViewController" id="nq0-QV-Nf2" customClass="RAMAnimatedTabBarController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="InitialViewController" modalTransitionStyle="flipHorizontal" id="nq0-QV-Nf2" customClass="RAMAnimatedTabBarController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="CAR-Gu-4Ri">
