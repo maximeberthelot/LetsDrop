@@ -25,6 +25,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var phoneTextField: DesignableTextField!
     
     @IBOutlet weak var errorLabel: DesignableLabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,24 +37,30 @@ class SignUpViewController: UIViewController {
         // Set animation for the transition to password input
         passView.animation = "zoomIn"
         passView.delay = 0.1
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-        
+        println("didload")
         usernameTextField.becomeFirstResponder()
         logView.animate()
         
         // Set animation out for transition to password input
         
         logView.animation = "fadeOut"
+
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
     }
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loader() -> Void {
+        
     }
     
     @IBAction func goToPassword(sender: AnyObject) {
@@ -77,6 +84,11 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func SignUp(sender: AnyObject) {
+        
+        var button:UIButton = sender as UIButton
+        button.hidden = true
+        spinner.startAnimating()
+        spinner.hidden = false
         
         var login = usernameTextField.text
         var password = passwordTextField.text
@@ -111,6 +123,7 @@ class SignUpViewController: UIViewController {
                     var controller = loginStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
                     controller.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
                     self.presentViewController(controller, animated: true, completion: nil)
+                    self.loader()
                 }
             
             } else {

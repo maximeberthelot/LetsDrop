@@ -25,8 +25,23 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
     var addressBook: ABAddressBookRef?
     var contactList = Array<Dictionary<String, String>>()
     var usersList:JSON = ""
+    var usersToAdd = [String]()
+    
+    
     @IBOutlet weak var tableView: UITableView!
 
+    @IBAction func validateButton(sender: AnyObject) {
+        
+        println("send contact request")
+        
+        if self.usersToAdd.count != 0 {
+            let usersToAddString = ",".join(self.usersToAdd)
+            println(usersToAddString)
+            self.addFriends(usersToAddString)
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
 
     @IBAction func inviteButton(sender: UIButton) {
         
@@ -50,6 +65,25 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
+    @IBAction func addRemoveButton(sender: AnyObject) {
+        
+        var button:UIButton = sender as UIButton
+        //use the tag to index the array
+        var id = "\(button.tag)"
+        
+        if contains(self.usersToAdd, id) {
+            // Remove user from friendlist
+            self.usersToAdd = self.usersToAdd.filter({$0 != id})
+            button.setTitle("Add", forState: UIControlState.Normal)
+            
+        } else {
+            // Add user in friendlist
+            self.usersToAdd.append(id)
+            button.setTitle("Remove", forState: UIControlState.Normal)
+        }
+        
+        println(self.usersToAdd)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,9 +110,8 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         var name:String = Array(self.contactList[indexPath.row].keys)[0]
         var phones:String = self.contactList[indexPath.row]["\(name)"]!
         cell.nameLabel.text = name
-        cell.phoneLabel.text = phones
         cell.inviteButton.tag = indexPath.row
-        cell.addRemoveButton.tag = indexPath.row
+        cell.addRemoveButton.tag = 0
         cell.addRemoveButton.enabled = false
         cell.addRemoveButton.hidden = true
         cell.inviteButton.hidden = false
@@ -90,11 +123,23 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
             cell.inviteButton.enabled = false
             cell.addRemoveButton.hidden = false
             cell.addRemoveButton.enabled = true
-            cell.phoneLabel.text = "TRUE"
             cell.idUser = "\(id)"
+            cell.addRemoveButton.tag = id
         }
         
         return cell
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        var navStoryboard = UIStoryboard(name: "navigation", bundle: nil)
+        var navController = navStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
+        navController.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        navController.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+        
+        self.presentingViewController!.presentViewController(navController, animated: true, completion: nil)
+
     }
     
     
@@ -163,34 +208,26 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         
     
         for record:ABRecordRef in contactList {
-            
-            println("CONTACT")
-            
+
             var contactPerson: ABRecordRef = record
-            println("RECORD")
-            var contactName:String = "TEST"
+            var contactName:String = ""
             if ABRecordCopyCompositeName(contactPerson) != nil {
                 contactName = ABRecordCopyCompositeName(contactPerson).takeRetainedValue() as NSString
                 
             }
-            println ("contactName \(contactName)")
+            
             self.names.append("\(contactName)")
             
             var emailArray:ABMultiValueRef = extractABEmailRef(ABRecordCopyValue(contactPerson, kABPersonPhoneProperty))!
                 var phones = ""
             
-            println("CONTACT OK")
-            
             for (var j = 0; j < ABMultiValueGetCount(emailArray); ++j)
             {
-                println("PHONES")
                 var emailAdd = ABMultiValueCopyValueAtIndex(emailArray, j)
                 var myString = extractABEmailAddress(emailAdd)
 
                 myString = myString!.stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("-", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString(")", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("+33", withString: "0", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("#", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
                 
-                
-                println("PHONES OK")
                     phones += "\(myString!),"
                 println("email: \(myString)")
                 self.phones += "\(myString!)%2C"
@@ -227,7 +264,7 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         return nil
     }
     
-    // MARK: - Request
+    // MARK: - Requests
     
     func getFriends(phonesList: String) -> Void {
         
@@ -266,6 +303,44 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
             } else {
                 println("Fail during process")
                 println(data)
+            }
+        }
+    }
+    
+    
+    
+    func addFriends(friendsList: String) -> Void {
+        var httpUrl = "POST:me/friends"
+        
+        let (dic, error) = Locksmith.loadDataForUserAccount(self.userAccount)
+        var data = JSON(dic!)
+        
+        self.login = data["login"].string!
+        self.password = data["password"].string!
+        self.signature = AuthHelper.getSignature(self.login, password: self.password, url: httpUrl)
+        
+        println("\(self.login) : \(self.password) : \(self.signature)")
+        
+        let postString = "friend_with=\(friendsList)"
+        let url = "http://macbook-simon.local/API/PHP06/API/me/friends"
+        
+        println(url)
+        var mutableURLRequest = AuthHelper.buildRequest(url, login: self.login, signature: self.signature, parameters: postString, verb: "POST", auth:true)
+        
+        
+        let manager = Alamofire.Manager.sharedInstance
+        let request = manager.request(mutableURLRequest)
+        request.responseJSON { (request, response, data, error) in
+            println(data)
+            if response!.statusCode == 200 {
+                
+                println("yo")
+                
+            } else {
+                var res = JSON(data!)
+                var err = res["error"]["message"]
+                
+                println("Fail during process : \(err)")
             }
         }
     }

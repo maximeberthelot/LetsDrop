@@ -77,6 +77,9 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="DmX-cC-Bl3">
+                                        <rect key="frame" x="214" y="20" width="20" height="20"/>
+                                    </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vh-7c-1dl" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
                                         <rect key="frame" x="213" y="19" width="22" height="22"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
@@ -329,6 +332,7 @@
                         <outlet property="passwordTextField" destination="zf2-IY-OOf" id="5Sz-6a-m2B"/>
                         <outlet property="phoneTextField" destination="2d0-39-A3H" id="6CZ-hA-SUr"/>
                         <outlet property="phoneView" destination="YRe-kM-fRE" id="e2R-fb-6Dr"/>
+                        <outlet property="spinner" destination="DmX-cC-Bl3" id="Dqj-gA-CfQ"/>
                         <outlet property="usernameTextField" destination="Rn8-VA-QZp" id="Don-ca-q5h"/>
                     </connections>
                 </viewController>
