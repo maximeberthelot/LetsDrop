@@ -60,6 +60,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSo-h1-zbk" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="125" y="390" width="71" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="SaL-66-o1F"/>
+                                    <constraint firstAttribute="height" constant="70" id="yR8-gT-QIO"/>
+                                </constraints>
+                                <state key="normal" image="icon-picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doPick:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="Rpa-BR-yYW"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="| Drop a message" minimumFontSize="17" background="Background Sign In" disabledBackground="Background Sign In" translatesAutoresizingMaskIntoConstraints="NO" id="bLy-r6-XJx" customClass="DesignableTextField" customModule="LetsDrop" customModuleProvider="target">
                                 <rect key="frame" x="32" y="74" width="254" height="365"/>
                                 <color key="backgroundColor" red="0.65563678794628932" green="0.52886722588520207" blue="0.76832455396652222" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,6 +100,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec7-2c-Se9" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DBl-Lt-FCO"/>
+                                    <constraint firstAttribute="width" constant="30" id="xVw-iu-JPy"/>
+                                </constraints>
+                                <state key="normal" image="btn-cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="tJs-k3-Qhd"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Maison albert dubert, 4 rue capitaine hadok" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5o-KH-H8n" customClass="DesignableLabel" customModule="LetsDrop" customModuleProvider="target">
                                 <rect key="frame" x="71" y="95" width="193" height="21"/>
                                 <constraints>
@@ -108,37 +139,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSo-h1-zbk" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
-                                <rect key="frame" x="125" y="390" width="71" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="SaL-66-o1F"/>
-                                    <constraint firstAttribute="height" constant="70" id="yR8-gT-QIO"/>
-                                </constraints>
-                                <state key="normal" image="icon-picture">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doPick:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="Rpa-BR-yYW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec7-2c-Se9" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
-                                <rect key="frame" x="16" y="28" width="26" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DBl-Lt-FCO"/>
-                                    <constraint firstAttribute="width" constant="30" id="xVw-iu-JPy"/>
-                                </constraints>
-                                <state key="normal" image="btn-cancel">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="cancelBtn:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="tJs-k3-Qhd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3p-zQ-9tk" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
                                 <rect key="frame" x="136" y="513" width="47" height="47"/>
                                 <constraints>
@@ -209,7 +209,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="SendBtn:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="Jtp-0c-33w"/>
+                                    <action selector="goToLifeTimeBtn:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="elR-dk-hF4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -277,9 +277,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="cancelBtn" destination="ec7-2c-Se9" id="r6H-BY-zNo"/>
+                        <outlet property="goToLifeTimeBtn" destination="jHw-EU-0wx" id="8Kt-q6-q59"/>
                         <outlet property="messageField" destination="bLy-r6-XJx" id="pd5-SA-f3w"/>
                         <outlet property="myPicture" destination="F6z-4L-HJM" id="SCs-dj-oUm"/>
-                        <outlet property="sendBtn" destination="jHw-EU-0wx" id="qB5-U9-d2U"/>
                         <outlet property="titleLabel" destination="u5o-KH-H8n" id="SLG-fz-A2x"/>
                     </connections>
                 </viewController>

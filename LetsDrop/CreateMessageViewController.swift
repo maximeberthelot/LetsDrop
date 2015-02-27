@@ -18,7 +18,7 @@ class CreateMessageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var myPicture : UIView!
     @IBOutlet weak var messageField: UITextField!
     @IBOutlet weak var titleLabel: DesignableLabel!
-    @IBOutlet weak var sendBtn: DesignableButton!
+    @IBOutlet weak var goToLifeTimeBtn: DesignableButton!
     
     
     override func viewDidLoad() {
@@ -48,29 +48,17 @@ class CreateMessageViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelBtn(sender: AnyObject) {
-        var navigationStoryboard = UIStoryboard(name: "navigation", bundle: nil)
-        var controller = navigationStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
-        controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        self.presentViewController(controller, animated: true, completion: nil)
-      
-        deleteMessages()
-    }
-    
     // Delete all Message in localStorage and Purge Memory
     func deleteMessages(){
-        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        let context: NSManagedObjectContext = appDel.managedObjectContext!
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate,
+            context: NSManagedObjectContext = appDel.managedObjectContext!
         
         var request = NSFetchRequest(entityName: "Messages")
         request.returnsObjectsAsFaults = false
-        var results:AnyObject = context.executeFetchRequest(request, error: nil)!
+        var results:AnyObject = context.executeFetchRequest(request, error: nil)!,
+            lenght = results.count
         
-        var lenght = results.count
-        
-        context.deleteObject(results[0] as NSManagedObject)
         for var i = 0; i<lenght; i++ {
-            println(i)
             context.deleteObject(results[i] as NSManagedObject)
             context.save(nil)
         }
@@ -226,7 +214,9 @@ extension CreateMessageViewController : UIImagePickerControllerDelegate, UINavig
         println(results[lenght-1])
 
     }
-    @IBAction func SendBtn(sender: AnyObject) {
+    //btn Interaction
+    /********** ------ **/
+    @IBAction func goToLifeTimeBtn(sender: AnyObject) {
         var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         var context:NSManagedObjectContext = appDel.managedObjectContext!
         //Adding part
@@ -235,9 +225,40 @@ extension CreateMessageViewController : UIImagePickerControllerDelegate, UINavig
         var results:AnyObject = context.executeFetchRequest(request, error: nil)!
         var lenght = results.count
         
+        println(results[lenght-1].message)
         
-        if results[lenght-1].title != nil && results[lenght-1].message != nil{
-        
+        if results[lenght-1].message == nil {
+            var alert = UIAlertController(title: "Ops! Error", message: "Please, enter your message", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
+        else{
+            //GoToLifeTime View
+            
+            var nameStoryboard:String = "lifetimeStoryboard"
+            var titleStoryboard:String = "lifetime"
+            var storyboardID:String = "LifeTimeViewController"
+            goToView(nameStoryboard,titleStoryboard: titleStoryboard,storyboardID: storyboardID)
+        }
+    }
+    
+    @IBAction func cancelBtn(sender: AnyObject) {
+        var navigationStoryboard = UIStoryboard(name: "navigation", bundle: nil)
+        var controller = navigationStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
+        controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+        //GoTo Navigation Storyboard
+        var nameStoryboard:String = "navigationStoryboard",
+            titleStoryboard:String = "navigation",
+            storyboardID:String = "InitialViewController"
+        goToView(nameStoryboard,titleStoryboard: titleStoryboard,storyboardID: storyboardID)
+    }
+    
+    func goToView(nameStoryboard:String,titleStoryboard:String,storyboardID:String){
+        var  nameStoryboard = UIStoryboard(name: titleStoryboard, bundle: nil)
+        var controller = nameStoryboard.instantiateViewControllerWithIdentifier(storyboardID) as UIViewController
+        controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        self.presentViewController(controller, animated: true, completion: nil)
     }
 }

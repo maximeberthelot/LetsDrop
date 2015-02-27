@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lolita SemiBold.otf">
+            <string>LolitaSemiBold</string>
+        </mutableArray>
+        <mutableArray key="LolitaLight.otf">
+            <string>LolitaLight</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Life Time View Controller-->
+        <scene sceneID="6Nk-Ux-hmU">
+            <objects>
+                <viewController storyboardIdentifier="LifeTimeViewController" id="3Te-WW-oDB" customClass="LifeTimeViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jeS-1O-qQJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="FJg-8f-NVa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aGO-mT-YVs" customClass="DesignableView" customModule="LetsDrop" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg-lifetime" translatesAutoresizingMaskIntoConstraints="NO" id="QYw-oB-tF6">
+                                <rect key="frame" x="-47" y="-78" width="392" height="705"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Message lifetime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-O0-Bnl" customClass="DesignableLabel" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="93" y="32" width="131" height="21"/>
+                                <fontDescription key="fontDescription" name="LolitaSemiBold" family="Lolita" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy2-Ul-9Qm">
+                                <rect key="frame" x="275" y="30" width="26" height="26"/>
+                                <state key="normal" image="icon-send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2H-kd-FZE">
+                                <rect key="frame" x="17" y="30" width="26" height="26"/>
+                                <state key="normal" image="icon-previous">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ONLY ONCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-8b-krn">
+                                <rect key="frame" x="101" y="77" width="97" height="21"/>
+                                <fontDescription key="fontDescription" name="LolitaLight" family="Lolita" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oe5-O0-Bnl" firstAttribute="top" secondItem="jeS-1O-qQJ" secondAttribute="bottom" constant="15" id="2l6-Zh-cBT"/>
+                            <constraint firstAttribute="centerX" secondItem="4aO-8b-krn" secondAttribute="centerX" id="62R-tc-6Xr"/>
+                            <constraint firstItem="oe5-O0-Bnl" firstAttribute="centerY" secondItem="m2H-kd-FZE" secondAttribute="centerY" id="CWa-iU-lf3"/>
+                            <constraint firstItem="oe5-O0-Bnl" firstAttribute="bottom" secondItem="4aO-8b-krn" secondAttribute="bottom" constant="-35" id="EMf-5d-4Vq"/>
+                            <constraint firstItem="QYw-oB-tF6" firstAttribute="leading" secondItem="aGO-mT-YVs" secondAttribute="leading" id="Gg8-we-mNy"/>
+                            <constraint firstItem="oe5-O0-Bnl" firstAttribute="centerY" secondItem="xy2-Ul-9Qm" secondAttribute="centerY" id="OOp-5b-aJs"/>
+                            <constraint firstItem="m2H-kd-FZE" firstAttribute="leading" secondItem="aGO-mT-YVs" secondAttribute="leadingMargin" id="STW-m4-QEk"/>
+                            <constraint firstItem="FJg-8f-NVa" firstAttribute="top" secondItem="QYw-oB-tF6" secondAttribute="bottom" id="a9g-i8-8tq"/>
+                            <constraint firstItem="QYw-oB-tF6" firstAttribute="top" secondItem="aGO-mT-YVs" secondAttribute="top" id="bb9-1w-quV"/>
+                            <constraint firstAttribute="trailing" secondItem="xy2-Ul-9Qm" secondAttribute="trailing" constant="14" id="kmn-yV-2PR"/>
+                            <constraint firstAttribute="centerX" secondItem="oe5-O0-Bnl" secondAttribute="centerX" id="mRj-pc-01f"/>
+                            <constraint firstAttribute="trailing" secondItem="QYw-oB-tF6" secondAttribute="trailing" id="oMW-me-wlX"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ask-Pl-Yws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg-lifetime" width="320" height="568"/>
+        <image name="icon-previous" width="26" height="26"/>
+        <image name="icon-send" width="26" height="26"/>
+    </resources>
+</document>
