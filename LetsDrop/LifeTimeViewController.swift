@@ -22,6 +22,16 @@ class LifeTimeViewController: UIViewController {
         var lenght = results.count
         
         println(results[lenght-1])
+        
+        var frame = CGRectMake(100, 100, 50, 50)
+        var newView = DragViewController(frame: frame)
+        newView.userInteractionEnabled = true
+        newView.image = UIImage(named: "icon-drag")
+        
+        newView.contentMode = .ScaleAspectFit
+        self.view.addSubview(newView)
+        // theButton.titleLabel.text
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +44,41 @@ class LifeTimeViewController: UIViewController {
         var controller = nameStoryboard.instantiateViewControllerWithIdentifier(storyboardID) as UIViewController
         controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(controller, animated: true, completion: nil)
+        
     }
     
+    func setLabel(currentLife : String){
+        println(currentLife)
+    }
+    
+    @IBOutlet weak var lifeLabel: UILabel!
+    class DragViewController: UIImageView {
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+        }
+        
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        
+        override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+            println("coucou")
+        }
+        
+        override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
+            var touch: UITouch! = touches.anyObject() as UITouch!
+            self.center = touch.locationInView(self.superview)
+            
+            println("coucouuuuuu")
+            
+        }
+        
+        override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+            var currentLife:String = "ououou"
+            //lifeLabel.text = "ouou"
+        }
+        
+    }
     
 }
