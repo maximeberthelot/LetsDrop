@@ -54,25 +54,28 @@ class CreateMessageViewController: UIViewController, UITextFieldDelegate {
         controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(controller, animated: true, completion: nil)
       
+        deleteMessages()
+    }
+    
+    // Delete all Message in localStorage and Purge Memory
+    func deleteMessages(){
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         let context: NSManagedObjectContext = appDel.managedObjectContext!
-        
-        
-        let fetchRequest = NSFetchRequest(entityName: "Messages")
-        fetchRequest.includesSubentities = false
-        fetchRequest.returnsObjectsAsFaults = false
-        
-        fetchRequest.predicate = NSPredicate(format:"name == '\(title)'")
         
         var request = NSFetchRequest(entityName: "Messages")
         request.returnsObjectsAsFaults = false
         var results:AnyObject = context.executeFetchRequest(request, error: nil)!
         
-       // for title in Messages() {
-         //   results.deleteObject(title)
-        //}
+        var lenght = results.count
+        
+        context.deleteObject(results[0] as NSManagedObject)
+        for var i = 0; i<lenght; i++ {
+            println(i)
+            context.deleteObject(results[i] as NSManagedObject)
+            context.save(nil)
+        }
     }
-    
+
     // Get Library Picture
     
     func determineStatus() -> Bool {
