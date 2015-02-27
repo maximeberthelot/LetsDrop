@@ -213,18 +213,27 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
             var contactName:String = ""
             if ABRecordCopyCompositeName(contactPerson) != nil {
                 contactName = ABRecordCopyCompositeName(contactPerson).takeRetainedValue() as NSString
+                println("NOT NIL OK")
                 
             }
+            println("NAME OK : \(contactName)")
             
             self.names.append("\(contactName)")
             
             var emailArray:ABMultiValueRef = extractABEmailRef(ABRecordCopyValue(contactPerson, kABPersonPhoneProperty))!
                 var phones = ""
             
+            println("EMAIL ARRAY OK")
+            
             for (var j = 0; j < ABMultiValueGetCount(emailArray); ++j)
             {
+                
                 var emailAdd = ABMultiValueCopyValueAtIndex(emailArray, j)
+                println("EMAIL ADD OK")
+                
                 var myString = extractABEmailAddress(emailAdd)
+                
+                println("EXTRACT OK")
 
                 myString = myString!.stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("-", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("(", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString(")", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("+33", withString: "0", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).stringByReplacingOccurrencesOfString("#", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
                 
