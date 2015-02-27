@@ -47,9 +47,7 @@ class LifeTimeViewController: UIViewController {
         
     }
     
-    func setLabel(currentLife : String){
-        println(currentLife)
-    }
+    
     
     @IBOutlet weak var lifeLabel: UILabel!
     class DragViewController: UIImageView {
@@ -76,6 +74,8 @@ class LifeTimeViewController: UIViewController {
         
         override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
             var currentLife:String = "ououou"
+           // let  setLabelFunc= LifeTimeViewController.setLabel(currentLife)
+            
             //lifeLabel.text = "ouou"
         }
         
