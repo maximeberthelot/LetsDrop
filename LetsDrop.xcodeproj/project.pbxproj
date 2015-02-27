@@ -69,11 +69,28 @@
 		C1BF10181A9BA68700E7AC50 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF10171A9BA68700E7AC50 /* AddressBook.framework */; };
 		C1BF101A1A9BC76C00E7AC50 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10191A9BC76C00E7AC50 /* CustomTableViewCell.swift */; };
 		C1DB40981A9E412C003E6846 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DB40971A9E412C003E6846 /* MessageUI.framework */; };
+		F9063C091A9F1A4D000E5996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C081A9F1A4D000E5996 /* Foundation.framework */; };
+		F9063C0E1A9F1A57000E5996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C0D1A9F1A57000E5996 /* UIKit.framework */; };
+		F9063C101A9F1A61000E5996 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C0F1A9F1A61000E5996 /* CoreGraphics.framework */; };
+		F9063C121A9F1C48000E5996 /* MyImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9063C111A9F1C48000E5996 /* MyImagePickerController.swift */; };
+		F9104BDF1AA0BA3B009B3E30 /* lifetime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9104BDE1AA0BA3B009B3E30 /* lifetime.storyboard */; };
+		F9104BE11AA0BA4C009B3E30 /* LifeTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9104BE01AA0BA4C009B3E30 /* LifeTimeViewController.swift */; };
+		F92A6DCE1A9E5575004EDF86 /* createmessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */; };
+		F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */; };
+		F99B6B451A9F52CE000ADDAE /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B6B441A9F52CE000ADDAE /* Messages.swift */; };
+		F9E1E0D21A9BBFE4004CF6F4 /* ReceivedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */; };
+		F9E1E0D61A9BC009004CF6F4 /* ReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */; };
+		F9E1E0D91A9BC026004CF6F4 /* DroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */; };
+		F9E1E0DB1A9BC036004CF6F4 /* DroppedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E0DA1A9BC036004CF6F4 /* DroppedViewController.xib */; };
+		F9E1E0DD1A9BC075004CF6F4 /* NavActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0DC1A9BC075004CF6F4 /* NavActViewController.swift */; };
+		F9E1E0E01A9BCC50004CF6F4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0DF1A9BCC50004CF6F4 /* MapViewController.swift */; };
+		F9E1E0E21A9BCE48004CF6F4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E1E0E11A9BCE48004CF6F4 /* MapKit.framework */; };
+		F9E1E0E41A9BCE54004CF6F4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E1E0E31A9BCE54004CF6F4 /* CoreLocation.framework */; };
+		F9E1E0E61A9BDCDB004CF6F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E0E51A9BDCDB004CF6F4 /* Images.xcassets */; };
 		F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C11A9A267D00707417 /* AppDelegate.swift */; };
 		F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */; };
 		F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3C61A9A267D00707417 /* ViewController.swift */; };
 		F9F6E3CA1A9A267D00707417 /* navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F6E3C81A9A267D00707417 /* navigation.storyboard */; };
-		F9F6E3CC1A9A267D00707417 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9F6E3CB1A9A267D00707417 /* Images.xcassets */; };
 		F9F6E3DB1A9A267D00707417 /* LetsDropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E3DA1A9A267D00707417 /* LetsDropTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -200,13 +217,30 @@
 		C1BF10171A9BA68700E7AC50 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		C1BF10191A9BC76C00E7AC50 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C1DB40971A9E412C003E6846 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		F9063C081A9F1A4D000E5996 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F9063C0D1A9F1A57000E5996 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F9063C0F1A9F1A61000E5996 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F9063C111A9F1C48000E5996 /* MyImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImagePickerController.swift; sourceTree = "<group>"; };
+		F9104BDE1AA0BA3B009B3E30 /* lifetime.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = lifetime.storyboard; sourceTree = "<group>"; };
+		F9104BE01AA0BA4C009B3E30 /* LifeTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeTimeViewController.swift; sourceTree = "<group>"; };
+		F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createmessage.storyboard; sourceTree = "<group>"; };
+		F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMessageViewController.swift; sourceTree = "<group>"; };
+		F99B6B441A9F52CE000ADDAE /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedViewController.xib; sourceTree = "<group>"; };
+		F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedViewController.swift; sourceTree = "<group>"; };
+		F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroppedViewController.swift; sourceTree = "<group>"; };
+		F9E1E0DA1A9BC036004CF6F4 /* DroppedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DroppedViewController.xib; sourceTree = "<group>"; };
+		F9E1E0DC1A9BC075004CF6F4 /* NavActViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavActViewController.swift; sourceTree = "<group>"; };
+		F9E1E0DF1A9BCC50004CF6F4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F9E1E0E11A9BCE48004CF6F4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F9E1E0E31A9BCE54004CF6F4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F9E1E0E51A9BDCDB004CF6F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F9F6E3BC1A9A267D00707417 /* LetsDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6E3C01A9A267D00707417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6E3C11A9A267D00707417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9F6E3C41A9A267D00707417 /* LetsDrop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LetsDrop.xcdatamodel; sourceTree = "<group>"; };
 		F9F6E3C61A9A267D00707417 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F9F6E3C91A9A267D00707417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/navigation.storyboard; sourceTree = "<group>"; };
-		F9F6E3CB1A9A267D00707417 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F9F6E3D41A9A267D00707417 /* LetsDropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetsDropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6E3D91A9A267D00707417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F6E3DA1A9A267D00707417 /* LetsDropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsDropTests.swift; sourceTree = "<group>"; };
@@ -219,6 +253,11 @@
 			files = (
 				C1DB40981A9E412C003E6846 /* MessageUI.framework in Frameworks */,
 				C1BF10181A9BA68700E7AC50 /* AddressBook.framework in Frameworks */,
+				F9063C101A9F1A61000E5996 /* CoreGraphics.framework in Frameworks */,
+				F9063C0E1A9F1A57000E5996 /* UIKit.framework in Frameworks */,
+				F9063C091A9F1A4D000E5996 /* Foundation.framework in Frameworks */,
+				F9E1E0E41A9BCE54004CF6F4 /* CoreLocation.framework in Frameworks */,
+				F9E1E0E21A9BCE48004CF6F4 /* MapKit.framework in Frameworks */,
 				C1BF0FFC1A9B6C1400E7AC50 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +453,68 @@
 			children = (
 			);
 			name = Checkbox;
+		F9104BDA1AA0BA24009B3E30 /* LifeTime */ = {
+			isa = PBXGroup;
+			children = (
+				F9104BDE1AA0BA3B009B3E30 /* lifetime.storyboard */,
+				F9104BE01AA0BA4C009B3E30 /* LifeTimeViewController.swift */,
+			);
+			name = LifeTime;
+			sourceTree = "<group>";
+		};
+		F92A6DC91A9E5549004EDF86 /* CreateMessage */ = {
+			isa = PBXGroup;
+			children = (
+				F9063C111A9F1C48000E5996 /* MyImagePickerController.swift */,
+				F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */,
+				F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */,
+				F9104BDA1AA0BA24009B3E30 /* LifeTime */,
+			);
+			name = CreateMessage;
+			sourceTree = "<group>";
+		};
+		F93C9F031A9F3AE000E949E6 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				F99B6B441A9F52CE000ADDAE /* Messages.swift */,
+			);
+			name = Datas;
+			sourceTree = "<group>";
+		};
+		F9E1E0D31A9BBFEA004CF6F4 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E0D71A9BC00E004CF6F4 /* Dropped */,
+				F9E1E0D41A9BBFF5004CF6F4 /* Received */,
+				F9E1E0DC1A9BC075004CF6F4 /* NavActViewController.swift */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		F9E1E0D41A9BBFF5004CF6F4 /* Received */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */,
+				F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */,
+			);
+			name = Received;
+			sourceTree = "<group>";
+		};
+		F9E1E0D71A9BC00E004CF6F4 /* Dropped */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */,
+				F9E1E0DA1A9BC036004CF6F4 /* DroppedViewController.xib */,
+			);
+			name = Dropped;
+			sourceTree = "<group>";
+		};
+		F9E1E0DE1A9BCC35004CF6F4 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E0DF1A9BCC50004CF6F4 /* MapViewController.swift */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 		F9F6E3B31A9A267D00707417 = {
@@ -421,6 +522,11 @@
 			children = (
 				C1DB40971A9E412C003E6846 /* MessageUI.framework */,
 				C1BF10171A9BA68700E7AC50 /* AddressBook.framework */,
+				F9063C0F1A9F1A61000E5996 /* CoreGraphics.framework */,
+				F9063C0D1A9F1A57000E5996 /* UIKit.framework */,
+				F9063C081A9F1A4D000E5996 /* Foundation.framework */,
+				F9E1E0E31A9BCE54004CF6F4 /* CoreLocation.framework */,
+				F9E1E0E11A9BCE48004CF6F4 /* MapKit.framework */,
 				C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */,
 				C15A465B1A9A4FA70012CE29 /* LetsDrop-Bridging-Header.h */,
 				F9F6E3BE1A9A267D00707417 /* LetsDrop */,
@@ -441,17 +547,21 @@
 		F9F6E3BE1A9A267D00707417 /* LetsDrop */ = {
 			isa = PBXGroup;
 			children = (
+				F9E1E0E51A9BDCDB004CF6F4 /* Images.xcassets */,
 				C15A46091A9A400A0012CE29 /* Ressources */,
 				C15A465A1A9A4F880012CE29 /* Helpers */,
 				F9F6E3C11A9A267D00707417 /* AppDelegate.swift */,
+				F93C9F031A9F3AE000E949E6 /* Datas */,
 				F9F6E3C61A9A267D00707417 /* ViewController.swift */,
-				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
 				C12D27761A9AAA730086CE66 /* Main.storyboard */,
 				C12D27791A9AAA830086CE66 /* LaunchScreen.xib */,
 				C1BF10121A9B9FC400E7AC50 /* InviteContacts */,
+				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
+				F92A6DC91A9E5549004EDF86 /* CreateMessage */,
+				F9E1E0DE1A9BCC35004CF6F4 /* Map */,
+				F9E1E0D31A9BBFEA004CF6F4 /* Activity */,
 				C1BF10051A9B6D8800E7AC50 /* SignUp */,
 				C15A45F01A9A334B0012CE29 /* Login */,
-				F9F6E3CB1A9A267D00707417 /* Images.xcassets */,
 				F9F6E3C31A9A267D00707417 /* LetsDrop.xcdatamodeld */,
 				F9F6E3BF1A9A267D00707417 /* Supporting Files */,
 			);
@@ -603,9 +713,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1BF10071A9B6D9D00E7AC50 /* signUp.storyboard in Resources */,
+				F9E1E0E61A9BDCDB004CF6F4 /* Images.xcassets in Resources */,
+				F92A6DCE1A9E5575004EDF86 /* createmessage.storyboard in Resources */,
+				F9E1E0D21A9BBFE4004CF6F4 /* ReceivedViewController.xib in Resources */,
 				C15A46151A9A400A0012CE29 /* Lolita ExtraLight.otf in Resources */,
 				C15A461E1A9A400A0012CE29 /* LolitaUltra.otf in Resources */,
 				C15A45EF1A9A33460012CE29 /* login.storyboard in Resources */,
+				F9104BDF1AA0BA3B009B3E30 /* lifetime.storyboard in Resources */,
 				C12D277B1A9AAA830086CE66 /* LaunchScreen.xib in Resources */,
 				C1BF10141A9B9FE700E7AC50 /* inviteContacts.storyboard in Resources */,
 				C15A46191A9A400A0012CE29 /* LolitaBook.otf in Resources */,
@@ -613,13 +727,13 @@
 				C15A461A1A9A400A0012CE29 /* LolitaHeavy.otf in Resources */,
 				C15A461D1A9A400A0012CE29 /* LolitaThin.otf in Resources */,
 				C15A461C1A9A400A0012CE29 /* LolitaMedium.otf in Resources */,
+				F9E1E0DB1A9BC036004CF6F4 /* DroppedViewController.xib in Resources */,
 				C15A46481A9A40760012CE29 /* Info.plist in Resources */,
 				C15A464B1A9A40760012CE29 /* LoadingView.xib in Resources */,
 				C15A461B1A9A400A0012CE29 /* LolitaLight.otf in Resources */,
 				C12D27781A9AAA730086CE66 /* Main.storyboard in Resources */,
 				C15A46181A9A400A0012CE29 /* LolitaBold.otf in Resources */,
 				C15A46161A9A400A0012CE29 /* Lolita SemiBold.otf in Resources */,
-				F9F6E3CC1A9A267D00707417 /* Images.xcassets in Resources */,
 				C15A46171A9A400A0012CE29 /* LolitaBlack.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,17 +761,20 @@
 				C1BF100F1A9B835600E7AC50 /* AuthHelper.swift in Sources */,
 				C15A464C1A9A40760012CE29 /* Misc.swift in Sources */,
 				C15A46501A9A40760012CE29 /* SpringImageView.swift in Sources */,
+				F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */,
 				C15A46521A9A40760012CE29 /* SpringTextField.swift in Sources */,
 				C1BF100D1A9B80EA00E7AC50 /* LocksmithRequest.swift in Sources */,
 				C15A46411A9A40760012CE29 /* DesignableImageView.swift in Sources */,
 				C15A45F31A9A33AC0012CE29 /* LoginViewController.swift in Sources */,
 				C15A46511A9A40760012CE29 /* SpringLabel.swift in Sources */,
+				F9E1E0E01A9BCC50004CF6F4 /* MapViewController.swift in Sources */,
 				C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */,
 				C15A463F1A9A40760012CE29 /* Data.swift in Sources */,
 				C15A46461A9A40760012CE29 /* DesignableView.swift in Sources */,
 				C15A464A1A9A40760012CE29 /* LoadingView.swift in Sources */,
 				C15A46401A9A40760012CE29 /* DesignableButton.swift in Sources */,
 				C1493B721A9AA8DE0013A7AD /* RAMRotationAnimation.swift in Sources */,
+				F9104BE11AA0BA4C009B3E30 /* LifeTimeViewController.swift in Sources */,
 				C15A464F1A9A40760012CE29 /* SpringButton.swift in Sources */,
 				C15A464D1A9A40760012CE29 /* Spring.swift in Sources */,
 				C15A46441A9A40760012CE29 /* DesignableTextField.swift in Sources */,
@@ -669,15 +786,20 @@
 				C1BF10091A9B7ACB00E7AC50 /* SwiftyJSON.swift in Sources */,
 				C15A46431A9A40760012CE29 /* DesignableTabBarController.swift in Sources */,
 				F9F6E3C51A9A267D00707417 /* LetsDrop.xcdatamodeld in Sources */,
+				F9063C121A9F1C48000E5996 /* MyImagePickerController.swift in Sources */,
+				F9E1E0DD1A9BC075004CF6F4 /* NavActViewController.swift in Sources */,
 				C1BF10041A9B6D8200E7AC50 /* SignUpViewController.swift in Sources */,
 				C15A46531A9A40760012CE29 /* SpringTextView.swift in Sources */,
 				C15A46451A9A40760012CE29 /* DesignableTextView.swift in Sources */,
 				C1493B741A9AA8DE0013A7AD /* RAMAnimatedTabBarController.swift in Sources */,
+				F99B6B451A9F52CE000ADDAE /* Messages.swift in Sources */,
 				C1493B731A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift in Sources */,
 				C1BF10161A9BA31500E7AC50 /* SwiftAddressBookWrapper.swift in Sources */,
 				C15A46421A9A40760012CE29 /* DesignableLabel.swift in Sources */,
 				F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */,
+				F9E1E0D91A9BC026004CF6F4 /* DroppedViewController.swift in Sources */,
 				C15A464E1A9A40760012CE29 /* SpringAnimation.swift in Sources */,
+				F9E1E0D61A9BC009004CF6F4 /* ReceivedViewController.swift in Sources */,
 				C1493B6F1A9AA8DE0013A7AD /* RAMBounceAnimation.swift in Sources */,
 				C15A46571A9A40760012CE29 /* UnwindSegue.swift in Sources */,
 				C1493B711A9AA8DE0013A7AD /* RAMFumeAnimation.swift in Sources */,
