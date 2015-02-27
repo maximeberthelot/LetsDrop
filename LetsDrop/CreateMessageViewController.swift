@@ -9,15 +9,36 @@
 import UIKit
 import MobileCoreServices
 import Photos
+import CoreData
 import AVKit
 
-class CreateMessageViewController: UIViewController {
+
+class CreateMessageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cancelBtn: DesignableButton!
-    @IBOutlet var redView : UIView!
+    @IBOutlet var myPicture : UIView!
+    @IBOutlet weak var messageField: UITextField!
+    @IBOutlet weak var titleLabel: DesignableLabel!
+    @IBOutlet weak var sendBtn: DesignableButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.messageField.delegate = self;
+        // Set
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var request = NSFetchRequest(entityName: "Messages")
+        request.returnsObjectsAsFaults = false
+        var results:AnyObject = context.executeFetchRequest(request, error: nil)!
+        var lenght = results.count
+        
+        titleLabel.text = results[lenght-1].title
+        titleLabel.textColor = UIColor(hex: "#FFFFFF")
+        sendBtn.autohide = true
+        println("result")
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,12 +54,9 @@ class CreateMessageViewController: UIViewController {
       
     }
     
+    // Get Library Picture
     
     func determineStatus() -> Bool {
-        // access permission dialog will appear automatically if necessary...
-        // ...when we try to present the UIImagePickerController
-        // however, things then proceed asynchronously
-        // so it can look better to try to ascertain permission in advance
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {
         case .Authorized:
@@ -49,11 +67,9 @@ class CreateMessageViewController: UIViewController {
         case .Restricted:
             return false
         case .Denied:
-            // new iOS 8 feature: sane way of getting the user directly to the relevant prefs
-            // I think the crash-in-background issue is now gone
-            let alert = UIAlertController(title: "Need Authorization", message: "Wouldn't you like to authorize this app to use your Photos library?", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Need Authorization", message: "Wouldn't you like to authorize Let's Drop to use your Photos library?", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: nil))
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: {
+            alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: {
                 _ in
                 let url = NSURL(string:UIApplicationOpenSettingsURLString)!
                 UIApplication.sharedApplication().openURL(url)
@@ -62,12 +78,6 @@ class CreateMessageViewController: UIViewController {
             return false
         }
     }
-    
-    /*
-    New authorization strategy: check for authorization when we first appear,
-    when we are brought back to the front,
-    and when the user taps a button whose functionality needs authorization
-    */
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -98,12 +108,7 @@ class CreateMessageViewController: UIViewController {
         picker.mediaTypes = arr!
         picker.delegate = self
         
-        picker.allowsEditing = false // try true
-        
-        // this will automatically be fullscreen on phone and pad, looks fine
-        // note that for .PhotoLibrary, iPhone app must permit portrait orientation
-        // if we want a popover, on pad, we can do that; just uncomment next line
-        // picker.modalPresentationStyle = .Popover
+        picker.allowsEditing = false
         self.presentViewController(picker, animated: true, completion: nil)
         // ignore:
         if let pop = picker.popoverPresentationController {
@@ -115,19 +120,18 @@ class CreateMessageViewController: UIViewController {
     }
 }
 
-// if we do nothing about cancel, cancels automatically
-// if we do nothing about what was chosen, cancel automatically but of course now we have no access
-
-// interesting problem is that we have no control over permitted orientations of picker
-// seems like a bug; can work around this by subclassing
-
 extension CreateMessageViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     func imagePickerController(picker: UIImagePickerController!,
         didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
             println(info[UIImagePickerControllerReferenceURL])
+            
+            var myPhotoUrl: String = info[UIImagePickerControllerReferenceURL] as String
+           
+            
             let url = info[UIImagePickerControllerMediaURL] as? NSURL
+            
             var im = info[UIImagePickerControllerOriginalImage] as? UIImage
             var edim = info[UIImagePickerControllerEditedImage] as? UIImage
             if edim != nil {
@@ -139,46 +143,65 @@ extension CreateMessageViewController : UIImagePickerControllerDelegate, UINavig
                     switch type! {
                     case kUTTypeImage:
                         if im != nil {
-                            self.showImage(im!)
-                        }
-                    case kUTTypeMovie:
-                        if url != nil {
-                            self.showMovie(url!)
+                            self.showImage(im!, myPhotoUrl: myPhotoUrl)
                         }
                     default:break
                     }
                 }
             }
+            
     }
     
-    func clearAll() {
+    func clearAll(myPhotoUrl: String) {
         if self.childViewControllers.count > 0 {
             let av = self.childViewControllers[0] as AVPlayerViewController
             av.willMoveToParentViewController(nil)
             av.view.removeFromSuperview()
             av.removeFromParentViewController()
         }
-        self.redView.subviews.map { ($0 as UIView).removeFromSuperview() }
+        self.myPicture.subviews.map { ($0 as UIView).removeFromSuperview() }
+        
+        println(myPhotoUrl)
+       // var Data:String = myPhotoUrl
+       // var typeData:String = "photo"
+       // self.setData(Data,typeData: typeData)
     }
     
-    func showImage(im:UIImage) {
-        self.clearAll()
+    func showImage(im:UIImage, myPhotoUrl:String) {
+        self.clearAll(myPhotoUrl)
         let iv = UIImageView(image:im)
         iv.contentMode = .ScaleAspectFit
-        iv.frame = self.redView.bounds
-        self.redView.addSubview(iv)
+        iv.frame = self.myPicture.bounds
+        self.myPicture.addSubview(iv)
+        
+          println(myPhotoUrl)
     }
     
-    func showMovie(url:NSURL) {
-        self.clearAll()
-        let av = AVPlayerViewController()
-        let player = AVPlayer(URL:url)
-        av.player = player
-        self.addChildViewController(av)
-        av.view.frame = self.redView.bounds
-        av.view.backgroundColor = self.redView.backgroundColor
-        self.redView.addSubview(av.view)
-        av.didMoveToParentViewController(self)
+    //Get Message
+    func textFieldShouldReturn(messageField: UITextField!) -> Bool {
+        self.view.endEditing(true);
+        //Set in current Object
+        var Data:String = messageField.text
+        var typeData:String = "message"
+        setData(Data,typeData: typeData)
+        
+        return false;
     }
     
+    // Set data in object/Entity Messages
+    func setData(Data: String, typeData: String){
+        println(Data+typeData)
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        //Adding part
+        var request = NSFetchRequest(entityName: "Messages")
+        request.returnsObjectsAsFaults = false
+        var results:AnyObject = context.executeFetchRequest(request, error: nil)!
+        var lenght = results.count
+        
+        
+        results[lenght-1].setValue(Data, forKey: typeData)
+        println(results[lenght-1])
+
+    }
 }

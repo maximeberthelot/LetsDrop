@@ -69,6 +69,7 @@
 		F9063C121A9F1C48000E5996 /* MyImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9063C111A9F1C48000E5996 /* MyImagePickerController.swift */; };
 		F92A6DCE1A9E5575004EDF86 /* createmessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */; };
 		F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */; };
+		F99B6B451A9F52CE000ADDAE /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B6B441A9F52CE000ADDAE /* Messages.swift */; };
 		F9E1E0D21A9BBFE4004CF6F4 /* ReceivedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */; };
 		F9E1E0D61A9BC009004CF6F4 /* ReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */; };
 		F9E1E0D91A9BC026004CF6F4 /* DroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */; };
@@ -208,6 +209,7 @@
 		F9063C111A9F1C48000E5996 /* MyImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImagePickerController.swift; sourceTree = "<group>"; };
 		F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createmessage.storyboard; sourceTree = "<group>"; };
 		F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMessageViewController.swift; sourceTree = "<group>"; };
+		F99B6B441A9F52CE000ADDAE /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedViewController.xib; sourceTree = "<group>"; };
 		F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedViewController.swift; sourceTree = "<group>"; };
 		F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroppedViewController.swift; sourceTree = "<group>"; };
@@ -426,6 +428,14 @@
 			name = CreateMessage;
 			sourceTree = "<group>";
 		};
+		F93C9F031A9F3AE000E949E6 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				F99B6B441A9F52CE000ADDAE /* Messages.swift */,
+			);
+			name = Datas;
+			sourceTree = "<group>";
+		};
 		F9E1E0D31A9BBFEA004CF6F4 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +504,7 @@
 				C15A46091A9A400A0012CE29 /* Ressources */,
 				C15A465A1A9A4F880012CE29 /* Helpers */,
 				F9F6E3C11A9A267D00707417 /* AppDelegate.swift */,
+				F93C9F031A9F3AE000E949E6 /* Datas */,
 				F9F6E3C61A9A267D00707417 /* ViewController.swift */,
 				C12D27761A9AAA730086CE66 /* Main.storyboard */,
 				C12D27791A9AAA830086CE66 /* LaunchScreen.xib */,
@@ -728,6 +739,7 @@
 				C15A46531A9A40760012CE29 /* SpringTextView.swift in Sources */,
 				C15A46451A9A40760012CE29 /* DesignableTextView.swift in Sources */,
 				C1493B741A9AA8DE0013A7AD /* RAMAnimatedTabBarController.swift in Sources */,
+				F99B6B451A9F52CE000ADDAE /* Messages.swift in Sources */,
 				C1493B731A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift in Sources */,
 				C15A46421A9A40760012CE29 /* DesignableLabel.swift in Sources */,
 				F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */,

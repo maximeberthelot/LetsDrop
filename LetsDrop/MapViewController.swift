@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 import AddressBookUI
-
+import CoreData
 
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,UISearchBarDelegate {
@@ -24,9 +24,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         
-        //
         searchBar.showsScopeBar = true
         searchBar.delegate = self
         
@@ -68,7 +66,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
        var currentLocation = mapView.centerCoordinate
         
-        NSLog("Lon: \(currentLocation.longitude.description) Lat: \(currentLocation.latitude.description)")
+       //NSLog("Lon: \(currentLocation.longitude.description) Lat: \(currentLocation.latitude.description)")
         
         //Convert lat & long
         var longitude :CLLocationDegrees = Double(currentLocation.longitude),
@@ -81,7 +79,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             if placemarks != nil {
                 let p = placemarks[0] as CLPlacemark     
                 let s = ABCreateStringWithAddressDictionary(p.addressDictionary, false)
-                println("you are at:\n\(s)") // do something with address
+                //println("you are at:\n\(s)") // do something with address
                 self.searchBar.text = String(s);
             }
         }
@@ -126,20 +124,44 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var mapCamera = MKMapCamera(lookingAtCenterCoordinate: location, fromEyeCoordinate: location, eyeAltitude: 1000)
         
         mapView.setCamera(mapCamera, animated: true)
-        
+
     }
     
     
     //Create a Message
     
     @IBAction func createMessage(sender: AnyObject) {
-       
+        var currentLocation = mapView.centerCoordinate
+        
+        NSLog("Lon: \(currentLocation.longitude.description) Lat: \(currentLocation.latitude.description)")
+        
+        //Convert lat & long
+        var longitude :CLLocationDegrees = Double(currentLocation.longitude),
+            latitude :CLLocationDegrees = Double(currentLocation.latitude);
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let managedContext = appDelegate.managedObjectContext!
+        
+        
+        //Adding part
+        var entity = NSEntityDescription.entityForName("Messages", inManagedObjectContext: managedContext)
+        var message = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        message.setValue(searchBar.text, forKey: "title")
+        message.setValue(longitude, forKey: "longitude")
+        message.setValue(latitude, forKey: "latitude")
+        
+        println(message)
+
         
         var createMessageStoryboard = UIStoryboard(name: "createmessage", bundle: nil)
         var controller = createMessageStoryboard.instantiateViewControllerWithIdentifier("InitialCMessageViewController") as UIViewController
         controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(controller, animated: true, completion: nil)
         
+        
     }
+    
+    
 }
 
