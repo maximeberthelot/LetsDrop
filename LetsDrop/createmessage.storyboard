@@ -200,7 +200,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHw-EU-0wx" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
-                                <rect key="frame" x="278" y="195" width="26" height="26"/>
+                                <rect key="frame" x="278" y="28" width="26" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="8tm-bT-JrN"/>
                                     <constraint firstAttribute="height" constant="30" id="CHx-kA-9JU"/>
@@ -208,6 +208,9 @@
                                 <state key="normal" image="icon-next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="SendBtn:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="Jtp-0c-33w"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

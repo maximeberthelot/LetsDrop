@@ -145,19 +145,22 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         //Adding part
         var entity = NSEntityDescription.entityForName("Messages", inManagedObjectContext: managedContext)
-        var message = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        var newMessage = NSEntityDescription.insertNewObjectForEntityForName("Messages", inManagedObjectContext: managedContext) as NSManagedObject
         
-        message.setValue(searchBar.text, forKey: "title")
-        message.setValue(longitude, forKey: "longitude")
-        message.setValue(latitude, forKey: "latitude")
+        newMessage.setValue(searchBar.text, forKey: "title")
+        newMessage.setValue(longitude, forKey: "longitude")
+        newMessage.setValue(latitude, forKey: "latitude")
         
-        println(message)
-
+        println(newMessage)
         
-        var createMessageStoryboard = UIStoryboard(name: "createmessage", bundle: nil)
-        var controller = createMessageStoryboard.instantiateViewControllerWithIdentifier("InitialCMessageViewController") as UIViewController
-        controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        self.presentViewController(controller, animated: true, completion: nil)
+        if newMessage.valueForKey("title") != nil{
+            println("ooooo")
+            var createMessageStoryboard = UIStoryboard(name: "createmessage", bundle: nil)
+            var controller = createMessageStoryboard.instantiateViewControllerWithIdentifier("InitialCMessageViewController") as UIViewController
+            controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+       
         
         
     }

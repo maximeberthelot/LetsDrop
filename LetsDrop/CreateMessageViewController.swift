@@ -36,8 +36,10 @@ class CreateMessageViewController: UIViewController, UITextFieldDelegate {
         
         titleLabel.text = results[lenght-1].title
         titleLabel.textColor = UIColor(hex: "#FFFFFF")
-        sendBtn.autohide = true
-        println("result")
+        
+        print("coeur")
+        println(results[lenght-1].title)
+        println(results)
         
     }
     
@@ -52,6 +54,23 @@ class CreateMessageViewController: UIViewController, UITextFieldDelegate {
         controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(controller, animated: true, completion: nil)
       
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext!
+        
+        
+        let fetchRequest = NSFetchRequest(entityName: "Messages")
+        fetchRequest.includesSubentities = false
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        fetchRequest.predicate = NSPredicate(format:"name == '\(title)'")
+        
+        var request = NSFetchRequest(entityName: "Messages")
+        request.returnsObjectsAsFaults = false
+        var results:AnyObject = context.executeFetchRequest(request, error: nil)!
+        
+       // for title in Messages() {
+         //   results.deleteObject(title)
+        //}
     }
     
     // Get Library Picture
@@ -203,5 +222,19 @@ extension CreateMessageViewController : UIImagePickerControllerDelegate, UINavig
         results[lenght-1].setValue(Data, forKey: typeData)
         println(results[lenght-1])
 
+    }
+    @IBAction func SendBtn(sender: AnyObject) {
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        //Adding part
+        var request = NSFetchRequest(entityName: "Messages")
+        request.returnsObjectsAsFaults = false
+        var results:AnyObject = context.executeFetchRequest(request, error: nil)!
+        var lenght = results.count
+        
+        
+        if results[lenght-1].title != nil && results[lenght-1].message != nil{
+        
+        }
     }
 }
