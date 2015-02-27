@@ -55,8 +55,7 @@
 		C15A46561A9A40760012CE29 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463C1A9A40760012CE29 /* TransitionZoom.swift */; };
 		C15A46571A9A40760012CE29 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463D1A9A40760012CE29 /* UnwindSegue.swift */; };
 		C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */; };
-		C1BF0FFC1A9B6C1400E7AC50 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
-		C1BF0FFD1A9B6C1400E7AC50 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C15CA4311AA0E50A006C7982 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
 		C1BF10041A9B6D8200E7AC50 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10031A9B6D8200E7AC50 /* SignUpViewController.swift */; };
 		C1BF10071A9B6D9D00E7AC50 /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1BF10061A9B6D9D00E7AC50 /* signUp.storyboard */; };
 		C1BF10091A9B7ACB00E7AC50 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10081A9B7ACB00E7AC50 /* SwiftyJSON.swift */; };
@@ -123,13 +122,6 @@
 			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
 			remoteInfo = "Alamofire OSX Tests";
 		};
-		C1BF0FFE1A9B6C1400E7AC50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
 		F9F6E3D51A9A267D00707417 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9F6E3B41A9A267D00707417 /* Project object */;
@@ -138,20 +130,6 @@
 			remoteInfo = LetsDrop;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C1BF10001A9B6C1400E7AC50 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C1BF0FFD1A9B6C1400E7AC50 /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C12D27771A9AAA730086CE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -251,6 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C15CA4311AA0E50A006C7982 /* Alamofire.framework in Frameworks */,
 				C1DB40981A9E412C003E6846 /* MessageUI.framework in Frameworks */,
 				C1BF10181A9BA68700E7AC50 /* AddressBook.framework in Frameworks */,
 				F9063C101A9F1A61000E5996 /* CoreGraphics.framework in Frameworks */,
@@ -258,7 +237,6 @@
 				F9063C091A9F1A4D000E5996 /* Foundation.framework in Frameworks */,
 				F9E1E0E41A9BCE54004CF6F4 /* CoreLocation.framework in Frameworks */,
 				F9E1E0E21A9BCE48004CF6F4 /* MapKit.framework in Frameworks */,
-				C1BF0FFC1A9B6C1400E7AC50 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +391,6 @@
 			children = (
 				C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */,
 				C1BF100E1A9B835600E7AC50 /* AuthHelper.swift */,
-				C1DB40A01A9E4ADC003E6846 /* Checkbox */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -448,11 +425,6 @@
 			name = InviteContacts;
 			sourceTree = "<group>";
 		};
-		C1DB40A01A9E4ADC003E6846 /* Checkbox */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Checkbox;
 		F9104BDA1AA0BA24009B3E30 /* LifeTime */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +492,7 @@
 		F9F6E3B31A9A267D00707417 = {
 			isa = PBXGroup;
 			children = (
+				C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */,
 				C1DB40971A9E412C003E6846 /* MessageUI.framework */,
 				C1BF10171A9BA68700E7AC50 /* AddressBook.framework */,
 				F9063C0F1A9F1A61000E5996 /* CoreGraphics.framework */,
@@ -527,7 +500,6 @@
 				F9063C081A9F1A4D000E5996 /* Foundation.framework */,
 				F9E1E0E31A9BCE54004CF6F4 /* CoreLocation.framework */,
 				F9E1E0E11A9BCE48004CF6F4 /* MapKit.framework */,
-				C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */,
 				C15A465B1A9A4FA70012CE29 /* LetsDrop-Bridging-Header.h */,
 				F9F6E3BE1A9A267D00707417 /* LetsDrop */,
 				F9F6E3D71A9A267D00707417 /* LetsDropTests */,
@@ -603,12 +575,10 @@
 				F9F6E3B81A9A267D00707417 /* Sources */,
 				F9F6E3B91A9A267D00707417 /* Frameworks */,
 				F9F6E3BA1A9A267D00707417 /* Resources */,
-				C1BF10001A9B6C1400E7AC50 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C1BF0FFF1A9B6C1400E7AC50 /* PBXTargetDependency */,
 			);
 			name = LetsDrop;
 			productName = LetsDrop;
@@ -818,11 +788,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C1BF0FFF1A9B6C1400E7AC50 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = C1BF0FFE1A9B6C1400E7AC50 /* PBXContainerItemProxy */;
-		};
 		F9F6E3D61A9A267D00707417 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F9F6E3BB1A9A267D00707417 /* LetsDrop */;
@@ -941,7 +906,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LetsDrop",
@@ -961,7 +925,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LetsDrop",
