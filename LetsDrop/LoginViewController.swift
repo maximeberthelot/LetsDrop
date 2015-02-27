@@ -88,6 +88,15 @@ class LoginViewController: UIViewController {
                 println(json)
                 
                 let error = Locksmith.saveData(["id": "\(id)", "login": login, "password": password], forUserAccount: self.userAccount)
+                
+                var navStoryboard = UIStoryboard(name: "navigation", bundle: nil)
+                var navController = navStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
+                navController.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+                navController.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+                
+                self.presentViewController(navController, animated: true, completion: nil)
+                
+                
             } else {
                 
                 self.usernameTextField.becomeFirstResponder()

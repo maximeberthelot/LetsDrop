@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         // Checking if userdata is already stored in Keychain
-        Locksmith.deleteDataForUserAccount(userAccount)
         let (dic, error) = Locksmith.loadDataForUserAccount(userAccount)
         
         if dic != nil {

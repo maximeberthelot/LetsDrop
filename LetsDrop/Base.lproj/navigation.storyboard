@@ -422,10 +422,10 @@
                         <color key="barTintColor" red="0.19215686269999999" green="0.74117647060000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="iV1-TC-aY6" kind="relationship" relationship="viewControllers" id="8BB-Dk-Xg7"/>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="H27-Pf-2ad"/>
                         <segue destination="B8s-sH-AnL" kind="relationship" relationship="viewControllers" id="weC-LC-rq9"/>
                         <segue destination="ax6-3e-MfZ" kind="relationship" relationship="viewControllers" id="6Gi-Oc-e6W"/>
+                        <segue destination="iV1-TC-aY6" kind="relationship" relationship="viewControllers" id="8BB-Dk-Xg7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlI-i3-csT" userLabel="First Responder" sceneMemberID="firstResponder"/>
