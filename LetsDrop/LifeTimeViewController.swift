@@ -11,8 +11,22 @@ import CoreData
 
 class LifeTimeViewController: UIViewController {
     
+    @IBOutlet weak var lifeLabel: UILabel!
+    @IBOutlet weak var dragBtn: DesignableButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        var leftSwipeGesture = UISwipeGestureRecognizer(target: self, action: "jumpToOtherTab:")
+        leftSwipeGesture.direction = UISwipeGestureRecognizerDirection.Left
+        view.addGestureRecognizer(leftSwipeGesture)
+        
+        var rightSwipeGesture = UISwipeGestureRecognizer(target: self, action: "jumpToOtherTab:")
+        rightSwipeGesture.direction = UISwipeGestureRecognizerDirection.Right
+        view.addGestureRecognizer(rightSwipeGesture)
+        
+        var panGesture = UIPanGestureRecognizer(target: self, action: "moveViewWithGestureRecognizer:")
+        dragBtn.addGestureRecognizer(panGesture)
+        
         
         var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         var context:NSManagedObjectContext = appDel.managedObjectContext!
@@ -22,16 +36,17 @@ class LifeTimeViewController: UIViewController {
         var lenght = results.count
         
         println(results[lenght-1])
-        
-        var frame = CGRectMake(100, 100, 50, 50)
-        var newView = DragViewController(frame: frame)
-        newView.userInteractionEnabled = true
-        newView.image = UIImage(named: "icon-drag")
-        
-        newView.contentMode = .ScaleAspectFit
-        self.view.addSubview(newView)
-        // theButton.titleLabel.text
+     
 
+    }
+    
+    func moveViewWithGestureRecognizer(gestureRecognizer: UIPanGestureRecognizer) -> Void {
+        self.view.bringSubviewToFront(lifeLabel)
+        var location = gestureRecognizer.locationInView(self.view)
+        dragBtn.center = location
+        
+        println("coucou ")
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,36 +64,5 @@ class LifeTimeViewController: UIViewController {
     
     
     
-    @IBOutlet weak var lifeLabel: UILabel!
-    class DragViewController: UIImageView {
-        
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-        }
-        
-        required init(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-        
-        override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-            println("coucou")
-        }
-        
-        override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
-            var touch: UITouch! = touches.anyObject() as UITouch!
-            self.center = touch.locationInView(self.superview)
-            
-            println("coucouuuuuu")
-            
-        }
-        
-        override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-            var currentLife:String = "ououou"
-           // let  setLabelFunc= LifeTimeViewController.setLabel(currentLife)
-            
-            //lifeLabel.text = "ouou"
-        }
-        
-    }
     
 }
