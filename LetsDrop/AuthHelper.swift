@@ -30,7 +30,7 @@ class AuthHelper {
         return signature
     }
     
-    class func buildRequest(url: String,login: String, signature: String, parameters: String, verb: String, auth: Bool) -> NSMutableURLRequest {
+    class func buildRequest(url: String,login: String, signature: String, parameters: String?, verb: String, auth: Bool) -> NSMutableURLRequest {
         
 
         let URL = NSURL(string: url)
@@ -47,7 +47,7 @@ class AuthHelper {
             
             mutableURLRequest.HTTPMethod = "POST"
             mutableURLRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-type")
-            mutableURLRequest.HTTPBody = parameters.dataUsingEncoding(NSUTF8StringEncoding)
+            mutableURLRequest.HTTPBody = parameters!.dataUsingEncoding(NSUTF8StringEncoding)
         case "GET":
 
             mutableURLRequest.HTTPMethod = "GET"
