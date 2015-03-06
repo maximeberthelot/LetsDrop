@@ -39,6 +39,8 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
             println(usersToAddString)
             self.addFriends(usersToAddString)
         }
+        
+        APIHelper.getFriends()
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }
@@ -331,7 +333,7 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         println("\(self.login) : \(self.password) : \(self.signature)")
         
         let postString = "friend_with=\(friendsList)"
-        let url = "http://macbook-simon.local/API/PHP06/API/me/friends"
+        let url = "http://macbook-simon.local/API/me/friends"
         
         println(url)
         var mutableURLRequest = AuthHelper.buildRequest(url, login: self.login, signature: self.signature, parameters: postString, verb: "POST", auth:true)
