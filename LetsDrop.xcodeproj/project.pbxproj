@@ -71,9 +71,9 @@
 		C1BF10181A9BA68700E7AC50 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF10171A9BA68700E7AC50 /* AddressBook.framework */; };
 		C1BF101A1A9BC76C00E7AC50 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10191A9BC76C00E7AC50 /* CustomTableViewCell.swift */; };
 		C1DB40981A9E412C003E6846 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DB40971A9E412C003E6846 /* MessageUI.framework */; };
-		F9016AB51AA93F4B0062E612 /* InteractionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9016AB41AA93F4B0062E612 /* InteractionHelper.swift */; };
 		C1FAC0B61AA9026800734EFB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
 		C1FAC0B71AA9026800734EFB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9016AB51AA93F4B0062E612 /* InteractionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9016AB41AA93F4B0062E612 /* InteractionHelper.swift */; };
 		F9063C091A9F1A4D000E5996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C081A9F1A4D000E5996 /* Foundation.framework */; };
 		F9063C0E1A9F1A57000E5996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C0D1A9F1A57000E5996 /* UIKit.framework */; };
 		F9063C101A9F1A61000E5996 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C0F1A9F1A61000E5996 /* CoreGraphics.framework */; };
@@ -81,8 +81,6 @@
 		F9104BE11AA0BA4C009B3E30 /* LifeTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9104BE01AA0BA4C009B3E30 /* LifeTimeViewController.swift */; };
 		F92A6DCE1A9E5575004EDF86 /* createmessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */; };
 		F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */; };
-		F9327E6C1AA9435300A9E849 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
-		F9327E6D1AA9435300A9E849 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F99B6B451A9F52CE000ADDAE /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B6B441A9F52CE000ADDAE /* Messages.swift */; };
 		F9E1E0D21A9BBFE4004CF6F4 /* ReceivedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */; };
 		F9E1E0D61A9BC009004CF6F4 /* ReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */; };
@@ -129,7 +127,6 @@
 			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
 			remoteInfo = "Alamofire OSX Tests";
 		};
-		F9327E6E1AA9435300A9E849 /* PBXContainerItemProxy */ = {
 		C1FAC0B81AA9026800734EFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */;
@@ -147,14 +144,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F9327E701AA9435300A9E849 /* Embed Frameworks */ = {
 		C1FAC0BA1AA9026900734EFB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F9327E6D1AA9435300A9E849 /* Alamofire.framework in Embed Frameworks */,
 				C1FAC0B71AA9026800734EFB /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -263,7 +258,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9327E6C1AA9435300A9E849 /* Alamofire.framework in Frameworks */,
 				C15CA4311AA0E50A006C7982 /* Alamofire.framework in Frameworks */,
 				C1FAC0B61AA9026800734EFB /* Alamofire.framework in Frameworks */,
 				C1DB40981A9E412C003E6846 /* MessageUI.framework in Frameworks */,
@@ -622,13 +616,11 @@
 				F9F6E3B81A9A267D00707417 /* Sources */,
 				F9F6E3B91A9A267D00707417 /* Frameworks */,
 				F9F6E3BA1A9A267D00707417 /* Resources */,
-				F9327E701AA9435300A9E849 /* Embed Frameworks */,
 				C1FAC0BA1AA9026900734EFB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F9327E6F1AA9435300A9E849 /* PBXTargetDependency */,
 				C1FAC0B91AA9026800734EFB /* PBXTargetDependency */,
 			);
 			name = LetsDrop;
@@ -842,10 +834,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F9327E6F1AA9435300A9E849 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = F9327E6E1AA9435300A9E849 /* PBXContainerItemProxy */;
 		C1FAC0B91AA9026800734EFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";

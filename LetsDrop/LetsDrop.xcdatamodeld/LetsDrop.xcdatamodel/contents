@@ -16,7 +16,7 @@
         <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="String" maxValueString="1000" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="validity" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="validity" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <elements>
         <element name="Friend" positionX="-36" positionY="63" width="128" height="150"/>
