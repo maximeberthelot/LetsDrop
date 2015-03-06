@@ -11,13 +11,14 @@ import Alamofire
 import CoreData
 import UIKit
 
-private let apiUrl:String = "http://macbook-simon.local/API/PHP06/API/"
+private let apiUrl:String = "http://macbook-simon.local/API/"
 private let service = "appAuth"
 private let userAccount = "user"
 
 class APIHelper {
     
     class func getFriends() -> Void {
+        println("getFriends")
         
         let (dic, error) = Locksmith.loadDataForUserAccount(userAccount)
         
@@ -37,36 +38,40 @@ class APIHelper {
 
                 if response!.statusCode == 200 {
                     
-                    var data = JSON(data!)
-                    
-                    var dataArray = data["data"].arrayValue
-                    println(dataArray)
-                    
-                    let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
- 
-                    let managedContext = appDelegate.managedObjectContext!
- 
-                    let entity =  NSEntityDescription.entityForName("Friend", inManagedObjectContext: managedContext)
- 
-                    
-                    for (var i=0; i < dataArray.count; i++) {
-                        let friend = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
+                    if data != nil {
+                        var data = JSON(data!)
+                        
+                        var dataArray = data["data"].arrayValue
+                        println(dataArray)
+                        
+                        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+                        
+                        let managedContext = appDelegate.managedObjectContext!
+                        
+                        let entity =  NSEntityDescription.entityForName("Friend", inManagedObjectContext: managedContext)
+                        
+                        
+                        for (var i=0; i < dataArray.count; i++) {
+                            let friend = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
+                            
+                            let id = dataArray[i]["user_id"].string!
+                            let login = dataArray[i]["user"]["login"].string!
+                            let phone = dataArray[i]["user"]["phone"].string!
+                            let blocked = dataArray[i]["user"]["blocked"].string!
+                            
+                            friend.setValue(id, forKey: "id")
+                            friend.setValue(login, forKey: "login")
+                            friend.setValue(phone, forKey: "phone")
+                            friend.setValue(blocked, forKey: "blocked")
+                        }
+                        
+                        
+                        var error: NSError?
+                        if !managedContext.save(&error) {
+                            println("Could not save \(error), \(error?.userInfo)")
+                        }
 
-                        let id = dataArray[i]["user"]["id"].string!
-                        let login = dataArray[i]["user"]["login"].string!
-                        let phone = dataArray[i]["user"]["phone"].string!
-                        let blocked = dataArray[i]["user"]["blocked"].string!
-
-                        friend.setValue(id, forKey: "id")
-                        friend.setValue(login, forKey: "login")
-                        friend.setValue(phone, forKey: "phone")
-                        friend.setValue(blocked, forKey: "blocked")
-                    }
-                    
-                    
-                    var error: NSError?
-                    if !managedContext.save(&error) {
-                        println("Could not save \(error), \(error?.userInfo)")
+                        
                     }
                     
                 } else {

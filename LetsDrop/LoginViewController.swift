@@ -74,12 +74,12 @@ class LoginViewController: UIViewController {
         
         let postString = "login=\(login)&password=\(password)"
         
-        var mutableURLRequest = AuthHelper.buildRequest("http://macbook-simon.local/API/PHP06/API/login", login: login, signature: signature, parameters: postString, verb: "POST", auth: true)
+        var mutableURLRequest = AuthHelper.buildRequest("http://macbook-simon.local/API/login", login: login, signature: signature, parameters: postString, verb: "POST", auth: true)
         
         let manager = Alamofire.Manager.sharedInstance
         let request = manager.request(mutableURLRequest)
         request.responseJSON { (request, response, data, error) in
-            
+            println(data)
             if response!.statusCode == 200 {
                 // Sucessful signup
                 
@@ -93,6 +93,8 @@ class LoginViewController: UIViewController {
                 var navController = navStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
                 navController.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
                 navController.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+                
+                APIHelper.getFriends()
                 
                 self.presentViewController(navController, animated: true, completion: nil)
                 

@@ -111,7 +111,7 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         var phones:String = self.contactList[indexPath.row]["\(name)"]!
         cell.nameLabel.text = name
         cell.inviteButton.tag = indexPath.row
-        cell.addRemoveButton.tag = 0
+        cell.addRemoveButton.tag = 0 // init with fake value
         cell.addRemoveButton.enabled = false
         cell.addRemoveButton.hidden = true
         cell.inviteButton.hidden = false

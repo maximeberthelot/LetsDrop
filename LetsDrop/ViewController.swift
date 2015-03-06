@@ -35,7 +35,6 @@ class ViewController: UIViewController {
                 
                 // user is already logged in
                 // Loading app
-                APIHelper.getFriends() 
                 var loginStoryboard = UIStoryboard(name: "navigation", bundle: nil)
                 var controller = loginStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
                 controller.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
