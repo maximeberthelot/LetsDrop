@@ -11,27 +11,51 @@ import CoreData
 
 class LifeTimeViewController: UIViewController {
     
+    @IBOutlet weak var lifeLabel: UILabel!
+    @IBOutlet weak var dragBtn: DesignableButton!
+    @IBOutlet weak var goBack: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        var leftSwipeGesture = UISwipeGestureRecognizer(target: self, action: "jumpToOtherTab:")
+        leftSwipeGesture.direction = UISwipeGestureRecognizerDirection.Up
+        view.addGestureRecognizer(leftSwipeGesture)
         
-        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        var context:NSManagedObjectContext = appDel.managedObjectContext!
-        var request = NSFetchRequest(entityName: "Messages")
-        request.returnsObjectsAsFaults = false
-        var results:AnyObject = context.executeFetchRequest(request, error: nil)!
-        var lenght = results.count
+        var rightSwipeGesture = UISwipeGestureRecognizer(target: self, action: "jumpToOtherTab:")
+        rightSwipeGesture.direction = UISwipeGestureRecognizerDirection.Right
+        view.addGestureRecognizer(rightSwipeGesture)
         
-        println(results[lenght-1])
+        var panGesture = UIPanGestureRecognizer(target: self, action: "moved:")
+        dragBtn.addGestureRecognizer(panGesture)
         
-        var frame = CGRectMake(100, 100, 50, 50)
-        var newView = DragViewController(frame: frame)
-        newView.userInteractionEnabled = true
-        newView.image = UIImage(named: "icon-drag")
         
-        newView.contentMode = .ScaleAspectFit
-        self.view.addSubview(newView)
-        // theButton.titleLabel.text
+       
+     
 
+    }
+    
+    func moved(gestureRecognizer: UIPanGestureRecognizer) -> Void {
+        self.view.bringSubviewToFront(lifeLabel)
+        var location = gestureRecognizer.locationInView(self.view)
+        dragBtn.center = location
+        
+        let screenSize: CGRect = UIScreen.mainScreen().bounds,
+            screenHeight = screenSize.height,
+            currentBtnY = dragBtn.frame.origin.y,
+            myLifeTime = screenHeight/31,
+            getMyLifetime = Int((currentBtnY/myLifeTime)+1)
+        println("ok")
+        println(Int(getMyLifetime))
+        dragBtn.hidden = true
+        lifeLabel.text = "\(String(getMyLifetime)) Day(s)"
+        if gestureRecognizer.state == UIGestureRecognizerState.Ended{
+            println("ko")
+            dragBtn.hidden = false
+            var validity: Int = getMyLifetime
+            addTime(validity)
+        }
+        
+      
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,6 +63,13 @@ class LifeTimeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func goBack(sender: AnyObject) {
+        //GoTo Navigation Storyboard
+        var nameStoryboard:String = "createmessageStoryboard",
+        titleStoryboard:String = "createmessage",
+        storyboardID:String = "InitialCMessageViewController"
+        goToView(nameStoryboard,titleStoryboard: titleStoryboard,storyboardID: storyboardID)
+    }
     func goToView(nameStoryboard:String,titleStoryboard:String,storyboardID:String){
         var  nameStoryboard = UIStoryboard(name: titleStoryboard, bundle: nil)
         var controller = nameStoryboard.instantiateViewControllerWithIdentifier(storyboardID) as UIViewController
@@ -47,38 +78,23 @@ class LifeTimeViewController: UIViewController {
         
     }
     
-    
-    
-    @IBOutlet weak var lifeLabel: UILabel!
-    class DragViewController: UIImageView {
+    func addTime(validity: Int){
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        var request = NSFetchRequest(entityName: "Messages")
+        request.returnsObjectsAsFaults = false
+        var results:AnyObject = context.executeFetchRequest(request, error: nil)!
+        var lenght = results.count
+
+        results[lenght-1].setValue(validity, forKey: "validity")
+        println(results[lenght-1].valueForKey("validity"))
         
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-        }
-        
-        required init(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-        
-        override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-            println("coucou")
-        }
-        
-        override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
-            var touch: UITouch! = touches.anyObject() as UITouch!
-            self.center = touch.locationInView(self.superview)
-            
-            println("coucouuuuuu")
-            
-        }
-        
-        override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-            var currentLife:String = "ououou"
-           // let  setLabelFunc= LifeTimeViewController.setLabel(currentLife)
-            
-            //lifeLabel.text = "ouou"
+        var error: NSError?
+        if !context.save(&error) {
+            println("Could not save \(error), \(error?.userInfo)")
         }
         
     }
+    
     
 }

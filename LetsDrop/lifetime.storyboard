@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg-lifetime" translatesAutoresizingMaskIntoConstraints="NO" id="QYw-oB-tF6">
-                                <rect key="frame" x="-47" y="-78" width="392" height="705"/>
+                                <rect key="frame" x="-46" y="-80" width="392" height="705"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Message lifetime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-O0-Bnl" customClass="DesignableLabel" customModule="LetsDrop" customModuleProvider="target">
                                 <rect key="frame" x="93" y="32" width="131" height="21"/>
@@ -45,10 +45,23 @@
                                 <state key="normal" image="icon-previous">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goBack:" destination="3Te-WW-oDB" eventType="touchUpInside" id="dY4-fj-E5L"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ONLY ONCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-8b-krn">
-                                <rect key="frame" x="101" y="77" width="97" height="21"/>
-                                <fontDescription key="fontDescription" name="LolitaLight" family="Lolita" pointSize="16"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHO-5Y-jgL" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="126" y="248" width="49" height="49"/>
+                                <gestureRecognizers/>
+                                <state key="normal" image="icon-drag">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wkn-Kp-Ukn" appends="YES" id="HpH-f2-8Su"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Move button to set time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-8b-krn">
+                                <rect key="frame" x="68" y="79" width="165" height="21"/>
+                                <fontDescription key="fontDescription" name="LolitaLight" family="Lolita" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -58,7 +71,7 @@
                             <constraint firstItem="oe5-O0-Bnl" firstAttribute="top" secondItem="jeS-1O-qQJ" secondAttribute="bottom" constant="15" id="2l6-Zh-cBT"/>
                             <constraint firstAttribute="centerX" secondItem="4aO-8b-krn" secondAttribute="centerX" id="62R-tc-6Xr"/>
                             <constraint firstItem="oe5-O0-Bnl" firstAttribute="centerY" secondItem="m2H-kd-FZE" secondAttribute="centerY" id="CWa-iU-lf3"/>
-                            <constraint firstItem="oe5-O0-Bnl" firstAttribute="bottom" secondItem="4aO-8b-krn" secondAttribute="bottom" constant="-35" id="EMf-5d-4Vq"/>
+                            <constraint firstItem="oe5-O0-Bnl" firstAttribute="bottom" secondItem="4aO-8b-krn" secondAttribute="bottom" constant="-45" id="EMf-5d-4Vq"/>
                             <constraint firstItem="QYw-oB-tF6" firstAttribute="leading" secondItem="aGO-mT-YVs" secondAttribute="leading" id="Gg8-we-mNy"/>
                             <constraint firstItem="oe5-O0-Bnl" firstAttribute="centerY" secondItem="xy2-Ul-9Qm" secondAttribute="centerY" id="OOp-5b-aJs"/>
                             <constraint firstItem="m2H-kd-FZE" firstAttribute="leading" secondItem="aGO-mT-YVs" secondAttribute="leadingMargin" id="STW-m4-QEk"/>
@@ -76,16 +89,20 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="dragBtn" destination="RHO-5Y-jgL" id="Bgs-jE-QKc"/>
+                        <outlet property="goBack" destination="m2H-kd-FZE" id="Uha-Gf-YVg"/>
                         <outlet property="lifeLabel" destination="4aO-8b-krn" id="C5a-BY-uxm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ask-Pl-Yws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="wkn-Kp-Ukn"/>
             </objects>
             <point key="canvasLocation" x="305" y="136"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg-lifetime" width="320" height="568"/>
+        <image name="icon-drag" width="49" height="49"/>
         <image name="icon-previous" width="26" height="26"/>
         <image name="icon-send" width="26" height="26"/>
     </resources>
