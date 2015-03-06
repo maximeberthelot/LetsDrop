@@ -291,7 +291,7 @@ class inviteContactsViewController: UIViewController, UITableViewDataSource, UIT
         println(self.login)
         println("\(self.login) : \(self.password) : \(self.signature)")
         
-        let url = "http://macbook-simon.local/API/PHP06/API/me/friends/suggest?phones="+self.phones
+        let url = "http://macbook-simon.local/API/me/friends/suggest?phones="+self.phones
         
         println(url)
         var mutableURLRequest = AuthHelper.buildRequest(url, login: self.login, signature: self.signature, parameters: "", verb: "GET", auth:true)

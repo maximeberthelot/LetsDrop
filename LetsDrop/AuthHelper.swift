@@ -51,6 +51,9 @@ class AuthHelper {
         case "GET":
 
             mutableURLRequest.HTTPMethod = "GET"
+            
+        case "DELETE":
+            mutableURLRequest.HTTPMethod = "DELETE"
 
         default:
             mutableURLRequest.HTTPMethod = "GET"
