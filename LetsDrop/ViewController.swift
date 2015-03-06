@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         let (dic, error) = Locksmith.loadDataForUserAccount(userAccount)
         
         if dic != nil {
+            
             
             if dic!["id"] != nil {
                 

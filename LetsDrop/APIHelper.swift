@@ -117,7 +117,7 @@ class APIHelper {
                         var data = JSON(data!)
                         
                         var dataArray = data["data"].arrayValue
-                        println(dataArray)
+                        println("data:\(dataArray)")
                         
                         //1
                         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
@@ -137,14 +137,95 @@ class APIHelper {
                         
                         if let results = fetchedResults {
                             let friend = results[0]
-                            managedContext.deleteObject(friend as NSManagedObject)
+                            
+                            
+                            friend.setValue("", forKey:"user_id")
+                            
                             var error: NSError?
                             if !managedContext.save(&error) {
                                 println("Could not save \(error), \(error?.userInfo)")
                             } else {
-                                 println("done with success")
+                                println("done with success")
                             }
-                           
+                            
+                        } else {
+                            println("Could not fetch \(error), \(error!.userInfo)")
+                        }
+                        
+                    }
+                    
+                } else {
+                    println("Request failed")
+                }
+            }
+            
+            
+        } else {
+            // User is not logged in
+            
+        }
+    }
+    
+    
+    class func addFriend(id:String, loggedUserId:String) -> Void {
+        println("addFriend")
+        
+        let (dic, error) = Locksmith.loadDataForUserAccount(userAccount)
+
+        if dic != nil {
+            
+            var login = dic!["login"] as String
+            var password = dic!["password"] as String
+            var verb = "POST"
+            var route = "me/friends"
+            var url = apiUrl+route
+            var signature = AuthHelper.getSignature(login, password: password, url: verb+":"+route)
+            var postString = "friend_with=\(id)"
+            var mutableURLRequest = AuthHelper.buildRequest(url, login: login, signature: signature, parameters: postString, verb: "POST", auth: true)
+            
+            let manager = Alamofire.Manager.sharedInstance
+            let request = manager.request(mutableURLRequest)
+            request.responseJSON { (request, response, data, error) in
+                
+                if response!.statusCode == 200 {
+                    
+                    if data != nil {
+                        
+                        
+                        
+                        var data = JSON(data!)
+                        
+                        var dataArray = data["data"].arrayValue
+                        println(dataArray)
+                        
+                        //1
+                        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+                        
+                        let managedContext = appDelegate.managedObjectContext!
+                        
+                        //2
+                        let fetchRequest = NSFetchRequest(entityName:"Friend")
+                        fetchRequest.predicate = NSPredicate(format:"id == \(id)")
+                        //3
+                        var error: NSError?
+                        
+                        let fetchedResults = managedContext.executeFetchRequest(fetchRequest,
+                            error: &error) as [NSManagedObject]?
+                        
+                        
+                        if let results = fetchedResults {
+                            let friend = results[0]
+                            
+                            
+                            friend.setValue(loggedUserId, forKey:"user_id")
+                            
+                            var error: NSError?
+                            if !managedContext.save(&error) {
+                                println("Could not save \(error), \(error?.userInfo)")
+                            } else {
+                                println("done with success")
+                            }
+                            
                         } else {
                             println("Could not fetch \(error), \(error!.userInfo)")
                         }

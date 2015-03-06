@@ -16,7 +16,6 @@ class friendsListViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     var friends = [NSManagedObject]()
-    var sendTo = Array<String>()
     let service = "appAuth"
     let userAccount = "user"
     var loggedUserId = ""
@@ -83,24 +82,17 @@ class friendsListViewController: UIViewController, UITableViewDataSource {
         cell.friendLabel.text = friend.valueForKey("login")? as String!
         
         var id = friend.valueForKey("id")? as String!
-        println(id)
         
         var idInt = id.toInt()
         cell.addRemoveButton.tag = idInt!
         
         if friendWithMeId != nil {
             if friendWithMeId == self.loggedUserId {
-                println("friend with me : \(name)")
                 self.alreadyFriend.append(id)
                 let image = UIImage(named: "icon-poubelle") as UIImage?
                 cell.addRemoveButton.setImage(image, forState: .Normal)
-                println(alreadyFriend)
             }
         }
-        
-        
-        
-        
         
         return cell
     }
@@ -116,24 +108,27 @@ class friendsListViewController: UIViewController, UITableViewDataSource {
         var id = "\(button.tag)"
         
         if contains(self.alreadyFriend, id) {
-            APIHelper.deleteFriend(id)
+            self.alreadyFriend = self.alreadyFriend.filter({$0 != id})
+            println("friend removed: \(self.alreadyFriend)")
             
-        } else if contains(self.sendTo, id) {
-            // Remove user from friendlist
-            self.sendTo = self.sendTo.filter({$0 != id})
             let image = UIImage(named: "icon-add") as UIImage?
             button.setImage(image, forState: .Normal)
+            APIHelper.deleteFriend(id)
+
+            // FIX RELOAD TABLE VIEW
             
         } else {
             // Add user in friendlist
-            self.sendTo.append(id)
-            button.frame = CGRectMake(0, 0, 100, 100)
-            
-            let image = UIImage(named: "icon-invite") as UIImage?
+            self.alreadyFriend.append(id)
+            println("friend added: \(self.alreadyFriend)")
+            let image = UIImage(named: "icon-poubelle") as UIImage?
             button.setImage(image, forState: .Normal)
+            
+            APIHelper.addFriend(id, loggedUserId: self.loggedUserId)
+
         }
         
-        println(self.sendTo)
+        println(self.alreadyFriend)
     }
     
     
