@@ -133,6 +133,22 @@ class SendToViewController: UIViewController,UITableViewDataSource {
 
     }
     
+    func deleteMessages(){
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate,
+        context: NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var request = NSFetchRequest(entityName: "Messages")
+        request.returnsObjectsAsFaults = false
+        var results:AnyObject = context.executeFetchRequest(request, error: nil)!,
+        lenght = results.count
+        
+        for var i = 0; i<lenght; i++ {
+            context.deleteObject(results[i] as NSManagedObject)
+            context.save(nil)
+        }
+    }
+
+    
     @IBAction func dismissViewController(sender: AnyObject) {
         
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -148,6 +164,11 @@ class SendToViewController: UIViewController,UITableViewDataSource {
         var color = "blue"
         
         APIHelper.sendPinTo(self.sendTo, latitude:latitude, longitude:longitude, message: messageText, validity: validity, color: color)
+        
+        deleteMessages()
+        println(message)
+        
+        
     }
 
 }
