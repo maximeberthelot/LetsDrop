@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lolita SemiBold.otf">
+            <string>LolitaSemiBold</string>
+        </mutableArray>
+        <mutableArray key="LolitaBook.otf">
+            <string>LolitaBook</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--InitialSendToViewController-->
+        <scene sceneID="UpO-l9-RO5">
+            <objects>
+                <viewController storyboardIdentifier="InitialSendToViewController" title="InitialSendToViewController" id="p78-L0-wPO" customClass="SendToViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tcq-Ow-yFa"/>
+                        <viewControllerLayoutGuide type="bottom" id="XET-hD-5hr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vx7-ns-M9F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ov4-xZ-vyk">
+                                <rect key="frame" x="0.0" y="71" width="320" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellFriendSend" rowHeight="60" id="7Hh-kf-pTX" customClass="CustomFriendSendTableViewCell" customModule="LetsDrop" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Hh-kf-pTX" id="jMm-eJ-CTP">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8N-NU-C8I" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                                    <rect key="frame" x="277" y="17" width="26" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="26" id="UmG-Mh-U0L"/>
+                                                        <constraint firstAttribute="height" constant="26" id="pny-QJ-fn0"/>
+                                                    </constraints>
+                                                    <state key="normal" image="icon-add">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addRemoveButton:" destination="p78-L0-wPO" eventType="touchUpInside" id="1p7-lb-H4y"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKo-JW-4Ah">
+                                                    <rect key="frame" x="18" y="19" width="232" height="21"/>
+                                                    <fontDescription key="fontDescription" name="LolitaBook" family="Lolita" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="X8N-NU-C8I" secondAttribute="centerY" id="GHV-JD-UmW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="X8N-NU-C8I" secondAttribute="trailing" constant="15" id="zYo-cf-DLJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addRemoveFriendButton" destination="X8N-NU-C8I" id="im0-93-AuH"/>
+                                            <outlet property="friendNameLabel" destination="GKo-JW-4Ah" id="dWo-pf-fSr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="p78-L0-wPO" id="CXc-HZ-cuI"/>
+                                    <outlet property="delegate" destination="p78-L0-wPO" id="Qbc-9L-fRi"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdC-gz-WRc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Select friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0o-BT-d7M">
+                                        <rect key="frame" x="115" y="34" width="90" height="17"/>
+                                        <fontDescription key="fontDescription" name="LolitaSemiBold" family="Lolita" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBz-84-RP6" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="276" y="30" width="26" height="26"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="icon-next">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendPin:" destination="p78-L0-wPO" eventType="touchUpInside" id="1d1-gC-yTp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3r2-No-8Aw" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="30" width="26" height="26"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="btn-cancel">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dismissViewController:" destination="p78-L0-wPO" eventType="touchUpInside" id="l8L-cK-yvO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2470588235" green="0.32156862749999998" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xBz-84-RP6" secondAttribute="trailing" constant="25" id="KtY-va-yRI"/>
+                                    <constraint firstAttribute="bottom" secondItem="xBz-84-RP6" secondAttribute="bottom" constant="15" id="RNX-bN-tPA"/>
+                                    <constraint firstAttribute="height" constant="71" id="s9L-Wn-Zxz"/>
+                                    <constraint firstAttribute="centerX" secondItem="m0o-BT-d7M" secondAttribute="centerX" id="xn6-68-6Go"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ov4-xZ-vyk" firstAttribute="top" secondItem="RdC-gz-WRc" secondAttribute="bottom" id="2qh-iP-fFZ"/>
+                            <constraint firstItem="RdC-gz-WRc" firstAttribute="leading" secondItem="vx7-ns-M9F" secondAttribute="leading" id="HSR-xf-HMx"/>
+                            <constraint firstAttribute="trailing" secondItem="Ov4-xZ-vyk" secondAttribute="trailing" id="Neo-iU-LmW"/>
+                            <constraint firstItem="RdC-gz-WRc" firstAttribute="top" secondItem="vx7-ns-M9F" secondAttribute="top" id="RC1-3x-uH7"/>
+                            <constraint firstItem="Ov4-xZ-vyk" firstAttribute="leading" secondItem="vx7-ns-M9F" secondAttribute="leading" id="WxI-9B-pl4"/>
+                            <constraint firstItem="XET-hD-5hr" firstAttribute="top" secondItem="Ov4-xZ-vyk" secondAttribute="bottom" id="Zyi-g0-k6P"/>
+                            <constraint firstAttribute="trailing" secondItem="RdC-gz-WRc" secondAttribute="trailing" id="o5m-Tl-xcR"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ov4-xZ-vyk" id="2Ra-fk-OtI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uqg-Gu-m9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="233" y="277"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn-cancel" width="26" height="26"/>
+        <image name="icon-add" width="31" height="31"/>
+        <image name="icon-next" width="26" height="26"/>
+    </resources>
+</document>

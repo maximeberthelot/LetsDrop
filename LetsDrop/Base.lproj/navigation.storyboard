@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nq0-QV-Nf2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lolita SemiBold.otf">
+            <string>LolitaSemiBold</string>
+            <string>LolitaSemiBold</string>
+        </mutableArray>
+        <mutableArray key="LolitaBook.otf">
+            <string>LolitaBook</string>
+        </mutableArray>
+        <mutableArray key="LolitaMedium.otf">
+            <string>LolitaMedium</string>
+            <string>LolitaMedium</string>
+            <string>LolitaMedium</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--MAP-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="InitialMapViewController" id="vXZ-lx-hvc" customClass="MapViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YU-U5-EY5">
+                                <rect key="frame" x="0.0" y="-26" width="320" height="565"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VcT-Ba-4Yn" customClass="DesignableView" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="11" y="36" width="301" height="54"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0T-XA-0Xz" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="239" y="5" width="43" height="41"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.74117647058823533" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Z2O-7F-0Qj"/>
+                                            <constraint firstAttribute="height" constant="40" id="qcd-Rw-fW0"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-locate">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="findMyLocate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Lba-lk-Jte"/>
+                                        </connections>
+                                    </button>
+                                    <searchBar contentMode="redraw" misplaced="YES" placeholder="| Drag map or find a place" backgroundImage="bg-searchfield" translatesAutoresizingMaskIntoConstraints="NO" id="eKv-N5-82C">
+                                        <rect key="frame" x="18" y="5" width="221" height="44"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="e31-dM-V1O"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="e31-dM-V1O"/>
+                                            </mask>
+                                        </variation>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="0BC-vs-Txl"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="6Eq-yd-8q1"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="Bfo-jI-cLb"/>
+                                    <constraint firstAttribute="centerY" secondItem="eKv-N5-82C" secondAttribute="centerY" id="I3x-y8-Net"/>
+                                    <constraint firstAttribute="height" constant="55" id="JDc-oy-cqP"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="U2Q-vg-18j"/>
+                                    <constraint firstItem="eKv-N5-82C" firstAttribute="leading" secondItem="VcT-Ba-4Yn" secondAttribute="leading" constant="20" id="VDt-5h-7ZX"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="b9t-e9-oba"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="grg-vY-34B"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="h12-vt-jK8"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="kay-CC-qrZ"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="tT9-QD-Eag"/>
+                                    <constraint firstAttribute="trailing" secondItem="w0T-XA-0Xz" secondAttribute="trailing" constant="15" id="uYI-sz-EZW"/>
+                                    <constraint firstAttribute="centerY" secondItem="w0T-XA-0Xz" secondAttribute="centerY" id="yKN-fX-KUk"/>
+                                    <constraint firstItem="w0T-XA-0Xz" firstAttribute="leading" secondItem="eKv-N5-82C" secondAttribute="trailing" constant="10" id="zql-ZL-fBl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0BC-vs-Txl"/>
+                                        <exclude reference="Bfo-jI-cLb"/>
+                                        <exclude reference="U2Q-vg-18j"/>
+                                        <exclude reference="b9t-e9-oba"/>
+                                        <exclude reference="h12-vt-jK8"/>
+                                        <exclude reference="kay-CC-qrZ"/>
+                                        <exclude reference="tT9-QD-Eag"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5n-4s-YUy" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="58" y="247" width="205" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="C4P-HQ-z0V"/>
+                                    <constraint firstAttribute="width" constant="205" id="Srs-o1-GrV"/>
+                                </constraints>
+                                <state key="normal" image="drop-message">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nH5-sI-frQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="n5n-4s-YUy" secondAttribute="trailing" constant="30" id="2Hs-Uq-MLD"/>
+                            <constraint firstAttribute="centerY" secondItem="n5n-4s-YUy" secondAttribute="centerY" id="8Gi-8d-reu"/>
+                            <constraint firstAttribute="centerY" secondItem="n5n-4s-YUy" secondAttribute="centerY" id="96P-Gl-rCb"/>
+                            <constraint firstAttribute="centerX" secondItem="n5n-4s-YUy" secondAttribute="centerX" id="AHb-oR-Jqy"/>
+                            <constraint firstItem="9YU-U5-EY5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="CFD-Vr-2FT"/>
+                            <constraint firstAttribute="trailing" secondItem="9YU-U5-EY5" secondAttribute="trailing" id="F2a-H6-vpw"/>
+                            <constraint firstAttribute="centerY" secondItem="n5n-4s-YUy" secondAttribute="centerY" constant="70" id="JhZ-MD-FUh"/>
+                            <constraint firstItem="VcT-Ba-4Yn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="Mdb-af-mLE"/>
+                            <constraint firstAttribute="centerY" secondItem="9YU-U5-EY5" secondAttribute="centerY" id="SjF-xY-h5s"/>
+                            <constraint firstAttribute="trailing" secondItem="VcT-Ba-4Yn" secondAttribute="trailing" constant="10" id="VKb-hT-BvJ"/>
+                            <constraint firstAttribute="centerY" secondItem="n5n-4s-YUy" secondAttribute="centerY" id="XyA-eI-KBs"/>
+                            <constraint firstItem="n5n-4s-YUy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="bZk-L3-Cph"/>
+                            <constraint firstAttribute="centerX" secondItem="n5n-4s-YUy" secondAttribute="centerX" id="c75-Ck-SRb"/>
+                            <constraint firstItem="n5n-4s-YUy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="cmO-Os-2C9"/>
+                            <constraint firstItem="9YU-U5-EY5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lsj-N9-wfN"/>
+                            <constraint firstItem="VcT-Ba-4Yn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="nOJ-1S-vsd"/>
+                            <constraint firstAttribute="centerX" secondItem="9YU-U5-EY5" secondAttribute="centerX" id="p9F-0K-mVI"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9YU-U5-EY5" secondAttribute="bottom" id="sTH-qj-JWr"/>
+                            <constraint firstItem="n5n-4s-YUy" firstAttribute="top" secondItem="VcT-Ba-4Yn" secondAttribute="bottom" constant="148" id="t8Q-Fd-Xpz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n5n-4s-YUy" secondAttribute="trailing" constant="20" id="xEf-M0-LF8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2Hs-Uq-MLD"/>
+                                <exclude reference="8Gi-8d-reu"/>
+                                <exclude reference="96P-Gl-rCb"/>
+                                <exclude reference="XyA-eI-KBs"/>
+                                <exclude reference="bZk-L3-Cph"/>
+                                <exclude reference="c75-Ck-SRb"/>
+                                <exclude reference="cmO-Os-2C9"/>
+                                <exclude reference="t8Q-Fd-Xpz"/>
+                                <exclude reference="xEf-M0-LF8"/>
+                                <exclude reference="sTH-qj-JWr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MAP" image="icon-map" id="zfu-f0-r4h" customClass="RAMAnimatedTabBarItem" customModule="LetsDrop" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" red="0.43529411759999997" green="0.81568627449999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="6P2-Vb-wt0" id="QFt-t6-udp"/>
+                        </connections>
+                    </tabBarItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="createMessageBtn" destination="n5n-4s-YUy" id="fda-NN-pbb"/>
+                        <outlet property="mapView" destination="9YU-U5-EY5" id="dJ0-p7-Fh9"/>
+                        <outlet property="searchBar" destination="eKv-N5-82C" id="y2T-Zv-kgH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <customObject id="6P2-Vb-wt0" customClass="RAMBounceAnimation" customModule="LetsDrop" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="327" y="1880"/>
+        </scene>
+        <!--CONTACTS-->
+        <scene sceneID="4DT-fS-lad">
+            <objects>
+                <viewController id="ax6-3e-MfZ" customClass="friendsListViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t2g-M1-iIT"/>
+                        <viewControllerLayoutGuide type="bottom" id="AoF-Cv-Db7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xOW-J7-ftY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4se-va-c4t">
+                                <rect key="frame" x="0.0" y="71" width="320" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellFriend" rowHeight="50" id="QZE-xU-8tW" customClass="CustomFriendTableViewCell" customModule="LetsDrop">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QZE-xU-8tW" id="mbD-QI-IMC">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0J-KE-bQS">
+                                                    <rect key="frame" x="20" y="14" width="153" height="21"/>
+                                                    <fontDescription key="fontDescription" name="LolitaBook" family="Lolita" pointSize="17"/>
+                                                    <color key="textColor" red="0.30271594929245282" green="0.30271594929245282" blue="0.30271594929245282" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hp-O5-HG2">
+                                                    <rect key="frame" x="270" y="12" width="26" height="26"/>
+                                                    <state key="normal" image="icon-add"/>
+                                                    <connections>
+                                                        <action selector="addFriendButton:" destination="ax6-3e-MfZ" eventType="touchUpInside" id="jc1-2q-E7c"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addRemoveButton" destination="7hp-O5-HG2" id="VkA-OP-anR"/>
+                                            <outlet property="friendLabel" destination="M0J-KE-bQS" id="jvh-ui-kl0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ax6-3e-MfZ" id="riN-Tm-Jy6"/>
+                                    <outlet property="delegate" destination="ax6-3e-MfZ" id="X9e-v6-4Cc"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ip8-Pj-js0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJD-tq-eI6">
+                                        <rect key="frame" x="124" y="34" width="72" height="17"/>
+                                        <fontDescription key="fontDescription" name="LolitaSemiBold" family="Lolita" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.24705882352941178" green="0.32156862745098042" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="xRc-71-3wS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ip8-Pj-js0" firstAttribute="leading" secondItem="xOW-J7-ftY" secondAttribute="leading" id="7m1-Af-8HP"/>
+                            <constraint firstItem="4se-va-c4t" firstAttribute="top" secondItem="ip8-Pj-js0" secondAttribute="bottom" id="III-bz-klS"/>
+                            <constraint firstItem="4se-va-c4t" firstAttribute="leading" secondItem="xOW-J7-ftY" secondAttribute="leading" id="Lcr-OO-crb"/>
+                            <constraint firstItem="ip8-Pj-js0" firstAttribute="top" secondItem="xOW-J7-ftY" secondAttribute="top" id="NFs-up-sR7"/>
+                            <constraint firstAttribute="trailing" secondItem="ip8-Pj-js0" secondAttribute="trailing" id="Rew-78-PYP"/>
+                            <constraint firstAttribute="trailing" secondItem="4se-va-c4t" secondAttribute="trailing" id="WpJ-Ly-Io5"/>
+                            <constraint firstItem="AoF-Cv-Db7" firstAttribute="top" secondItem="4se-va-c4t" secondAttribute="bottom" id="cTy-ls-1UJ"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" title="CONTACTS" image="icon-contacts" id="Hnz-hA-xBi" customClass="RAMAnimatedTabBarItem" customModule="LetsDrop" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" red="0.43529411759999997" green="0.81568627449999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="6vk-5u-8XN" id="wSR-dI-ETl"/>
+                        </connections>
+                    </tabBarItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="4se-va-c4t" id="7Uk-aM-aEb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bv0-Cc-Q2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="6vk-5u-8XN" customClass="RAMLeftRotationAnimation" customModule="LetsDrop" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1064" y="1880"/>
+        </scene>
+        <!--SETTINGS-->
+        <scene sceneID="IZb-vB-x2h">
+            <objects>
+                <viewController id="iV1-TC-aY6" customClass="SettingsViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kyV-y2-U9Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="XG1-xN-g5w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MVc-RQ-SaM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVf-WM-KSM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6S-q0-3zT">
+                                        <rect key="frame" x="133" y="34" width="54" height="17"/>
+                                        <fontDescription key="fontDescription" name="LolitaSemiBold" family="Lolita" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2470588235" green="0.32156862749999998" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="ThC-sg-jrs"/>
+                                    <constraint firstAttribute="centerX" secondItem="y6S-q0-3zT" secondAttribute="centerX" id="xlJ-4o-iv2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzK-Lh-qon" customClass="DesignableView" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="130" y="81" width="60" height="54"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A Z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Deb-iL-Ifu" customClass="DesignableLabel" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="16" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="25"/>
+                                        <color key="textColor" red="0.2470588235" green="0.32156862749999998" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="Deb-iL-Ifu" secondAttribute="centerY" id="7T4-NV-UIf"/>
+                                    <constraint firstAttribute="centerX" secondItem="Deb-iL-Ifu" secondAttribute="centerX" id="VWV-XF-JsM"/>
+                                    <constraint firstAttribute="width" constant="70" id="X1n-xN-SHx"/>
+                                    <constraint firstAttribute="height" constant="70" id="Yjr-AR-mEt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WVf-WM-KSM" firstAttribute="top" secondItem="MVc-RQ-SaM" secondAttribute="top" id="2c4-Ju-Njs"/>
+                            <constraint firstAttribute="centerX" secondItem="jzK-Lh-qon" secondAttribute="centerX" id="Do1-lX-qDP"/>
+                            <constraint firstItem="WVf-WM-KSM" firstAttribute="bottom" secondItem="jzK-Lh-qon" secondAttribute="bottom" constant="-35" id="E6N-2i-Gql"/>
+                            <constraint firstAttribute="trailing" secondItem="WVf-WM-KSM" secondAttribute="trailing" id="cEb-Fl-rb8"/>
+                            <constraint firstItem="WVf-WM-KSM" firstAttribute="leading" secondItem="MVc-RQ-SaM" secondAttribute="leading" id="cmc-rm-4Rk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SETTINGS" image="icon-settings" id="tEG-Mi-k0l" customClass="RAMAnimatedTabBarItem" customModule="LetsDrop" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" red="0.43529411764705883" green="0.81568627450980391" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="6Rz-Tj-Eth" id="tZ9-V2-Imy"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ra-Un-CTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="6Rz-Tj-Eth" customClass="RAMLeftRotationAnimation" customModule="LetsDrop" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-88" y="1880"/>
+        </scene>
+        <!--ACTIVITY-->
+        <scene sceneID="o3a-0X-Tge">
+            <objects>
+                <viewController id="B8s-sH-AnL" customClass="NavActViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qdO-91-ov7"/>
+                        <viewControllerLayoutGuide type="bottom" id="yNl-u4-yHe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1nR-8g-RPG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pob-qB-RQF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.32156862749999998" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="BrG-uu-CfP"/>
+                                    <constraint firstAttribute="height" constant="90" id="aYj-h7-uv8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F52-az-H3f">
+                                <rect key="frame" x="0.0" y="51" width="141" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="Q52-Tc-h29"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="15"/>
+                                <state key="normal" title="RECEIVED">
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recBtn:" destination="B8s-sH-AnL" eventType="touchUpInside" id="de3-pQ-5c4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwF-sT-oQR">
+                                <rect key="frame" x="183" y="51" width="137" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Lgb-b2-66N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="15"/>
+                                <state key="normal" title="DROPPED">
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dropBtn:" destination="B8s-sH-AnL" eventType="touchUpInside" id="saE-7m-Qqs"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fa-OX-gQP">
+                                <rect key="frame" x="0.0" y="89" width="320" height="430"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4fa-OX-gQP" secondAttribute="trailing" id="2bz-zh-Djh"/>
+                            <constraint firstItem="pob-qB-RQF" firstAttribute="top" secondItem="1nR-8g-RPG" secondAttribute="top" id="3Zp-a6-L2w"/>
+                            <constraint firstItem="F52-az-H3f" firstAttribute="leading" secondItem="1nR-8g-RPG" secondAttribute="leading" id="3th-dc-MDR"/>
+                            <constraint firstAttribute="trailing" secondItem="EwF-sT-oQR" secondAttribute="trailing" id="9D3-Kc-XeE"/>
+                            <constraint firstItem="EwF-sT-oQR" firstAttribute="top" secondItem="qdO-91-ov7" secondAttribute="bottom" constant="33" id="Ah3-3l-Njj"/>
+                            <constraint firstAttribute="trailing" secondItem="pob-qB-RQF" secondAttribute="trailing" id="FFy-Wf-HFt"/>
+                            <constraint firstItem="4fa-OX-gQP" firstAttribute="top" secondItem="qdO-91-ov7" secondAttribute="bottom" constant="70" id="Kid-ZJ-i4J"/>
+                            <constraint firstItem="yNl-u4-yHe" firstAttribute="top" secondItem="4fa-OX-gQP" secondAttribute="bottom" id="VNd-PR-iVb"/>
+                            <constraint firstItem="F52-az-H3f" firstAttribute="top" secondItem="qdO-91-ov7" secondAttribute="bottom" constant="33" id="Yzs-5M-AbP"/>
+                            <constraint firstItem="pob-qB-RQF" firstAttribute="leading" secondItem="1nR-8g-RPG" secondAttribute="leading" id="dAO-9j-UPU"/>
+                            <constraint firstItem="4fa-OX-gQP" firstAttribute="leading" secondItem="1nR-8g-RPG" secondAttribute="leading" id="xq7-Re-vh5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ACTIVITY" image="icon-drops" id="8qq-Jp-xHc" customClass="RAMAnimatedTabBarItem" customModule="LetsDrop" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" red="0.43529411759999997" green="0.81568627449999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="g9z-4v-1ep" id="Cav-x2-r7h"/>
+                        </connections>
+                    </tabBarItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="dropBtn" destination="EwF-sT-oQR" id="f3s-Hg-157"/>
+                        <outlet property="recBtn" destination="F52-az-H3f" id="oqR-DU-CUS"/>
+                        <outlet property="scrollView" destination="4fa-OX-gQP" id="2mP-Jg-Eqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wd7-yg-qpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="g9z-4v-1ep" customClass="RAMBounceAnimation" customModule="LetsDrop" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="699" y="1880"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="lJG-QT-bnw">
+            <objects>
+                <tabBarController storyboardIdentifier="InitialViewController" modalTransitionStyle="flipHorizontal" id="nq0-QV-Nf2" customClass="RAMAnimatedTabBarController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="CAR-Gu-4Ri">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.19215686269999999" green="0.74117647060000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="H27-Pf-2ad"/>
+                        <segue destination="B8s-sH-AnL" kind="relationship" relationship="viewControllers" id="weC-LC-rq9"/>
+                        <segue destination="ax6-3e-MfZ" kind="relationship" relationship="viewControllers" id="6Gi-Oc-e6W"/>
+                        <segue destination="iV1-TC-aY6" kind="relationship" relationship="viewControllers" id="8BB-Dk-Xg7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KlI-i3-csT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="1081"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg-searchfield" width="233" height="28"/>
+        <image name="drop-message" width="205" height="74"/>
+        <image name="icon-add" width="31" height="31"/>
+        <image name="icon-contacts" width="13" height="13"/>
+        <image name="icon-drops" width="15" height="13"/>
+        <image name="icon-locate" width="18" height="17"/>
+        <image name="icon-map" width="17" height="13"/>
+        <image name="icon-settings" width="14" height="14"/>
+    </resources>
+</document>

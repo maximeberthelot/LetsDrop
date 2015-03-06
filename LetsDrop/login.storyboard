@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DBI-vD-Wyf">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="LolitaLight.otf">
+            <string>LolitaLight</string>
+        </mutableArray>
+        <mutableArray key="LolitaMedium.otf">
+            <string>LolitaMedium</string>
+            <string>LolitaMedium</string>
+            <string>LolitaMedium</string>
+            <string>LolitaMedium</string>
+            <string>LolitaMedium</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="FFD-CH-Ql6">
+            <objects>
+                <viewController storyboardIdentifier="InitialViewController" id="DBI-vD-Wyf" customClass="LoginViewController" customModule="LetsDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZyE-4A-WmI"/>
+                        <viewControllerLayoutGuide type="bottom" id="gCZ-OL-Xlj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e9q-aY-F9z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Sign In" translatesAutoresizingMaskIntoConstraints="NO" id="nz4-FA-wcq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="hJv-LS-xCG" customClass="DesignableImageView" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="138" y="94" width="45" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="8mM-C8-UvA"/>
+                                    <constraint firstAttribute="height" constant="68" id="Wzu-n1-FD8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6D6-UP-8cc" customClass="DesignableLabel" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="138" y="172" width="44" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Gbu-Rk-Hqg"/>
+                                    <constraint firstAttribute="height" constant="17" id="geR-nO-9gk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LolitaLight" family="Lolita" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQh-kd-OyV" customClass="DesignableView" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="35" y="224" width="250" height="60"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3R-oN-Y08" customClass="DesignableView" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-password" translatesAutoresizingMaskIntoConstraints="NO" id="TuH-8M-pS2">
+                                                <rect key="frame" x="22" y="20" width="16" height="20"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5S-yz-btl">
+                                        <rect key="frame" x="75" y="16" width="39" height="10"/>
+                                        <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="10"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9c-rc-WOi" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="213" y="19" width="22" height="22"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="icon-arrow-right">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="11"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signIn:" destination="DBI-vD-Wyf" eventType="touchUpInside" id="YHL-Cn-TBf"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ASg-Id-LWt" customClass="DesignableTextField" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="74" y="30" width="130" height="17"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="XGN-tQ-iu3"/>
+                                    <constraint firstAttribute="height" constant="60" id="g9P-ex-f5E"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVe-ri-Uf3" customClass="DesignableView" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="35" y="224" width="250" height="60"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YCY-9C-ydh" customClass="DesignableView" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-profile" translatesAutoresizingMaskIntoConstraints="NO" id="ODr-yW-IgS">
+                                                <rect key="frame" x="20" y="21" width="20" height="18"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETV-QA-lDS">
+                                        <rect key="frame" x="75" y="16" width="40" height="10"/>
+                                        <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="10"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mk6-JH-NxA" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="213" y="19" width="22" height="22"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="icon-arrow-right">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="11"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goToPassword:" destination="DBI-vD-Wyf" eventType="touchUpInside" id="fBX-2W-s3J"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHo-g5-eSF" customClass="DesignableTextField" customModule="LetsDrop" customModuleProvider="target">
+                                        <rect key="frame" x="74" y="30" width="130" height="17"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="FrM-Kj-REb"/>
+                                    <constraint firstAttribute="height" constant="60" id="hZJ-7r-Ow8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNm-WT-sz5" customClass="DesignableLabel" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="82" y="198" width="157" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="66d-PK-du9"/>
+                                    <constraint firstAttribute="width" constant="157" id="Aqe-2t-klo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LolitaMedium" family="Lolita" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.15294117647058825" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lQh-kd-OyV" firstAttribute="top" secondItem="6D6-UP-8cc" secondAttribute="bottom" constant="35" id="GQl-Af-IQv"/>
+                            <constraint firstItem="dVe-ri-Uf3" firstAttribute="top" secondItem="aNm-WT-sz5" secondAttribute="bottom" constant="10" id="P81-Cu-atg"/>
+                            <constraint firstAttribute="centerX" secondItem="dVe-ri-Uf3" secondAttribute="centerX" id="SLs-8n-DZ2"/>
+                            <constraint firstAttribute="centerY" secondItem="lQh-kd-OyV" secondAttribute="centerY" constant="30" id="TNH-Bm-bs7"/>
+                            <constraint firstItem="gCZ-OL-Xlj" firstAttribute="top" secondItem="nz4-FA-wcq" secondAttribute="bottom" id="UCu-af-VaZ"/>
+                            <constraint firstItem="6D6-UP-8cc" firstAttribute="top" secondItem="hJv-LS-xCG" secondAttribute="bottom" constant="10" id="WpY-Ma-3JB"/>
+                            <constraint firstItem="nz4-FA-wcq" firstAttribute="top" secondItem="e9q-aY-F9z" secondAttribute="top" id="YRR-eh-Dyf"/>
+                            <constraint firstItem="nz4-FA-wcq" firstAttribute="leading" secondItem="e9q-aY-F9z" secondAttribute="leading" id="dcT-1z-5DV"/>
+                            <constraint firstAttribute="trailing" secondItem="nz4-FA-wcq" secondAttribute="trailing" id="hfl-P3-rq0"/>
+                            <constraint firstAttribute="centerY" secondItem="dVe-ri-Uf3" secondAttribute="centerY" constant="30" id="kLY-w6-TrX"/>
+                            <constraint firstAttribute="centerX" secondItem="6D6-UP-8cc" secondAttribute="centerX" id="raj-V7-wcy"/>
+                            <constraint firstAttribute="centerX" secondItem="lQh-kd-OyV" secondAttribute="centerX" id="vHq-5F-t3u"/>
+                            <constraint firstAttribute="centerX" secondItem="aNm-WT-sz5" secondAttribute="centerX" id="xAq-aX-8Nv"/>
+                            <constraint firstAttribute="centerX" secondItem="hJv-LS-xCG" secondAttribute="centerX" id="xSr-mC-nKK"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="errorLabel" destination="aNm-WT-sz5" id="wJg-K2-ewa"/>
+                        <outlet property="logView" destination="dVe-ri-Uf3" id="2Q2-OP-KT3"/>
+                        <outlet property="passView" destination="lQh-kd-OyV" id="ucU-EQ-VKm"/>
+                        <outlet property="passwordTextField" destination="ASg-Id-LWt" id="2tZ-Px-dVb"/>
+                        <outlet property="usernameTextField" destination="gHo-g5-eSF" id="LrG-nG-fVx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLK-PR-62Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="251" y="435"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background Sign In" width="320" height="568"/>
+        <image name="Logo" width="58" height="85"/>
+        <image name="icon-arrow-right" width="6" height="10"/>
+        <image name="icon-password" width="16" height="21"/>
+        <image name="icon-profile" width="19" height="18"/>
+    </resources>
+</document>
