@@ -85,6 +85,8 @@
 		F92A6DCE1A9E5575004EDF86 /* createmessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */; };
 		F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */; };
 		F99B6B451A9F52CE000ADDAE /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B6B441A9F52CE000ADDAE /* Messages.swift */; };
+		F9DF3A2A1AA9731D00184D57 /* MyImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF3A291AA9731D00184D57 /* MyImagePickerController.swift */; };
+		F9DF3A2D1AA98AA500184D57 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF3A2C1AA98AA500184D57 /* SettingsViewController.swift */; };
 		F9E1E0D21A9BBFE4004CF6F4 /* ReceivedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */; };
 		F9E1E0D61A9BC009004CF6F4 /* ReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */; };
 		F9E1E0D91A9BC026004CF6F4 /* DroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */; };
@@ -239,6 +241,8 @@
 		F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createmessage.storyboard; sourceTree = "<group>"; };
 		F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMessageViewController.swift; sourceTree = "<group>"; };
 		F99B6B441A9F52CE000ADDAE /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		F9DF3A291AA9731D00184D57 /* MyImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImagePickerController.swift; sourceTree = "<group>"; };
+		F9DF3A2C1AA98AA500184D57 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F9E1E0D11A9BBFE4004CF6F4 /* ReceivedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceivedViewController.xib; sourceTree = "<group>"; };
 		F9E1E0D51A9BC009004CF6F4 /* ReceivedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceivedViewController.swift; sourceTree = "<group>"; };
 		F9E1E0D81A9BC026004CF6F4 /* DroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroppedViewController.swift; sourceTree = "<group>"; };
@@ -494,6 +498,7 @@
 		F92A6DC91A9E5549004EDF86 /* CreateMessage */ = {
 			isa = PBXGroup;
 			children = (
+				F9DF3A291AA9731D00184D57 /* MyImagePickerController.swift */,
 				F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */,
 				F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */,
 				C1FAC0C01AA966AA00734EFB /* SendTo */,
@@ -508,6 +513,14 @@
 				F99B6B441A9F52CE000ADDAE /* Messages.swift */,
 			);
 			name = Datas;
+			sourceTree = "<group>";
+		};
+		F9DF3A2B1AA98A8C00184D57 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F9DF3A2C1AA98AA500184D57 /* SettingsViewController.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		F9E1E0D31A9BBFEA004CF6F4 /* Activity */ = {
@@ -589,6 +602,7 @@
 				C1BF10121A9B9FC400E7AC50 /* InviteContacts */,
 				F92A6DC91A9E5549004EDF86 /* CreateMessage */,
 				F9E1E0DE1A9BCC35004CF6F4 /* Map */,
+				F9DF3A2B1AA98A8C00184D57 /* Settings */,
 				F9E1E0D31A9BBFEA004CF6F4 /* Activity */,
 				C1BF10051A9B6D8800E7AC50 /* SignUp */,
 				C15A45F01A9A334B0012CE29 /* Login */,
@@ -807,6 +821,7 @@
 				C1B88E081AA97728003714EB /* SendToViewController.swift in Sources */,
 				C177C7D31AA9682C00DA1741 /* LifeTimeViewController.swift in Sources */,
 				C15A46461A9A40760012CE29 /* DesignableView.swift in Sources */,
+				F9DF3A2D1AA98AA500184D57 /* SettingsViewController.swift in Sources */,
 				C15A464A1A9A40760012CE29 /* LoadingView.swift in Sources */,
 				C15A46401A9A40760012CE29 /* DesignableButton.swift in Sources */,
 				C1493B721A9AA8DE0013A7AD /* RAMRotationAnimation.swift in Sources */,
@@ -831,6 +846,7 @@
 				C1493B731A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift in Sources */,
 				C1BF10161A9BA31500E7AC50 /* SwiftAddressBookWrapper.swift in Sources */,
 				C15A46421A9A40760012CE29 /* DesignableLabel.swift in Sources */,
+				F9DF3A2A1AA9731D00184D57 /* MyImagePickerController.swift in Sources */,
 				F9F6E3C21A9A267D00707417 /* AppDelegate.swift in Sources */,
 				F9E1E0D91A9BC026004CF6F4 /* DroppedViewController.swift in Sources */,
 				C15A464E1A9A40760012CE29 /* SpringAnimation.swift in Sources */,

@@ -8,36 +8,48 @@
 
 import UIKit
 import CoreData
+import MobileCoreServices
+import Photos
+import AVKit
 
 class CreateMessageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    var photoSelected:Bool = false
     
+    @IBOutlet weak var redView: UIView!
     @IBOutlet weak var cancelBtn: DesignableButton!
     @IBOutlet weak var messageField: UITextField!
     @IBOutlet weak var titleLabel: DesignableLabel!
     @IBOutlet weak var goToLifeTimeBtn: DesignableButton!
-    
-    //Action on click photo
-    @IBAction func pickImage(sender: AnyObject) {
-        var image = UIImagePickerController()
-        image.delegate = self
-        image.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        image.allowsEditing = false
-        
-        self.presentViewController(image, animated: true, completion: nil)
-    }
-    
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        println("ko")
-        self.dismissViewControllerAnimated(true, completion: nil)
-        
-        pickImage.image = image
-    }
-    
-    
-    @IBOutlet weak var pickImage: UIImageView!
-    
 
+    func currentStatus() -> Bool {
+        // access permission dialog will appear automatically if necessary...
+        // ...when we try to present the UIImagePickerController
+        // however, things then proceed asynchronously
+        // so it can look better to try to ascertain permission in advance
+        let status = PHPhotoLibrary.authorizationStatus()
+        switch status {
+        case .Authorized:
+            return true
+        case .NotDetermined:
+            PHPhotoLibrary.requestAuthorization(nil)
+            return false
+        case .Restricted:
+            return false
+        case .Denied:
+            // new iOS 8 feature: sane way of getting the user directly to the relevant prefs
+            // I think the crash-in-background issue is now gone
+            let alert = UIAlertController(title: "Need Authorization", message: "Wouldn't you like to authorize this app to use your Photos library?", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: {
+                _ in
+                let url = NSURL(string:UIApplicationOpenSettingsURLString)!
+                UIApplication.sharedApplication().openURL(url)
+            }))
+            self.presentViewController(alert, animated:true, completion:nil)
+            return false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,8 +95,14 @@ class CreateMessageViewController: UIViewController, UIImagePickerControllerDele
             context.save(nil)
         }
     }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
+        self.currentStatus()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "currentStatus", name: UIApplicationWillEnterForegroundNotification, object: nil)
+
+        
     }
     
     //Get Message
@@ -118,17 +136,8 @@ class CreateMessageViewController: UIViewController, UIImagePickerControllerDele
     //btn Interaction
     /********** ------ **/
     @IBAction func goToLifeTimeBtn(sender: AnyObject) {
-        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        var context:NSManagedObjectContext = appDel.managedObjectContext!
-        //Adding part
-        var request = NSFetchRequest(entityName: "Messages")
-        request.returnsObjectsAsFaults = false
-        var results:AnyObject = context.executeFetchRequest(request, error: nil)!
-        var lenght = results.count
         
-        println(results[lenght-1].message)
-        
-        if results[lenght-1].message == nil {
+        if messageField.text == "" {
             var alert = UIAlertController(title: "Ops! Error", message: "Please, enter your message", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
@@ -141,8 +150,8 @@ class CreateMessageViewController: UIViewController, UIImagePickerControllerDele
             var storyboardID:String = "LifeTimeViewController"
             goToView(nameStoryboard,titleStoryboard: titleStoryboard,storyboardID: storyboardID)
         }
+        
     }
-    
     @IBAction func cancelBtn(sender: AnyObject) {
         
         //GoTo Navigation Storyboard
@@ -157,5 +166,105 @@ class CreateMessageViewController: UIViewController, UIImagePickerControllerDele
         var controller = nameStoryboard.instantiateViewControllerWithIdentifier(storyboardID) as UIViewController
         controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func doPick (sender:AnyObject!) {
+        if !self.currentStatus() {
+            println("not authorized")
+            return
+        }
+        
+        let src = UIImagePickerControllerSourceType.SavedPhotosAlbum
+        let ok = UIImagePickerController.isSourceTypeAvailable(src)
+        if !ok {
+            println("alas")
+            return
+        }
+        
+        let arr = UIImagePickerController.availableMediaTypesForSourceType(src)
+        if arr == nil {
+            println("no available types")
+            return
+        }
+        let picker = MyImagePickerController() // see comments below for reason
+        picker.sourceType = src
+        picker.mediaTypes = arr!
+        picker.delegate = self
+        
+        picker.allowsEditing = false // try true
+        
+        // this will automatically be fullscreen on phone and pad, looks fine
+        // note that for .PhotoLibrary, iPhone app must permit portrait orientation
+        // if we want a popover, on pad, we can do that; just uncomment next line
+        // picker.modalPresentationStyle = .Popover
+        self.presentViewController(picker, animated: true, completion: nil)
+        // ignore:
+        if let pop = picker.popoverPresentationController {
+            let v = sender as UIView
+            pop.sourceView = v
+            pop.sourceRect = v.bounds
+        }
+        
+    }
+}
+
+extension CreateMessageViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    // this has no effect
+    func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> Int {
+        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
+    }
+    
+    
+    func imagePickerController(picker: UIImagePickerController!,
+        didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
+            println(info[UIImagePickerControllerReferenceURL])
+            
+            
+            var myURL = "\(info[UIImagePickerControllerReferenceURL]!)"
+            println(myURL)
+            
+            //Set in current Object
+            var Data:String = myURL
+            var typeData:String = "photo"
+            setData(Data,typeData: typeData)
+            
+            let url = info[UIImagePickerControllerMediaURL] as? NSURL
+            
+            var im = info[UIImagePickerControllerOriginalImage] as? UIImage
+            var edim = info[UIImagePickerControllerEditedImage] as? UIImage
+            if edim != nil {
+                im = edim
+            }
+            self.dismissViewControllerAnimated(true) {
+                let type = info[UIImagePickerControllerMediaType] as? String
+                if type != nil {
+                    switch type! {
+                    case kUTTypeImage:
+                        if im != nil {
+                            self.showImage(im!)
+                        }
+                    default:break
+                    }
+                }
+            }
+    }
+    
+    func clearAll() {
+        if self.childViewControllers.count > 0 {
+            let av = self.childViewControllers[0] as AVPlayerViewController
+            av.willMoveToParentViewController(nil)
+            av.view.removeFromSuperview()
+            av.removeFromParentViewController()
+        }
+        self.redView.subviews.map { ($0 as UIView).removeFromSuperview() }
+    }
+    
+    func showImage(im:UIImage) {
+        self.clearAll()
+        let iv = UIImageView(image:im)
+        iv.contentMode = .ScaleAspectFit
+        iv.frame = self.redView.bounds
+        self.redView.addSubview(iv)
     }
 }
