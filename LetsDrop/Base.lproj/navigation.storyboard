@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nq0-QV-Nf2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nq0-QV-Nf2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Lolita SemiBold.otf">
+            <string>LolitaSemiBold</string>
             <string>LolitaSemiBold</string>
         </mutableArray>
         <mutableArray key="LolitaBook.otf">
@@ -317,22 +318,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdI-0p-BYN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVf-WM-KSM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6S-q0-3zT">
+                                        <rect key="frame" x="133" y="34" width="54" height="17"/>
+                                        <fontDescription key="fontDescription" name="LolitaSemiBold" family="Lolita" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2470588235" green="0.32156862749999998" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="6ji-Bh-9xj"/>
+                                    <constraint firstAttribute="height" constant="71" id="ThC-sg-jrs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="pdI-0p-BYN" secondAttribute="trailing" id="W16-OF-OPk"/>
-                            <constraint firstItem="pdI-0p-BYN" firstAttribute="leading" secondItem="MVc-RQ-SaM" secondAttribute="leading" id="bvh-mS-Vx8"/>
-                            <constraint firstItem="pdI-0p-BYN" firstAttribute="top" secondItem="MVc-RQ-SaM" secondAttribute="top" id="dEJ-4T-0sE"/>
+                            <constraint firstItem="WVf-WM-KSM" firstAttribute="top" secondItem="MVc-RQ-SaM" secondAttribute="top" id="2c4-Ju-Njs"/>
+                            <constraint firstAttribute="trailing" secondItem="WVf-WM-KSM" secondAttribute="trailing" id="cEb-Fl-rb8"/>
+                            <constraint firstItem="WVf-WM-KSM" firstAttribute="leading" secondItem="MVc-RQ-SaM" secondAttribute="leading" id="cmc-rm-4Rk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="SETTINGS" image="icon-settings" id="tEG-Mi-k0l" customClass="RAMAnimatedTabBarItem" customModule="LetsDrop" customModuleProvider="target">
@@ -374,7 +380,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pob-qB-RQF">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.32156862749999998" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="BrG-uu-CfP"/>
                                     <constraint firstAttribute="height" constant="90" id="aYj-h7-uv8"/>
