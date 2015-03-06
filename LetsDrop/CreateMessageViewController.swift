@@ -37,6 +37,9 @@ class CreateMessageViewController: UIViewController, UITextFieldDelegate {
         titleLabel.text = results[lenght-1].title
         titleLabel.textColor = UIColor(hex: "#FFFFFF")
         
+        if results[lenght-1].message != nil{
+            messageField.text = results[lenght-1].message
+        }
         print("coeur")
         println(results[lenght-1].title)
         println(results)
@@ -243,10 +246,6 @@ extension CreateMessageViewController : UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cancelBtn(sender: AnyObject) {
-        var navigationStoryboard = UIStoryboard(name: "navigation", bundle: nil)
-        var controller = navigationStoryboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
-        controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        self.presentViewController(controller, animated: true, completion: nil)
         
         //GoTo Navigation Storyboard
         var nameStoryboard:String = "navigationStoryboard",

@@ -13,6 +13,7 @@ class LifeTimeViewController: UIViewController {
     
     @IBOutlet weak var lifeLabel: UILabel!
     @IBOutlet weak var dragBtn: DesignableButton!
+    @IBOutlet weak var goBack: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +29,7 @@ class LifeTimeViewController: UIViewController {
         dragBtn.addGestureRecognizer(panGesture)
         
         
-       // var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        //var context:NSManagedObjectContext = appDel.managedObjectContext!
-        //var request = NSFetchRequest(entityName: "Messages")
-        //request.returnsObjectsAsFaults = false
-        //var results:AnyObject = context.executeFetchRequest(request, error: nil)!
-        //var lenght = results.count
-        
-        //println(results[lenght-1])
+       
      
 
     }
@@ -53,10 +47,12 @@ class LifeTimeViewController: UIViewController {
         println("ok")
         println(Int(getMyLifetime))
         dragBtn.hidden = true
-        lifeLabel.text = String(getMyLifetime)
+        lifeLabel.text = "\(String(getMyLifetime)) Day(s)"
         if gestureRecognizer.state == UIGestureRecognizerState.Ended{
             println("ko")
             dragBtn.hidden = false
+            var validity: Int = getMyLifetime
+            addTime(validity)
         }
         
       
@@ -67,6 +63,13 @@ class LifeTimeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func goBack(sender: AnyObject) {
+        //GoTo Navigation Storyboard
+        var nameStoryboard:String = "createmessageStoryboard",
+        titleStoryboard:String = "createmessage",
+        storyboardID:String = "InitialCMessageViewController"
+        goToView(nameStoryboard,titleStoryboard: titleStoryboard,storyboardID: storyboardID)
+    }
     func goToView(nameStoryboard:String,titleStoryboard:String,storyboardID:String){
         var  nameStoryboard = UIStoryboard(name: titleStoryboard, bundle: nil)
         var controller = nameStoryboard.instantiateViewControllerWithIdentifier(storyboardID) as UIViewController
@@ -75,7 +78,18 @@ class LifeTimeViewController: UIViewController {
         
     }
     
-    
+    func addTime(validity: Int){
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        var request = NSFetchRequest(entityName: "Messages")
+        request.returnsObjectsAsFaults = false
+        var results:AnyObject = context.executeFetchRequest(request, error: nil)!
+        var lenght = results.count
+        //results[lenght-1].myligr
+        results.title
+       //results[lenght-1].validity = 12
+        println(results[lenght-1])
+    }
     
     
 }
