@@ -166,9 +166,19 @@ class SendToViewController: UIViewController,UITableViewDataSource {
         APIHelper.sendPinTo(self.sendTo, latitude:latitude, longitude:longitude, message: messageText, validity: validity, color: color)
         
         deleteMessages()
-        println(message)
         
+        var nameStoryboard:String = "navigationStoryboard",
+        titleStoryboard:String = "navigation",
+        storyboardID:String = "InitialViewController"
+        goToView(nameStoryboard,titleStoryboard: titleStoryboard,storyboardID: storyboardID)
         
+    }
+    
+    func goToView(nameStoryboard:String,titleStoryboard:String,storyboardID:String){
+        var  nameStoryboard = UIStoryboard(name: titleStoryboard, bundle: nil)
+        var controller = nameStoryboard.instantiateViewControllerWithIdentifier(storyboardID) as UIViewController
+        controller.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        self.presentViewController(controller, animated: true, completion: nil)
     }
 
 }
