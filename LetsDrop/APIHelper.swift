@@ -244,5 +244,56 @@ class APIHelper {
         }
     }
     
+    class func sendPinTo(sendToArray:Array<String>, latitude:Double, longitude:Double, message: String, validity: Int, color:String) -> Void {
+        
+        let (dic, error) = Locksmith.loadDataForUserAccount(userAccount)
+
+        if dic != nil {
+
+            var login = dic!["login"] as String
+            var password = dic!["password"] as String
+            var verb = "POST"
+            var route = "me/pins"
+            println("fsf")
+            println("\(sendToArray)")
+            var toIds = ",".join(sendToArray)
+            var postString = "latitude=\(latitude)&longitude=\(longitude)&message=\(message)&validity=\(validity)&color=\(color)&to_ids=\(toIds)"
+            
+            println("eki")
+            
+            var url = apiUrl+route
+            var signature = AuthHelper.getSignature(login, password: password, url: verb+":"+route)
+            var mutableURLRequest = AuthHelper.buildRequest(url, login: login, signature: signature, parameters: postString, verb: "POST", auth: true)
+            
+            println("eki")
+            
+            let manager = Alamofire.Manager.sharedInstance
+            let request = manager.request(mutableURLRequest)
+            request.responseJSON { (request, response, data, error) in
+                println(data)
+                if response!.statusCode == 200 {
+                    
+                    println("posted pin")
+                    if data != nil {
+                        var data = JSON(data!)
+                        
+                        var dataArray = data["data"].arrayValue
+                        println("data:\(dataArray)")
+                        
+                    }
+                    
+                } else {
+                    println("Request failed")
+                }
+            }
+            
+            
+        } else {
+            // User is not logged in
+            
+        }
+
+    }
+    
     
 }

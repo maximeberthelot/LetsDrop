@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C125C5BD1AA9725F0068FA43 /* CustomFriendSendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125C5BC1AA9725F0068FA43 /* CustomFriendSendTableViewCell.swift */; };
+		C125C5C11AA974DC0068FA43 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
+		C125C5C21AA974E10068FA43 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
+		C125C5C31AA974E10068FA43 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C12D27781A9AAA730086CE66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12D27761A9AAA730086CE66 /* Main.storyboard */; };
 		C12D277B1A9AAA830086CE66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C12D27791A9AAA830086CE66 /* LaunchScreen.xib */; };
 		C1493B6F1A9AA8DE0013A7AD /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1493B641A9AA8DE0013A7AD /* RAMBounceAnimation.swift */; };
@@ -57,9 +61,9 @@
 		C15A46561A9A40760012CE29 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463C1A9A40760012CE29 /* TransitionZoom.swift */; };
 		C15A46571A9A40760012CE29 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463D1A9A40760012CE29 /* UnwindSegue.swift */; };
 		C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */; };
-		C15CA4311AA0E50A006C7982 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
 		C177C7D31AA9682C00DA1741 /* LifeTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C177C7D21AA9682C00DA1741 /* LifeTimeViewController.swift */; };
 		C19DE7161AA3A3A500DB037B /* CustomFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19DE7151AA3A3A500DB037B /* CustomFriendTableViewCell.swift */; };
+		C1B88E081AA97728003714EB /* SendToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B88E071AA97728003714EB /* SendToViewController.swift */; };
 		C1BF10041A9B6D8200E7AC50 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10031A9B6D8200E7AC50 /* SignUpViewController.swift */; };
 		C1BF10071A9B6D9D00E7AC50 /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1BF10061A9B6D9D00E7AC50 /* signUp.storyboard */; };
 		C1BF10091A9B7ACB00E7AC50 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10081A9B7ACB00E7AC50 /* SwiftyJSON.swift */; };
@@ -72,10 +76,7 @@
 		C1BF10181A9BA68700E7AC50 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF10171A9BA68700E7AC50 /* AddressBook.framework */; };
 		C1BF101A1A9BC76C00E7AC50 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10191A9BC76C00E7AC50 /* CustomTableViewCell.swift */; };
 		C1DB40981A9E412C003E6846 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DB40971A9E412C003E6846 /* MessageUI.framework */; };
-		C1FAC0B61AA9026800734EFB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
-		C1FAC0B71AA9026800734EFB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C1FAC0BF1AA966A000734EFB /* sendTo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FAC0BE1AA966A000734EFB /* sendTo.storyboard */; };
-		C1FAC0C21AA966C100734EFB /* SendToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FAC0C11AA966C100734EFB /* SendToViewController.swift */; };
+		C1FD169C1AA96FD900241ADC /* sendTo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FD169B1AA96FD900241ADC /* sendTo.storyboard */; };
 		F9016AB51AA93F4B0062E612 /* InteractionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9016AB41AA93F4B0062E612 /* InteractionHelper.swift */; };
 		F9063C091A9F1A4D000E5996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C081A9F1A4D000E5996 /* Foundation.framework */; };
 		F9063C0E1A9F1A57000E5996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C0D1A9F1A57000E5996 /* UIKit.framework */; };
@@ -101,6 +102,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C125C5C41AA974E10068FA43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 		C1BF0FF41A9B6C0800E7AC50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */;
@@ -129,13 +137,6 @@
 			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
 			remoteInfo = "Alamofire OSX Tests";
 		};
-		C1FAC0B81AA9026800734EFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
 		F9F6E3D51A9A267D00707417 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9F6E3B41A9A267D00707417 /* Project object */;
@@ -146,13 +147,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C1FAC0BA1AA9026900734EFB /* Embed Frameworks */ = {
+		C125C5C61AA974E10068FA43 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C1FAC0B71AA9026800734EFB /* Alamofire.framework in Embed Frameworks */,
+				C125C5C31AA974E10068FA43 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +161,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C125C5BC1AA9725F0068FA43 /* CustomFriendSendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFriendSendTableViewCell.swift; sourceTree = "<group>"; };
 		C12D27771A9AAA730086CE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C12D277A1A9AAA830086CE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C1493B641A9AA8DE0013A7AD /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		C15A465B1A9A4FA70012CE29 /* LetsDrop-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LetsDrop-Bridging-Header.h"; path = "LetsDrop/LetsDrop-Bridging-Header.h"; sourceTree = "<group>"; };
 		C177C7D21AA9682C00DA1741 /* LifeTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeTimeViewController.swift; sourceTree = "<group>"; };
 		C19DE7151AA3A3A500DB037B /* CustomFriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFriendTableViewCell.swift; sourceTree = "<group>"; };
+		C1B88E071AA97728003714EB /* SendToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendToViewController.swift; sourceTree = "<group>"; };
 		C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C1BF10031A9B6D8200E7AC50 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C1BF10061A9B6D9D00E7AC50 /* signUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = signUp.storyboard; sourceTree = "<group>"; };
@@ -227,8 +230,7 @@
 		C1BF10171A9BA68700E7AC50 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		C1BF10191A9BC76C00E7AC50 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C1DB40971A9E412C003E6846 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		C1FAC0BE1AA966A000734EFB /* sendTo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = sendTo.storyboard; sourceTree = "<group>"; };
-		C1FAC0C11AA966C100734EFB /* SendToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendToViewController.swift; sourceTree = "<group>"; };
+		C1FD169B1AA96FD900241ADC /* sendTo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = sendTo.storyboard; sourceTree = "<group>"; };
 		F9016AB41AA93F4B0062E612 /* InteractionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionHelper.swift; sourceTree = "<group>"; };
 		F9063C081A9F1A4D000E5996 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9063C0D1A9F1A57000E5996 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -262,8 +264,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C15CA4311AA0E50A006C7982 /* Alamofire.framework in Frameworks */,
-				C1FAC0B61AA9026800734EFB /* Alamofire.framework in Frameworks */,
+				C125C5C11AA974DC0068FA43 /* Alamofire.framework in Frameworks */,
+				C125C5C21AA974E10068FA43 /* Alamofire.framework in Frameworks */,
 				C1DB40981A9E412C003E6846 /* MessageUI.framework in Frameworks */,
 				C1BF10181A9BA68700E7AC50 /* AddressBook.framework in Frameworks */,
 				F9063C101A9F1A61000E5996 /* CoreGraphics.framework in Frameworks */,
@@ -473,8 +475,9 @@
 		C1FAC0C01AA966AA00734EFB /* SendTo */ = {
 			isa = PBXGroup;
 			children = (
-				C1FAC0BE1AA966A000734EFB /* sendTo.storyboard */,
-				C1FAC0C11AA966C100734EFB /* SendToViewController.swift */,
+				C1B88E071AA97728003714EB /* SendToViewController.swift */,
+				C1FD169B1AA96FD900241ADC /* sendTo.storyboard */,
+				C125C5BC1AA9725F0068FA43 /* CustomFriendSendTableViewCell.swift */,
 			);
 			name = SendTo;
 			sourceTree = "<group>";
@@ -630,12 +633,12 @@
 				F9F6E3B81A9A267D00707417 /* Sources */,
 				F9F6E3B91A9A267D00707417 /* Frameworks */,
 				F9F6E3BA1A9A267D00707417 /* Resources */,
-				C1FAC0BA1AA9026900734EFB /* Embed Frameworks */,
+				C125C5C61AA974E10068FA43 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C1FAC0B91AA9026800734EFB /* PBXTargetDependency */,
+				C125C5C51AA974E10068FA43 /* PBXTargetDependency */,
 			);
 			name = LetsDrop;
 			productName = LetsDrop;
@@ -752,7 +755,7 @@
 				C15A46191A9A400A0012CE29 /* LolitaBook.otf in Resources */,
 				F9F6E3CA1A9A267D00707417 /* navigation.storyboard in Resources */,
 				C15A461A1A9A400A0012CE29 /* LolitaHeavy.otf in Resources */,
-				C1FAC0BF1AA966A000734EFB /* sendTo.storyboard in Resources */,
+				C1FD169C1AA96FD900241ADC /* sendTo.storyboard in Resources */,
 				C15A461D1A9A400A0012CE29 /* LolitaThin.otf in Resources */,
 				C15A461C1A9A400A0012CE29 /* LolitaMedium.otf in Resources */,
 				F9E1E0DB1A9BC036004CF6F4 /* DroppedViewController.xib in Resources */,
@@ -781,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19DE7161AA3A3A500DB037B /* CustomFriendTableViewCell.swift in Sources */,
+				C125C5BD1AA9725F0068FA43 /* CustomFriendSendTableViewCell.swift in Sources */,
 				C1BF100C1A9B80EA00E7AC50 /* Locksmith.swift in Sources */,
 				C15A46561A9A40760012CE29 /* TransitionZoom.swift in Sources */,
 				C1BF101A1A9BC76C00E7AC50 /* CustomTableViewCell.swift in Sources */,
@@ -789,7 +793,6 @@
 				C15A46471A9A40760012CE29 /* ImageLoader.swift in Sources */,
 				C1BF100F1A9B835600E7AC50 /* AuthHelper.swift in Sources */,
 				C15A464C1A9A40760012CE29 /* Misc.swift in Sources */,
-				C1FAC0C21AA966C100734EFB /* SendToViewController.swift in Sources */,
 				C15A46501A9A40760012CE29 /* SpringImageView.swift in Sources */,
 				F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */,
 				C154A7A91AA14D1200A4868F /* friendsListViewController.swift in Sources */,
@@ -801,6 +804,7 @@
 				F9E1E0E01A9BCC50004CF6F4 /* MapViewController.swift in Sources */,
 				C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */,
 				C15A463F1A9A40760012CE29 /* Data.swift in Sources */,
+				C1B88E081AA97728003714EB /* SendToViewController.swift in Sources */,
 				C177C7D31AA9682C00DA1741 /* LifeTimeViewController.swift in Sources */,
 				C15A46461A9A40760012CE29 /* DesignableView.swift in Sources */,
 				C15A464A1A9A40760012CE29 /* LoadingView.swift in Sources */,
@@ -850,10 +854,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C1FAC0B91AA9026800734EFB /* PBXTargetDependency */ = {
+		C125C5C51AA974E10068FA43 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
-			targetProxy = C1FAC0B81AA9026800734EFB /* PBXContainerItemProxy */;
+			targetProxy = C125C5C41AA974E10068FA43 /* PBXContainerItemProxy */;
 		};
 		F9F6E3D61A9A267D00707417 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

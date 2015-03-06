@@ -58,7 +58,6 @@ class CreateMessageViewController: UIViewController, UIImagePickerControllerDele
         if results[lenght-1].message != nil{
             messageField.text = results[lenght-1].message
         }
-        print("coeur")
         println(results[lenght-1].title)
         println(results)
         
@@ -93,9 +92,10 @@ class CreateMessageViewController: UIViewController, UIImagePickerControllerDele
         self.view.endEditing(true);
         //Set in current Object
         var Data:String = messageField.text
+        println(Data)
         var typeData:String = "message"
         setData(Data,typeData: typeData)
-        
+
         return false;
     }
     
