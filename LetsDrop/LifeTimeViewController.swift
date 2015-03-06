@@ -86,9 +86,16 @@ class LifeTimeViewController: UIViewController {
         var results:AnyObject = context.executeFetchRequest(request, error: nil)!
         var lenght = results.count
         //results[lenght-1].myligr
-        results.title
+
+        results[lenght-1].setValue(validity, forKey: "validity")
        //results[lenght-1].validity = 12
-        println(results[lenght-1])
+        println(results[lenght-1].valueForKey("validity"))
+        
+        var error: NSError?
+        if !context.save(&error) {
+            println("Could not save \(error), \(error?.userInfo)")
+        }
+        
     }
     
     
