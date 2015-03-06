@@ -2,11 +2,10 @@
 
 import UIKit
 
-class MyImagePickerController : UIImagePickerController {
-    override func prefersStatusBarHidden() -> Bool {
-        return true
+class MyImagePickerController: UIImagePickerController {
+    
+    override func supportedInterfaceOrientations() -> Int {
+        return self.presentingViewController!.supportedInterfaceOrientations()
     }
-    override func childViewControllerForStatusBarHidden() -> UIViewController? {
-        return nil
-    }
+
 }
