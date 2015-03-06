@@ -85,10 +85,8 @@ class LifeTimeViewController: UIViewController {
         request.returnsObjectsAsFaults = false
         var results:AnyObject = context.executeFetchRequest(request, error: nil)!
         var lenght = results.count
-        //results[lenght-1].myligr
 
         results[lenght-1].setValue(validity, forKey: "validity")
-       //results[lenght-1].validity = 12
         println(results[lenght-1].valueForKey("validity"))
         
         var error: NSError?

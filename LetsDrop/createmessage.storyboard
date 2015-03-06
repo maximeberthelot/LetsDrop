@@ -60,19 +60,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSo-h1-zbk" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
-                                <rect key="frame" x="125" y="390" width="71" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="SaL-66-o1F"/>
-                                    <constraint firstAttribute="height" constant="70" id="yR8-gT-QIO"/>
-                                </constraints>
-                                <state key="normal" image="icon-picture">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doPick:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="Rpa-BR-yYW"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="| Drop a message" minimumFontSize="17" background="Background Sign In" disabledBackground="Background Sign In" translatesAutoresizingMaskIntoConstraints="NO" id="bLy-r6-XJx" customClass="DesignableTextField" customModule="LetsDrop" customModuleProvider="target">
                                 <rect key="frame" x="32" y="74" width="254" height="365"/>
                                 <color key="backgroundColor" red="0.65563678794628932" green="0.52886722588520207" blue="0.76832455396652222" alpha="1" colorSpace="calibratedRGB"/>
@@ -100,6 +87,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSo-h1-zbk" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
+                                <rect key="frame" x="125" y="390" width="71" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="SaL-66-o1F"/>
+                                    <constraint firstAttribute="height" constant="70" id="yR8-gT-QIO"/>
+                                </constraints>
+                                <state key="normal" image="icon-picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickImage:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="u55-ND-WG9"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec7-2c-Se9" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
                                 <rect key="frame" x="16" y="28" width="26" height="26"/>
                                 <constraints>
@@ -127,18 +127,6 @@
                                 <color key="textColor" red="0.98039215690000003" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6z-4L-HJM" customClass="DesignableView" customModule="LetsDrop" customModuleProvider="target">
-                                <rect key="frame" x="48" y="-6" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="S6G-38-mKJ"/>
-                                    <constraint firstAttribute="height" constant="60" id="UEu-D0-Lwr"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3p-zQ-9tk" customClass="DesignableButton" customModule="LetsDrop" customModuleProvider="target">
                                 <rect key="frame" x="136" y="513" width="47" height="47"/>
                                 <constraints>
@@ -212,13 +200,15 @@
                                     <action selector="goToLifeTimeBtn:" destination="KQy-Uk-HKY" eventType="touchUpInside" id="elR-dk-hF4"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Mm-8x-tTC">
+                                <rect key="frame" x="48" y="351" width="75" height="70"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bLy-r6-XJx" firstAttribute="leading" secondItem="Qhc-3k-MTR" secondAttribute="leading" constant="40" id="0CA-9a-7Vu"/>
                             <constraint firstItem="wvX-oD-gbS" firstAttribute="bottom" secondItem="f5C-Yp-zua" secondAttribute="bottom" constant="-15" id="1zL-bA-Vgh"/>
                             <constraint firstItem="STf-JN-wtC" firstAttribute="top" secondItem="N3p-zQ-9tk" secondAttribute="bottom" constant="10" id="4QP-J4-D1C"/>
-                            <constraint firstItem="bLy-r6-XJx" firstAttribute="top" secondItem="F6z-4L-HJM" secondAttribute="top" constant="-20" id="665-TI-Ajz"/>
                             <constraint firstItem="bLy-r6-XJx" firstAttribute="top" secondItem="v6t-w1-tCI" secondAttribute="top" constant="-10" id="77B-7j-wj7"/>
                             <constraint firstAttribute="centerX" secondItem="bLy-r6-XJx" secondAttribute="centerX" id="APR-wk-wLP"/>
                             <constraint firstAttribute="centerX" secondItem="mhY-IA-9Hl" secondAttribute="centerX" id="DHc-aG-Mxm"/>
@@ -233,7 +223,6 @@
                             <constraint firstItem="mhY-IA-9Hl" firstAttribute="bottom" secondItem="f5C-Yp-zua" secondAttribute="bottom" constant="25" id="O9o-Mm-yqf"/>
                             <constraint firstItem="f5C-Yp-zua" firstAttribute="leading" secondItem="Qhc-3k-MTR" secondAttribute="leading" id="Oup-cv-lsS"/>
                             <constraint firstItem="MSo-h1-zbk" firstAttribute="bottom" secondItem="bLy-r6-XJx" secondAttribute="bottom" constant="-15" id="PGb-eA-bfw"/>
-                            <constraint firstItem="bLy-r6-XJx" firstAttribute="leading" secondItem="F6z-4L-HJM" secondAttribute="leading" constant="-10" id="PK5-tz-54M"/>
                             <constraint firstAttribute="centerX" secondItem="N3p-zQ-9tk" secondAttribute="centerX" id="PLI-FB-C9e"/>
                             <constraint firstItem="f5C-Yp-zua" firstAttribute="top" secondItem="Qhc-3k-MTR" secondAttribute="top" id="RdN-sE-YKc"/>
                             <constraint firstAttribute="centerX" secondItem="7gQ-SO-63I" secondAttribute="centerX" id="SQl-de-PF1"/>
@@ -263,7 +252,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="665-TI-Ajz"/>
                                 <exclude reference="Mk1-hS-NLu"/>
                                 <exclude reference="Ue5-Nu-6ia"/>
                                 <exclude reference="abO-gH-Ycc"/>
@@ -279,13 +267,13 @@
                         <outlet property="cancelBtn" destination="ec7-2c-Se9" id="r6H-BY-zNo"/>
                         <outlet property="goToLifeTimeBtn" destination="jHw-EU-0wx" id="8Kt-q6-q59"/>
                         <outlet property="messageField" destination="bLy-r6-XJx" id="pd5-SA-f3w"/>
-                        <outlet property="myPicture" destination="F6z-4L-HJM" id="SCs-dj-oUm"/>
+                        <outlet property="pickImage" destination="1Mm-8x-tTC" id="SvU-8e-qdZ"/>
                         <outlet property="titleLabel" destination="u5o-KH-H8n" id="SLG-fz-A2x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rav-Ja-gc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109" y="57"/>
+            <point key="canvasLocation" x="109" y="28"/>
         </scene>
     </scenes>
     <resources>
