@@ -58,6 +58,7 @@
 		C15A46571A9A40760012CE29 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463D1A9A40760012CE29 /* UnwindSegue.swift */; };
 		C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */; };
 		C15CA4311AA0E50A006C7982 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
+		C177C7D31AA9682C00DA1741 /* LifeTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C177C7D21AA9682C00DA1741 /* LifeTimeViewController.swift */; };
 		C19DE7161AA3A3A500DB037B /* CustomFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19DE7151AA3A3A500DB037B /* CustomFriendTableViewCell.swift */; };
 		C1BF10041A9B6D8200E7AC50 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10031A9B6D8200E7AC50 /* SignUpViewController.swift */; };
 		C1BF10071A9B6D9D00E7AC50 /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1BF10061A9B6D9D00E7AC50 /* signUp.storyboard */; };
@@ -73,12 +74,13 @@
 		C1DB40981A9E412C003E6846 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DB40971A9E412C003E6846 /* MessageUI.framework */; };
 		C1FAC0B61AA9026800734EFB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
 		C1FAC0B71AA9026800734EFB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1FAC0BF1AA966A000734EFB /* sendTo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FAC0BE1AA966A000734EFB /* sendTo.storyboard */; };
+		C1FAC0C21AA966C100734EFB /* SendToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FAC0C11AA966C100734EFB /* SendToViewController.swift */; };
 		F9016AB51AA93F4B0062E612 /* InteractionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9016AB41AA93F4B0062E612 /* InteractionHelper.swift */; };
 		F9063C091A9F1A4D000E5996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C081A9F1A4D000E5996 /* Foundation.framework */; };
 		F9063C0E1A9F1A57000E5996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C0D1A9F1A57000E5996 /* UIKit.framework */; };
 		F9063C101A9F1A61000E5996 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C0F1A9F1A61000E5996 /* CoreGraphics.framework */; };
 		F9104BDF1AA0BA3B009B3E30 /* lifetime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9104BDE1AA0BA3B009B3E30 /* lifetime.storyboard */; };
-		F9104BE11AA0BA4C009B3E30 /* LifeTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9104BE01AA0BA4C009B3E30 /* LifeTimeViewController.swift */; };
 		F92A6DCE1A9E5575004EDF86 /* createmessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */; };
 		F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */; };
 		F99B6B451A9F52CE000ADDAE /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B6B441A9F52CE000ADDAE /* Messages.swift */; };
@@ -210,6 +212,7 @@
 		C15A463D1A9A40760012CE29 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 		C15A465B1A9A4FA70012CE29 /* LetsDrop-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LetsDrop-Bridging-Header.h"; path = "LetsDrop/LetsDrop-Bridging-Header.h"; sourceTree = "<group>"; };
+		C177C7D21AA9682C00DA1741 /* LifeTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeTimeViewController.swift; sourceTree = "<group>"; };
 		C19DE7151AA3A3A500DB037B /* CustomFriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFriendTableViewCell.swift; sourceTree = "<group>"; };
 		C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C1BF10031A9B6D8200E7AC50 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -224,12 +227,13 @@
 		C1BF10171A9BA68700E7AC50 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		C1BF10191A9BC76C00E7AC50 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C1DB40971A9E412C003E6846 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		C1FAC0BE1AA966A000734EFB /* sendTo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = sendTo.storyboard; sourceTree = "<group>"; };
+		C1FAC0C11AA966C100734EFB /* SendToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendToViewController.swift; sourceTree = "<group>"; };
 		F9016AB41AA93F4B0062E612 /* InteractionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionHelper.swift; sourceTree = "<group>"; };
 		F9063C081A9F1A4D000E5996 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9063C0D1A9F1A57000E5996 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9063C0F1A9F1A61000E5996 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F9104BDE1AA0BA3B009B3E30 /* lifetime.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = lifetime.storyboard; sourceTree = "<group>"; };
-		F9104BE01AA0BA4C009B3E30 /* LifeTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeTimeViewController.swift; sourceTree = "<group>"; };
 		F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createmessage.storyboard; sourceTree = "<group>"; };
 		F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMessageViewController.swift; sourceTree = "<group>"; };
 		F99B6B441A9F52CE000ADDAE /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
@@ -466,11 +470,20 @@
 			name = InviteContacts;
 			sourceTree = "<group>";
 		};
+		C1FAC0C01AA966AA00734EFB /* SendTo */ = {
+			isa = PBXGroup;
+			children = (
+				C1FAC0BE1AA966A000734EFB /* sendTo.storyboard */,
+				C1FAC0C11AA966C100734EFB /* SendToViewController.swift */,
+			);
+			name = SendTo;
+			sourceTree = "<group>";
+		};
 		F9104BDA1AA0BA24009B3E30 /* LifeTime */ = {
 			isa = PBXGroup;
 			children = (
+				C177C7D21AA9682C00DA1741 /* LifeTimeViewController.swift */,
 				F9104BDE1AA0BA3B009B3E30 /* lifetime.storyboard */,
-				F9104BE01AA0BA4C009B3E30 /* LifeTimeViewController.swift */,
 			);
 			name = LifeTime;
 			sourceTree = "<group>";
@@ -480,6 +493,7 @@
 			children = (
 				F92A6DCD1A9E5575004EDF86 /* createmessage.storyboard */,
 				F92A6DCF1A9E5597004EDF86 /* CreateMessageViewController.swift */,
+				C1FAC0C01AA966AA00734EFB /* SendTo */,
 				F9104BDA1AA0BA24009B3E30 /* LifeTime */,
 			);
 			name = CreateMessage;
@@ -738,6 +752,7 @@
 				C15A46191A9A400A0012CE29 /* LolitaBook.otf in Resources */,
 				F9F6E3CA1A9A267D00707417 /* navigation.storyboard in Resources */,
 				C15A461A1A9A400A0012CE29 /* LolitaHeavy.otf in Resources */,
+				C1FAC0BF1AA966A000734EFB /* sendTo.storyboard in Resources */,
 				C15A461D1A9A400A0012CE29 /* LolitaThin.otf in Resources */,
 				C15A461C1A9A400A0012CE29 /* LolitaMedium.otf in Resources */,
 				F9E1E0DB1A9BC036004CF6F4 /* DroppedViewController.xib in Resources */,
@@ -774,6 +789,7 @@
 				C15A46471A9A40760012CE29 /* ImageLoader.swift in Sources */,
 				C1BF100F1A9B835600E7AC50 /* AuthHelper.swift in Sources */,
 				C15A464C1A9A40760012CE29 /* Misc.swift in Sources */,
+				C1FAC0C21AA966C100734EFB /* SendToViewController.swift in Sources */,
 				C15A46501A9A40760012CE29 /* SpringImageView.swift in Sources */,
 				F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */,
 				C154A7A91AA14D1200A4868F /* friendsListViewController.swift in Sources */,
@@ -785,11 +801,11 @@
 				F9E1E0E01A9BCC50004CF6F4 /* MapViewController.swift in Sources */,
 				C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */,
 				C15A463F1A9A40760012CE29 /* Data.swift in Sources */,
+				C177C7D31AA9682C00DA1741 /* LifeTimeViewController.swift in Sources */,
 				C15A46461A9A40760012CE29 /* DesignableView.swift in Sources */,
 				C15A464A1A9A40760012CE29 /* LoadingView.swift in Sources */,
 				C15A46401A9A40760012CE29 /* DesignableButton.swift in Sources */,
 				C1493B721A9AA8DE0013A7AD /* RAMRotationAnimation.swift in Sources */,
-				F9104BE11AA0BA4C009B3E30 /* LifeTimeViewController.swift in Sources */,
 				C15A464F1A9A40760012CE29 /* SpringButton.swift in Sources */,
 				C15A464D1A9A40760012CE29 /* Spring.swift in Sources */,
 				C15A46441A9A40760012CE29 /* DesignableTextField.swift in Sources */,
