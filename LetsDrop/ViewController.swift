@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
         let (dic, error) = Locksmith.loadDataForUserAccount(userAccount)
         
         if dic != nil {
+            
             
             if dic!["id"] != nil {
                 

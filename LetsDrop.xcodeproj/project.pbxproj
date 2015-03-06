@@ -16,6 +16,8 @@
 		C1493B731A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1493B6C1A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift */; };
 		C1493B741A9AA8DE0013A7AD /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1493B6D1A9AA8DE0013A7AD /* RAMAnimatedTabBarController.swift */; };
 		C1493B751A9AA8DE0013A7AD /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1493B6E1A9AA8DE0013A7AD /* RAMItemAnimationProtocol.swift */; };
+		C154A7A71AA1421C00A4868F /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154A7A61AA1421C00A4868F /* APIHelper.swift */; };
+		C154A7A91AA14D1200A4868F /* friendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C154A7A81AA14D1200A4868F /* friendsListViewController.swift */; };
 		C15A45EF1A9A33460012CE29 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15A45EE1A9A33460012CE29 /* login.storyboard */; };
 		C15A45F31A9A33AC0012CE29 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45F21A9A33AC0012CE29 /* LoginViewController.swift */; };
 		C15A46151A9A400A0012CE29 /* Lolita ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15A460B1A9A400A0012CE29 /* Lolita ExtraLight.otf */; };
@@ -55,6 +57,8 @@
 		C15A46561A9A40760012CE29 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463C1A9A40760012CE29 /* TransitionZoom.swift */; };
 		C15A46571A9A40760012CE29 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A463D1A9A40760012CE29 /* UnwindSegue.swift */; };
 		C15A46591A9A4F7D0012CE29 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */; };
+		C15CA4311AA0E50A006C7982 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
+		C19DE7161AA3A3A500DB037B /* CustomFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19DE7151AA3A3A500DB037B /* CustomFriendTableViewCell.swift */; };
 		C1BF10041A9B6D8200E7AC50 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10031A9B6D8200E7AC50 /* SignUpViewController.swift */; };
 		C1BF10071A9B6D9D00E7AC50 /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1BF10061A9B6D9D00E7AC50 /* signUp.storyboard */; };
 		C1BF10091A9B7ACB00E7AC50 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10081A9B7ACB00E7AC50 /* SwiftyJSON.swift */; };
@@ -68,6 +72,8 @@
 		C1BF101A1A9BC76C00E7AC50 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF10191A9BC76C00E7AC50 /* CustomTableViewCell.swift */; };
 		C1DB40981A9E412C003E6846 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DB40971A9E412C003E6846 /* MessageUI.framework */; };
 		F9016AB51AA93F4B0062E612 /* InteractionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9016AB41AA93F4B0062E612 /* InteractionHelper.swift */; };
+		C1FAC0B61AA9026800734EFB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; };
+		C1FAC0B71AA9026800734EFB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1BF0FF51A9B6C0800E7AC50 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9063C091A9F1A4D000E5996 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C081A9F1A4D000E5996 /* Foundation.framework */; };
 		F9063C0E1A9F1A57000E5996 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C0D1A9F1A57000E5996 /* UIKit.framework */; };
 		F9063C101A9F1A61000E5996 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9063C0F1A9F1A61000E5996 /* CoreGraphics.framework */; };
@@ -124,6 +130,7 @@
 			remoteInfo = "Alamofire OSX Tests";
 		};
 		F9327E6E1AA9435300A9E849 /* PBXContainerItemProxy */ = {
+		C1FAC0B81AA9026800734EFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */;
 			proxyType = 1;
@@ -141,12 +148,14 @@
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F9327E701AA9435300A9E849 /* Embed Frameworks */ = {
+		C1FAC0BA1AA9026900734EFB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 				F9327E6D1AA9435300A9E849 /* Alamofire.framework in Embed Frameworks */,
+				C1FAC0B71AA9026800734EFB /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +172,8 @@
 		C1493B6C1A9AA8DE0013A7AD /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
 		C1493B6D1A9AA8DE0013A7AD /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
 		C1493B6E1A9AA8DE0013A7AD /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		C154A7A61AA1421C00A4868F /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		C154A7A81AA14D1200A4868F /* friendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = friendsListViewController.swift; sourceTree = "<group>"; };
 		C15A45EE1A9A33460012CE29 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		C15A45F21A9A33AC0012CE29 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C15A460B1A9A400A0012CE29 /* Lolita ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lolita ExtraLight.otf"; sourceTree = "<group>"; };
@@ -204,6 +215,7 @@
 		C15A463D1A9A40760012CE29 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 		C15A465B1A9A4FA70012CE29 /* LetsDrop-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LetsDrop-Bridging-Header.h"; path = "LetsDrop/LetsDrop-Bridging-Header.h"; sourceTree = "<group>"; };
+		C19DE7151AA3A3A500DB037B /* CustomFriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFriendTableViewCell.swift; sourceTree = "<group>"; };
 		C1BF0FED1A9B6C0800E7AC50 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C1BF10031A9B6D8200E7AC50 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C1BF10061A9B6D9D00E7AC50 /* signUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = signUp.storyboard; sourceTree = "<group>"; };
@@ -252,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9327E6C1AA9435300A9E849 /* Alamofire.framework in Frameworks */,
+				C15CA4311AA0E50A006C7982 /* Alamofire.framework in Frameworks */,
+				C1FAC0B61AA9026800734EFB /* Alamofire.framework in Frameworks */,
 				C1DB40981A9E412C003E6846 /* MessageUI.framework in Frameworks */,
 				C1BF10181A9BA68700E7AC50 /* AddressBook.framework in Frameworks */,
 				F9063C101A9F1A61000E5996 /* CoreGraphics.framework in Frameworks */,
@@ -334,6 +348,15 @@
 			path = TransitionAniamtions;
 			sourceTree = "<group>";
 		};
+		C154A7AA1AA14D1800A4868F /* FriendsList */ = {
+			isa = PBXGroup;
+			children = (
+				C19DE7151AA3A3A500DB037B /* CustomFriendTableViewCell.swift */,
+				C154A7A81AA14D1200A4868F /* friendsListViewController.swift */,
+			);
+			name = FriendsList;
+			sourceTree = "<group>";
+		};
 		C15A45F01A9A334B0012CE29 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +434,7 @@
 		C15A465A1A9A4F880012CE29 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C154A7A61AA1421C00A4868F /* APIHelper.swift */,
 				C15A46581A9A4F7D0012CE29 /* CryptoHelper.swift */,
 				C1BF100E1A9B835600E7AC50 /* AuthHelper.swift */,
 				F9016AB41AA93F4B0062E612 /* InteractionHelper.swift */,
@@ -550,6 +574,7 @@
 				C12D27761A9AAA730086CE66 /* Main.storyboard */,
 				C12D27791A9AAA830086CE66 /* LaunchScreen.xib */,
 				F9F6E3C81A9A267D00707417 /* navigation.storyboard */,
+				C154A7AA1AA14D1800A4868F /* FriendsList */,
 				C1BF10121A9B9FC400E7AC50 /* InviteContacts */,
 				F92A6DC91A9E5549004EDF86 /* CreateMessage */,
 				F9E1E0DE1A9BCC35004CF6F4 /* Map */,
@@ -598,11 +623,13 @@
 				F9F6E3B91A9A267D00707417 /* Frameworks */,
 				F9F6E3BA1A9A267D00707417 /* Resources */,
 				F9327E701AA9435300A9E849 /* Embed Frameworks */,
+				C1FAC0BA1AA9026900734EFB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				F9327E6F1AA9435300A9E849 /* PBXTargetDependency */,
+				C1FAC0B91AA9026800734EFB /* PBXTargetDependency */,
 			);
 			name = LetsDrop;
 			productName = LetsDrop;
@@ -746,6 +773,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19DE7161AA3A3A500DB037B /* CustomFriendTableViewCell.swift in Sources */,
 				C1BF100C1A9B80EA00E7AC50 /* Locksmith.swift in Sources */,
 				C15A46561A9A40760012CE29 /* TransitionZoom.swift in Sources */,
 				C1BF101A1A9BC76C00E7AC50 /* CustomTableViewCell.swift in Sources */,
@@ -756,6 +784,7 @@
 				C15A464C1A9A40760012CE29 /* Misc.swift in Sources */,
 				C15A46501A9A40760012CE29 /* SpringImageView.swift in Sources */,
 				F92A6DD01A9E5597004EDF86 /* CreateMessageViewController.swift in Sources */,
+				C154A7A91AA14D1200A4868F /* friendsListViewController.swift in Sources */,
 				C15A46521A9A40760012CE29 /* SpringTextField.swift in Sources */,
 				C1BF100D1A9B80EA00E7AC50 /* LocksmithRequest.swift in Sources */,
 				C15A46411A9A40760012CE29 /* DesignableImageView.swift in Sources */,
@@ -773,6 +802,7 @@
 				C15A464D1A9A40760012CE29 /* Spring.swift in Sources */,
 				C15A46441A9A40760012CE29 /* DesignableTextField.swift in Sources */,
 				F9F6E3C71A9A267D00707417 /* ViewController.swift in Sources */,
+				C154A7A71AA1421C00A4868F /* APIHelper.swift in Sources */,
 				C15A46551A9A40760012CE29 /* TransitionManager.swift in Sources */,
 				C1BF10111A9B9FB000E7AC50 /* inviteContactsViewController.swift in Sources */,
 				C15A463E1A9A40760012CE29 /* BlurView.swift in Sources */,
@@ -816,6 +846,10 @@
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
 			targetProxy = F9327E6E1AA9435300A9E849 /* PBXContainerItemProxy */;
+		C1FAC0B91AA9026800734EFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = C1FAC0B81AA9026800734EFB /* PBXContainerItemProxy */;
 		};
 		F9F6E3D61A9A267D00707417 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
