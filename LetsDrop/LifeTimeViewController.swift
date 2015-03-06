@@ -78,6 +78,13 @@ class LifeTimeViewController: UIViewController {
         
     }
     
+    @IBAction func goToSendTo(sender: AnyObject) {
+        //GoTo Navigation Storyboard
+        var nameStoryboard:String = "sendToStoryboard",
+        titleStoryboard:String = "sendTo",
+        storyboardID:String = "InitialSenToViewController"
+        goToView(nameStoryboard,titleStoryboard: titleStoryboard,storyboardID: storyboardID)
+    }
     func addTime(validity: Int){
         var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         var context:NSManagedObjectContext = appDel.managedObjectContext!

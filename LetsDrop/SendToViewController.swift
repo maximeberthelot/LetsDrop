@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class ViewController: UIViewController {
+class SendToViewController: UIViewController {
     
     
     override func viewDidLoad() {
