@@ -17,6 +17,7 @@ class CreateMessageViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var titleLabel: DesignableLabel!
     @IBOutlet weak var goToLifeTimeBtn: DesignableButton!
     
+    //Action on click photo
     @IBAction func pickImage(sender: AnyObject) {
         var image = UIImagePickerController()
         image.delegate = self
@@ -25,6 +26,15 @@ class CreateMessageViewController: UIViewController, UIImagePickerControllerDele
         
         self.presentViewController(image, animated: true, completion: nil)
     }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        println("ko")
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        pickImage.image = image
+    }
+    
+    
     @IBOutlet weak var pickImage: UIImageView!
     
 
